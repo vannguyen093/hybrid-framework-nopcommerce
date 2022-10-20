@@ -5,7 +5,7 @@ import java.util.Scanner;
 import org.testng.annotations.Test;
 
 public class Topic_06_Switch_Case_Exercise {
-    Scanner scanner = new scanner(System.in);
+    Scanner scanner = new Scanner(System.in);
 
     @Test
     public void TC_01() {
