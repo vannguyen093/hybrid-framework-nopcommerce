@@ -1,0 +1,44 @@
+package pageObjects;
+
+import commons.BasePage;
+import org.openqa.selenium.WebDriver;
+import pageUIs.HomePageUI;
+import pageUIs.LoginPageUI;
+
+public class LoginPageObject extends BasePage {
+    private WebDriver driver;
+
+    public LoginPageObject(WebDriver driver) {
+        this.driver = driver;
+    }
+
+    public void clickToLoginButton() {
+        waitForElementClickable(driver, LoginPageUI.LOGIN_BUTTON);
+        clickToElement(driver, LoginPageUI.LOGIN_BUTTON);
+    }
+
+    public String getErrorMessageAtEmailTextbox() {
+        waitForElementVisible(driver, LoginPageUI.EMAIL_ERROR_MESSAGE);
+        return getElementText(driver, LoginPageUI.EMAIL_ERROR_MESSAGE);
+    }
+
+    public void inputToEmailTextbox(String existingEmail) {
+        waitForElementVisible(driver, LoginPageUI.EMAIL_TEXTBOX);
+        sendkeysToElement(driver, LoginPageUI.EMAIL_TEXTBOX, existingEmail);
+    }
+
+    public void inputToPasswordTextbox(String password) {
+        waitForElementVisible(driver, LoginPageUI.PASSWORD_TEXTBOX);
+        sendkeysToElement(driver, LoginPageUI.PASSWORD_TEXTBOX, password);
+    }
+
+    public boolean isMyAccountLinkDisplayed() {
+        waitForElementVisible(driver, HomePageUI.MY_ACCOUNT_LINK);
+        return true;
+    }
+
+    public String getErrorMessageUnsuccessful() {
+        waitForElementVisible(driver, LoginPageUI.UNSUCESSFULL_MESSAGE);
+        return getElementText(driver, LoginPageUI.UNSUCESSFULL_MESSAGE);
+    }
+}
