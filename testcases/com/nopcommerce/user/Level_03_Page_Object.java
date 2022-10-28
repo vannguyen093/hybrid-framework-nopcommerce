@@ -38,7 +38,7 @@ public class Level_03_Page_Object extends BasePage {
   }
   
   @Test
-  public void TC_01_Register_Empty_Data() {
+  public void Register_01_Empty_Data() {
     homePage.clickToRegisterLink();
 
     registerPage.clickToRegisterButton();
@@ -50,7 +50,7 @@ public class Level_03_Page_Object extends BasePage {
     Assert.assertEquals(registerPage.getErrorAtConfirmPasswordTextbox(), "Password is required.");
   }
   @Test
-  public void TC_02_Register_Invalid_Email() {
+  public void Register_02_Invalid_Email() {
     homePage.clickToRegisterLink();
 
     registerPage.inputToFirstNameTextbox(firstName);
@@ -64,7 +64,7 @@ public class Level_03_Page_Object extends BasePage {
     Assert.assertEquals(registerPage.getErrorAtEmailTextbox(), "Wrong email");
   }
   @Test
-  public void TC_03_Register_Register_Success() {
+  public void Register_03_Register_Success() {
     homePage.clickToRegisterLink();
 
     registerPage.inputToFirstNameTextbox(firstName);
@@ -79,7 +79,7 @@ public class Level_03_Page_Object extends BasePage {
     registerPage.clickToLogOutLink();
   }
   @Test
-  public void TC_04_Register_Existing_Email() {
+  public void Register_04_Existing_Email() {
     homePage.clickToRegisterLink();
 
     registerPage.inputToFirstNameTextbox(firstName);
@@ -93,7 +93,7 @@ public class Level_03_Page_Object extends BasePage {
     Assert.assertEquals(registerPage.getErrorAtExistingEmail(), "The specified email already exists");
   }
   @Test
-  public void TC_05_Register_Password_Less_Than_6_Chars() {
+  public void Register_05_Password_Less_Than_6_Chars() {
     homePage.clickToRegisterLink();
 
     registerPage.inputToFirstNameTextbox(firstName);
@@ -107,7 +107,7 @@ public class Level_03_Page_Object extends BasePage {
     Assert.assertEquals(registerPage.getErrorAtPasswordTextbox(), "Password must meet the following rules:\nmust have at least 6 characters");
   }
   @Test
-  public void TC_06_Register_Invalid_Confirm_Password() {
+  public void Register_06_Invalid_Confirm_Password() {
     homePage.clickToRegisterLink();
 
     registerPage.inputToFirstNameTextbox(firstName);
