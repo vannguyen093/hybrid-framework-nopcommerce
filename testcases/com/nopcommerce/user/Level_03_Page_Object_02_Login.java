@@ -14,7 +14,7 @@ import pageObjects.RegisterPageObject;
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
-public class Level_03_Page_Object_02_Login extends BasePage {
+public class Level_03_Page_Object_02_Login {
   WebDriver driver;
   String projectPath = System.getProperty("user.dir");
   String firstName, lastName,notFoundEmail, existingEmail, password;
