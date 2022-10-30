@@ -12,12 +12,13 @@ import java.util.concurrent.TimeUnit;
 
 public class BaseTest {
     private WebDriver driver;
-    //String projectPath = System.getProperty("user.dir");
+    String projectPath = System.getProperty("user.dir");
 
     protected WebDriver getBrowserDriver(String browserName){
         switch (browserName) {
             case "firefox":
-                WebDriverManager.firefoxdriver().setup();
+//                WebDriverManager.firefoxdriver().setup();
+                System.setProperty("webdriver.gecko.driver", projectPath + "\\browserDrivers\\geckodriver.exe");
                 driver = new FirefoxDriver();
                 break;
             case "h_firefox":
