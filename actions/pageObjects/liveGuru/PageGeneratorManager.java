@@ -12,7 +12,19 @@ public class PageGeneratorManager {
     public static RegisterPageObject getRegisterPage(WebDriver driver){
         return new RegisterPageObject(driver);
     }
-    public static MyAccountPageObject getMyAccountPage(WebDriver driver){
-        return new MyAccountPageObject(driver);
+    public static MyDashboardPageObject getMyAccountDashboardPage(WebDriver driver){
+        return new MyDashboardPageObject(driver);
+    }
+    public static AccountInforPageObject getAccountInforPage(WebDriver driver){
+        return new AccountInforPageObject(driver);
+    }
+    public static AddressBookPageObject getAddressBookPage(WebDriver driver){
+        return new AddressBookPageObject(driver);
+    }
+    public static MyOrderPageObject getMyOrdersPage(WebDriver driver){
+        return new MyOrderPageObject(driver);
+    }
+    public static BillingAgreementsPageObject getBillingAgreementsPage(WebDriver driver){
+        return new BillingAgreementsPageObject(driver);
     }
 }

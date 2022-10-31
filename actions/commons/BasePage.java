@@ -8,6 +8,8 @@ import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import pageObjects.liveGuru.*;
+import pageUIs.liveGuru.BasePageUI;
 
 import java.util.List;
 import java.util.Set;
@@ -315,6 +317,36 @@ public class BasePage {
     public void waitForElementClickable(WebDriver driver, String xpathLocator){
         WebDriverWait explicitWait = new WebDriverWait(driver, longTimeout);
         explicitWait.until(ExpectedConditions.elementToBeClickable(getByXpath(xpathLocator)));
+    }
+
+    public MyDashboardPageObject openMyDashboardPage(WebDriver driver){
+        waitForElementClickable(driver, BasePageUI.ACCOUNT_DASHBOARD_LINK);
+        clickToElement(driver, BasePageUI.ACCOUNT_DASHBOARD_LINK);
+        return PageGeneratorManager.getMyAccountDashboardPage(driver);
+    }
+
+    public AccountInforPageObject openAccountInforPage(WebDriver driver){
+        waitForElementClickable(driver, BasePageUI.ACCOUNT_INFOR_LINK);
+        clickToElement(driver, BasePageUI.ACCOUNT_INFOR_LINK);
+        return PageGeneratorManager.getAccountInforPage(driver);
+    }
+
+    public AddressBookPageObject openAddressBookPage(WebDriver driver){
+        waitForElementClickable(driver, BasePageUI.ADDRESS_BOOK_LINK);
+        clickToElement(driver, BasePageUI.ADDRESS_BOOK_LINK);
+        return PageGeneratorManager.getAddressBookPage(driver);
+    }
+
+    public MyOrderPageObject openMyOrdersPage(WebDriver driver){
+        waitForElementClickable(driver, BasePageUI.MY_ORDERS_LINK);
+        clickToElement(driver, BasePageUI.MY_ORDERS_LINK);
+        return PageGeneratorManager.getMyOrdersPage(driver);
+    }
+
+    public BillingAgreementsPageObject openBillingAgreementsPage(WebDriver driver){
+        waitForElementClickable(driver, BasePageUI.BILLING_AGREEMENTS_LINK);
+        clickToElement(driver, BasePageUI.BILLING_AGREEMENTS_LINK);
+        return PageGeneratorManager.getBillingAgreementsPage(driver);
     }
 
     private long longTimeout = 30;

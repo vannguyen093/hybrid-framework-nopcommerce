@@ -14,7 +14,11 @@ public class Live_Guru_User extends BaseTest {
   HomePageObject homePage;
   LoginPageObject loginPage;
   RegisterPageObject registerPage;
-  MyAccountPageObject myAccountPage;
+  MyDashboardPageObject myAccountDashboardPage;
+  AccountInforPageObject accountInforPage;
+  AddressBookPageObject addressBookPage;
+  MyOrderPageObject myOrderPage;
+  BillingAgreementsPageObject billingAgreementsPage;
   String firstName, lastName, email, password;
 
   @Parameters("browser")
@@ -46,10 +50,10 @@ public class Live_Guru_User extends BaseTest {
     registerPage.inputConfirmPasswordTextbox(password);
     registerPage.clickRegisterButton();
 
-    myAccountPage = PageGeneratorManager.getMyAccountPage(driver);
-    Assert.assertEquals(myAccountPage.getRegisterSuccessMessage(), "Thank you for registering with Main Website Store.");
-    myAccountPage.clickToAccountButton();
-    myAccountPage.clickToLogoutButton();
+    myAccountDashboardPage = PageGeneratorManager.getMyAccountDashboardPage(driver);
+    Assert.assertEquals(myAccountDashboardPage.getRegisterSuccessMessage(), "Thank you for registering with Main Website Store.");
+    myAccountDashboardPage.clickToAccountButton();
+    myAccountDashboardPage.clickToLogoutButton();
     homePage = PageGeneratorManager.getHomePage(driver);
   }
 
@@ -62,11 +66,22 @@ public class Live_Guru_User extends BaseTest {
     loginPage.inputPasswordTextbox(password);
     loginPage.clickToLoginButton();
 
-    myAccountPage = PageGeneratorManager.getMyAccountPage(driver);
-    Assert.assertEquals(myAccountPage.getHelloUserText(), "Hello, Van Nguyen!");
-    myAccountPage.clickToAccountButton();
-    myAccountPage.clickToLogoutButton();
-    homePage = PageGeneratorManager.getHomePage(driver);
+    myAccountDashboardPage = PageGeneratorManager.getMyAccountDashboardPage(driver);
+    Assert.assertEquals(myAccountDashboardPage.getHelloUserText(), "Hello, Van Nguyen!");
+  }
+
+  @Test
+  public void User_03_Switch_Page() {
+    accountInforPage = myAccountDashboardPage.openAccountInforPage(driver);
+
+    addressBookPage = accountInforPage.openAddressBookPage(driver);
+
+    myOrderPage = addressBookPage.openMyOrdersPage(driver);
+
+    billingAgreementsPage = myOrderPage.openBillingAgreementsPage(driver);
+
+    myAccountDashboardPage = billingAgreementsPage.openMyDashboardPage(driver);
+
   }
 
   @AfterClass
