@@ -14,7 +14,6 @@ import pageObjects.RegisterPageObject;
 
 public class Level_06_Page_Generator_Manager_II extends BaseTest {
   WebDriver driver;
-  String projectPath = System.getProperty("user.dir");
   String firstName, lastName,notFoundEmail, existingEmail, password;
   HomePageObject homePage;
   RegisterPageObject registerPage;
