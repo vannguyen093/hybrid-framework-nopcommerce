@@ -8,6 +8,7 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 
+import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
 public class BaseTest {
@@ -49,5 +50,10 @@ public class BaseTest {
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
         driver.get("https://demo.nopcommerce.com/");
         return driver;
+    }
+
+    protected int generateFakeNumber() {
+        Random random = new Random();
+        return random.nextInt(99999);
     }
 }

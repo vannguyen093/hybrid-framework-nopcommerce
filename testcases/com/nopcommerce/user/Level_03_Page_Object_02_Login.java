@@ -38,24 +38,24 @@ public class Level_03_Page_Object_02_Login {
     existingEmail = "vannguyen" + generateFakeNumber() + "@gmail.com";
     notFoundEmail = "vannguyen" + generateFakeNumber() + "@gmail.vn";
 
-    System.out.println("Register 03 - Step 01: Click to register link");
+    System.out.println("Pre-Condition - Step 01: Click to register link");
     homePage.clickToRegisterLink();
 
     registerPage = new RegisterPageObject(driver);
 
-    System.out.println("Register 03 - Step 02: Input valid data into required fields");
+    System.out.println("Pre-Condition - Step 02: Input valid data into required fields");
     registerPage.inputToFirstNameTextbox(firstName);
     registerPage.inputToLastNameTextbox(lastName);
     registerPage.inputToEmailTextbox(existingEmail);
     registerPage.inputToPasswordTextbox(password);
     registerPage.inputToConfirmPasswordTextbox(password);
 
-    System.out.println("Register 03 - Step 03: Click to register button");
+    System.out.println("Pre-Condition - Step 03: Click to register button");
     registerPage.clickToRegisterButton();
 
-    System.out.println("Register 03 - Step 03: Verify success message");
+    System.out.println("Pre-Condition - Step 03: Verify success message");
     Assert.assertEquals(registerPage.getSuccessMessage(), "Your registration completed");
-    System.out.println("Register 03 - Step 04: Click to logout link");
+    System.out.println("Pre-Condition - Step 04: Click to logout link");
     registerPage.clickToLogOutLink();
 
     homePage = new HomePageObject(driver);
@@ -159,10 +159,10 @@ public class Level_03_Page_Object_02_Login {
     System.out.println("Login 06 - Step 03: Click to login button");
     loginPage.clickToLoginButton();
 
-    System.out.println("Login 06 - Step 04: Verify My Account link display");
-    Assert.assertTrue(loginPage.isMyAccountLinkDisplayed());
-
     homePage = new HomePageObject(driver);
+
+    System.out.println("Login 06 - Step 04: Verify My Account link display");
+    Assert.assertTrue(homePage.isMyAccountLinkDisplayed());
   }
 
   @AfterClass
