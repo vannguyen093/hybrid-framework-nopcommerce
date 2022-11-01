@@ -7,74 +7,69 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-import pageObjects.nopCommerce.HomePageObject;
-import pageObjects.nopCommerce.LoginPageObject;
-import pageObjects.nopCommerce.PageGeneratorManager;
-import pageObjects.nopCommerce.RegisterPageObject;
+import pageObjects.nopCommerce.*;
 
 import java.util.Random;
 
-public class Level_07_Switch_Page extends BaseTest{
-  private WebDriver driver;
-  private String firstName, lastName, email, password;
-  private HomePageObject homePage;
-  private RegisterPageObject registerPage;
-  private LoginPageObject loginPage;
+public class Level_07_Switch_Page extends BaseTest {
+    private WebDriver driver;
+    private String firstName, lastName, email, password;
+    private HomePageObject homePage;
+    private RegisterPageObject registerPage;
+    private LoginPageObject loginPage;
+    private CustomerInfoPageObject customerInfoPage;
+    private AddressesPageObject addressesPage;
+    private OrdersPageObject ordersPage;
 
-  @Parameters("browser")
-  @BeforeClass
-  public void beforeClass(String browserName) {
+    @Parameters("browser")
+    @BeforeClass
+    public void beforeClass(String browserName) {
 
-    driver = getBrowserDriver(browserName);
+        driver = getBrowserDriver(browserName);
 
-    homePage = PageGeneratorManager.getHomePage(driver);
+        homePage = PageGeneratorManager.getHomePage(driver);
 
-    firstName = "Automation";
-    lastName = "FC";
-    password = "123456";
-    email = "vannguyen" + generateFakeNumber() + "@gmail.com";
-  }
-  
-  @Test
-  public void User_01_Register() {
-    registerPage = homePage.clickToRegisterLink();
+        firstName = "Automation";
+        lastName = "FC";
+        password = "123456";
+        email = "vannguyen" + generateFakeNumber() + "@gmail.com";
+    }
 
-    registerPage.inputToFirstNameTextbox(firstName);
-    registerPage.inputToLastNameTextbox(lastName);
-    registerPage.inputToEmailTextbox(email);
-    registerPage.inputToPasswordTextbox(password);
-    registerPage.inputToConfirmPasswordTextbox(password);
+    @Test
+    public void User_01_Register() {
+        registerPage = homePage.clickToRegisterLink();
 
-    registerPage.clickToRegisterButton();
+        registerPage.inputToFirstNameTextbox(firstName);
+        registerPage.inputToLastNameTextbox(lastName);
+        registerPage.inputToEmailTextbox(email);
+        registerPage.inputToPasswordTextbox(password);
+        registerPage.inputToConfirmPasswordTextbox(password);
 
-    Assert.assertEquals(registerPage.getSuccessMessage(), "Your registration completed");
-    homePage = registerPage.clickToLogOutLink();
-  }
+        registerPage.clickToRegisterButton();
 
-  @Test
-  public void User_02_Login() {
-    homePage.clickToLoginLink();
+        Assert.assertEquals(registerPage.getSuccessMessage(), "Your registration completed");
+        homePage = registerPage.clickToLogOutLink();
+    }
 
-    loginPage = new LoginPageObject(driver);
+    @Test
+    public void User_02_Login() {
+        loginPage = homePage.clickToLoginLink();
 
-    loginPage.inputToEmailTextbox("23423@465#456");
+        loginPage.inputToEmailTextbox(email);
+        loginPage.inputToPasswordTextbox(password);
+        homePage = loginPage.clickToLoginButton();
+        customerInfoPage = homePage.clickToMyAccountLink();
+    }
 
-    loginPage.clickToLoginButton();
+    @Test
+    public void User_03_Switch_Page() {
+        addressesPage = customerInfoPage.openAddressesPage(driver);
+        ordersPage = addressesPage.openOrdersPage(driver);
+        customerInfoPage = ordersPage.openCustomerInfoPage(driver);
+    }
 
-    Assert.assertEquals(loginPage.getErrorMessageAtEmailTextbox(), "Wrong email");
-  }
-
-  @Test
-  public void User_03_Switch_Page() {
-  }
-
-  @AfterClass
-  public void afterClass() {
-    driver.quit();
-  }
-
-  public int generateFakeNumber() {
-    Random random = new Random();
-    return random.nextInt(99999);
-  }
+    @AfterClass
+    public void afterClass() {
+        driver.quit();
+    }
 }
