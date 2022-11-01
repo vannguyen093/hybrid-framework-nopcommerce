@@ -56,11 +56,11 @@
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="file://$MODULE_DIR$/libWebDriverManager" />
+          <root url="file://$MODULE_DIR$/libWebDriverManager5" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
-        <jarDirectory url="file://$MODULE_DIR$/libWebDriverManager" recursive="false" />
+        <jarDirectory url="file://$MODULE_DIR$/libWebDriverManager5" recursive="false" />
       </library>
     </orderEntry>
   </component>
