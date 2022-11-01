@@ -1,6 +1,5 @@
 package commons;
 
-import org.jetbrains.annotations.NotNull;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.Color;
@@ -9,8 +8,14 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import pageObjects.liveGuru.*;
-import pageObjects.nopCommerce.*;
-import pageUIs.liveGuru.BasePageUI;
+import pageObjects.nopCommerce.admin.AdminLoginPageObject;
+import pageObjects.nopCommerce.user.UserAddressesPageObject;
+import pageObjects.nopCommerce.user.UserCustomerInfoPageObject;
+import pageObjects.nopCommerce.user.UserHomePageObject;
+import pageObjects.nopCommerce.user.UserOrdersPageObject;
+import pageObjects.nopCommerce.PageGeneratorManager;
+import pageUIs.nopCommerce.admin.AdminBasePageUI;
+import pageUIs.nopCommerce.user.UserBasePageUI;
 
 import java.util.List;
 import java.util.Set;
@@ -350,22 +355,35 @@ public class BasePage {
         return pageObjects.liveGuru.PageGeneratorManager.getBillingAgreementsPage(driver);
     }
 
-    public CustomerInfoPageObject openCustomerInfoPage(WebDriver driver){
-        waitForElementClickable(driver, pageUIs.nopCommerce.BasePageUI.CUSTOMER_INFO_LINK);
-        clickToElement(driver, pageUIs.nopCommerce.BasePageUI.CUSTOMER_INFO_LINK);
-        return pageObjects.nopCommerce.PageGeneratorManager.getCustomerInfoPage(driver);
+    public UserCustomerInfoPageObject openCustomerInfoPage(WebDriver driver){
+        waitForElementClickable(driver, UserBasePageUI.CUSTOMER_INFO_LINK);
+        clickToElement(driver, UserBasePageUI.CUSTOMER_INFO_LINK);
+        return PageGeneratorManager.getUserCustomerInfoPage(driver);
     }
 
-    public AddressesPageObject openAddressesPage(WebDriver driver){
-        waitForElementClickable(driver, pageUIs.nopCommerce.BasePageUI.ADDRESSES_LINK);
-        clickToElement(driver, pageUIs.nopCommerce.BasePageUI.ADDRESSES_LINK);
-        return pageObjects.nopCommerce.PageGeneratorManager.getAddressesPage(driver);
+    public UserAddressesPageObject openAddressesPage(WebDriver driver){
+        waitForElementClickable(driver, UserBasePageUI.ADDRESSES_LINK);
+        clickToElement(driver, UserBasePageUI.ADDRESSES_LINK);
+        return PageGeneratorManager.getUserAddressesPage(driver);
     }
 
-    public OrdersPageObject openOrdersPage(WebDriver driver){
-        waitForElementClickable(driver, pageUIs.nopCommerce.BasePageUI.ORDERS_LINK);
-        clickToElement(driver, pageUIs.nopCommerce.BasePageUI.ORDERS_LINK);
-        return pageObjects.nopCommerce.PageGeneratorManager.getOrdersPage(driver);
+    public UserOrdersPageObject openOrdersPage(WebDriver driver){
+        waitForElementClickable(driver, UserBasePageUI.ORDERS_LINK);
+        clickToElement(driver, UserBasePageUI.ORDERS_LINK);
+        return PageGeneratorManager.getUserOrdersPage(driver);
+    }
+
+    public UserHomePageObject clickToLogoutLinkAtUser(WebDriver driver) {
+        waitForElementClickable(driver, UserBasePageUI.LOGOUT_LINK);
+        clickToElement(driver, UserBasePageUI.LOGOUT_LINK);
+        return PageGeneratorManager.getUserHomePage(driver);
+    }
+
+    public AdminLoginPageObject clickToLogoutLinkAtAdmin(WebDriver driver) {
+        waitForElementInvisible(driver, AdminBasePageUI.AJAX_BUSY);
+        waitForElementClickable(driver, AdminBasePageUI.LOGOUT_LINK);
+        clickToElement(driver, AdminBasePageUI.LOGOUT_LINK);
+        return PageGeneratorManager.getAdminLoginPage(driver);
     }
 
     private long longTimeout = 30;

@@ -7,18 +7,18 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-import pageObjects.nopCommerce.HomePageObject;
-import pageObjects.nopCommerce.LoginPageObject;
-import pageObjects.nopCommerce.RegisterPageObject;
+import pageObjects.nopCommerce.user.UserHomePageObject;
+import pageObjects.nopCommerce.user.UserLoginPageObject;
+import pageObjects.nopCommerce.user.UserRegisterPageObject;
 
 import java.util.Random;
 
 public class Level_04_Multiple_Browser extends BaseTest{
   private WebDriver driver;
   private String firstName, lastName,notFoundEmail, existingEmail, password;
-  private HomePageObject homePage;
-  private RegisterPageObject registerPage;
-  private LoginPageObject loginPage;
+  private UserHomePageObject homePage;
+  private UserRegisterPageObject registerPage;
+  private UserLoginPageObject loginPage;
 
   @Parameters("browser")
   @BeforeClass
@@ -26,7 +26,7 @@ public class Level_04_Multiple_Browser extends BaseTest{
 
     driver = getBrowserDriver(browserName);
 
-    homePage = new HomePageObject(driver);
+    homePage = new UserHomePageObject(driver);
 
     firstName = "Automation";
     lastName = "FC";
@@ -37,7 +37,7 @@ public class Level_04_Multiple_Browser extends BaseTest{
     System.out.println("Pre-Condition - Step 01: Click to register link");
     homePage.clickToRegisterLink();
 
-    registerPage = new RegisterPageObject(driver);
+    registerPage = new UserRegisterPageObject(driver);
 
     System.out.println("Pre-Condition - Step 02: Input valid data into required fields");
     registerPage.inputToFirstNameTextbox(firstName);
@@ -54,7 +54,7 @@ public class Level_04_Multiple_Browser extends BaseTest{
     System.out.println("Pre-Condition - Step 04: Click to logout link");
     registerPage.clickToLogOutLink();
 
-    homePage = new HomePageObject(driver);
+    homePage = new UserHomePageObject(driver);
   }
   
   @Test
@@ -62,7 +62,7 @@ public class Level_04_Multiple_Browser extends BaseTest{
     System.out.println("Login 01 - Step 01: Click to login link");
     homePage.clickToLoginLink();
 
-    loginPage = new LoginPageObject(driver);
+    loginPage = new UserLoginPageObject(driver);
 
     System.out.println("Login 01 - Step 02: Click to login button");
     loginPage.clickToLoginButton();

@@ -48,7 +48,8 @@ public class BaseTest {
                 throw new RuntimeException("Browser not supported: " + browserName);
         }
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-        driver.get("https://demo.nopcommerce.com");
+        driver.manage().window().maximize();
+        driver.get(GlobalConstants.USER_PAGE_URL);
         return driver;
     }
 

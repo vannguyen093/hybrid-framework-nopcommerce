@@ -7,19 +7,18 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-import pageObjects.nopCommerce.*;
-
-import java.util.Random;
+import pageObjects.nopCommerce.PageGeneratorManager;
+import pageObjects.nopCommerce.user.*;
 
 public class Level_07_Switch_Page extends BaseTest {
     private WebDriver driver;
     private String firstName, lastName, email, password;
-    private HomePageObject homePage;
-    private RegisterPageObject registerPage;
-    private LoginPageObject loginPage;
-    private CustomerInfoPageObject customerInfoPage;
-    private AddressesPageObject addressesPage;
-    private OrdersPageObject ordersPage;
+    private UserHomePageObject homePage;
+    private UserRegisterPageObject registerPage;
+    private UserLoginPageObject loginPage;
+    private UserCustomerInfoPageObject customerInfoPage;
+    private UserAddressesPageObject addressesPage;
+    private UserOrdersPageObject ordersPage;
 
     @Parameters("browser")
     @BeforeClass
@@ -27,7 +26,7 @@ public class Level_07_Switch_Page extends BaseTest {
 
         driver = getBrowserDriver(browserName);
 
-        homePage = PageGeneratorManager.getHomePage(driver);
+        homePage = PageGeneratorManager.getUserHomePage(driver);
 
         firstName = "Automation";
         lastName = "FC";

@@ -7,17 +7,17 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-import pageObjects.nopCommerce.HomePageObject;
-import pageObjects.nopCommerce.LoginPageObject;
-import pageObjects.nopCommerce.RegisterPageObject;
+import pageObjects.nopCommerce.user.UserHomePageObject;
+import pageObjects.nopCommerce.user.UserLoginPageObject;
+import pageObjects.nopCommerce.user.UserRegisterPageObject;
 
 public class Level_06_Page_Generator_Manager_I extends BaseTest {
   WebDriver driver;
   String projectPath = System.getProperty("user.dir");
   String firstName, lastName,notFoundEmail, existingEmail, password;
-  HomePageObject homePage;
-  RegisterPageObject registerPage;
-  LoginPageObject loginPage;
+  UserHomePageObject homePage;
+  UserRegisterPageObject registerPage;
+  UserLoginPageObject loginPage;
 
   @Parameters("browser")
   @BeforeClass
@@ -25,7 +25,7 @@ public class Level_06_Page_Generator_Manager_I extends BaseTest {
 
     driver = getBrowserDriver(browserName);
 
-    homePage = new HomePageObject(driver);
+    homePage = new UserHomePageObject(driver);
 
     firstName = "Automation";
     lastName = "FC";
