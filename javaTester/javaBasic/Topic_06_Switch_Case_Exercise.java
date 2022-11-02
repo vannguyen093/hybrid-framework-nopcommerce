@@ -10,7 +10,6 @@ public class Topic_06_Switch_Case_Exercise {
     @Test
     public void TC_01() {
         int month = scanner.nextInt();
-
         switch (month) {
             case 1:
             case 3:
@@ -33,14 +32,6 @@ public class Topic_06_Switch_Case_Exercise {
                 System.out.println("Vui lòng nhập tháng trong khoảng 1 - 12");
                 break;
         }
-    }
-
-    public Scanner getScanner() {
-        return scanner;
-    }
-
-    public void setScanner(Scanner scanner) {
-        this.scanner = scanner;
     }
 
     @Test
