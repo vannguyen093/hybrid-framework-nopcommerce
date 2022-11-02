@@ -2,6 +2,7 @@ package javaBasic;
 
 import java.util.Scanner;
 
+import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
 
 public class Topic_06_Switch_Case_Exercise {
@@ -10,6 +11,7 @@ public class Topic_06_Switch_Case_Exercise {
     @Test
     public void TC_01() {
         int month = scanner.nextInt();
+
         switch (month) {
             case 1:
             case 3:
@@ -33,7 +35,7 @@ public class Topic_06_Switch_Case_Exercise {
                 break;
         }
     }
-
+    
     @Test
     public void TC_02() {
         int number = scanner.nextInt();
