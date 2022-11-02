@@ -40,4 +40,14 @@ public class RegisterPageObject extends BasePage {
         waitForElementClickable(driver, RegisterPageUI.REGISTER_BUTTON);
         clickToElement(driver, RegisterPageUI.REGISTER_BUTTON);
     }
+
+    public MyDashboardPageObject inputToRequiredRegisterField(String firstName, String lastName, String email, String password, String password1) {
+        inputFirstNameTextbox(firstName);
+        inputLastNameTextbox(lastName);
+        inputEmailTextbox(email);
+        inputPasswordTextbox(password);
+        inputConfirmPasswordTextbox(password1);
+        clickRegisterButton();
+        return PageGeneratorManager.getMyAccountDashboardPage(driver);
+    }
 }

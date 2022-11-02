@@ -49,7 +49,7 @@ public class BaseTest {
         }
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
         driver.manage().window().maximize();
-        driver.get(GlobalConstants.USER_PAGE_URL);
+        driver.get(GlobalConstants.USER_LIVE_GURU_URL);
         return driver;
     }
 

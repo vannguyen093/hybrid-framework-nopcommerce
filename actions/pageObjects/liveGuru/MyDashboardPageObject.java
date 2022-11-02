@@ -21,9 +21,10 @@ public class MyDashboardPageObject extends BasePage {
         clickToElement(driver, MyAccountPageUI.ACCOUNT_BUTTON);
     }
 
-    public void clickToLogoutButton() {
+    public HomePageObject clickToLogoutButton() {
         waitForElementClickable(driver, MyAccountPageUI.LOGOUT_BUTTON);
         clickToElement(driver, MyAccountPageUI.LOGOUT_BUTTON);
+        return PageGeneratorManager.getHomePage(driver);
     }
 
     public String getHelloUserText() {
