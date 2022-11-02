@@ -1,4 +1,4 @@
-package pageUIs.liveGuru;
+package pageUIs.liveGuru.user;
 
 public class MyAccountPageUI {
     public static final String SUCCESS_MESSAGE = "xpath=//ul[@class='messages']//span";

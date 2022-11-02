@@ -7,14 +7,11 @@ import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import pageObjects.liveGuru.*;
+import pageObjects.liveGuru.user.*;
 import pageObjects.nopCommerce.admin.AdminLoginPageObject;
-import pageObjects.nopCommerce.user.UserAddressesPageObject;
-import pageObjects.nopCommerce.user.UserCustomerInfoPageObject;
 import pageObjects.nopCommerce.user.UserHomePageObject;
-import pageObjects.nopCommerce.user.UserOrdersPageObject;
 import pageObjects.nopCommerce.PageGeneratorManager;
-import pageUIs.liveGuru.BasePageUI;
+import pageUIs.liveGuru.user.BasePageUI;
 import pageUIs.nopCommerce.admin.AdminBasePageUI;
 import pageUIs.nopCommerce.user.UserBasePageUI;
 
@@ -413,33 +410,33 @@ public class BasePage {
 
     //Level_08_Switch_Role
     public MyDashboardPageObject openMyDashboardPage(WebDriver driver){
-        waitForElementClickable(driver, pageUIs.liveGuru.BasePageUI.ACCOUNT_DASHBOARD_LINK);
-        clickToElement(driver, pageUIs.liveGuru.BasePageUI.ACCOUNT_DASHBOARD_LINK);
-        return pageObjects.liveGuru.PageGeneratorManager.getMyAccountDashboardPage(driver);
+        waitForElementClickable(driver, BasePageUI.ACCOUNT_DASHBOARD_LINK);
+        clickToElement(driver, BasePageUI.ACCOUNT_DASHBOARD_LINK);
+        return pageObjects.liveGuru.user.PageGeneratorManager.getMyAccountDashboardPage(driver);
     }
 
     public AccountInforPageObject openAccountInforPage(WebDriver driver){
-        waitForElementClickable(driver, pageUIs.liveGuru.BasePageUI.ACCOUNT_INFOR_LINK);
-        clickToElement(driver, pageUIs.liveGuru.BasePageUI.ACCOUNT_INFOR_LINK);
-        return pageObjects.liveGuru.PageGeneratorManager.getAccountInforPage(driver);
+        waitForElementClickable(driver, BasePageUI.ACCOUNT_INFOR_LINK);
+        clickToElement(driver, BasePageUI.ACCOUNT_INFOR_LINK);
+        return pageObjects.liveGuru.user.PageGeneratorManager.getAccountInforPage(driver);
     }
 
     public AddressBookPageObject openAddressBookPage(WebDriver driver){
-        waitForElementClickable(driver, pageUIs.liveGuru.BasePageUI.ADDRESS_BOOK_LINK);
-        clickToElement(driver, pageUIs.liveGuru.BasePageUI.ADDRESS_BOOK_LINK);
-        return pageObjects.liveGuru.PageGeneratorManager.getAddressBookPage(driver);
+        waitForElementClickable(driver, BasePageUI.ADDRESS_BOOK_LINK);
+        clickToElement(driver, BasePageUI.ADDRESS_BOOK_LINK);
+        return pageObjects.liveGuru.user.PageGeneratorManager.getAddressBookPage(driver);
     }
 
     public MyOrderPageObject openMyOrdersPage(WebDriver driver){
-        waitForElementClickable(driver, pageUIs.liveGuru.BasePageUI.MY_ORDERS_LINK);
-        clickToElement(driver, pageUIs.liveGuru.BasePageUI.MY_ORDERS_LINK);
-        return pageObjects.liveGuru.PageGeneratorManager.getMyOrdersPage(driver);
+        waitForElementClickable(driver, BasePageUI.MY_ORDERS_LINK);
+        clickToElement(driver, BasePageUI.MY_ORDERS_LINK);
+        return pageObjects.liveGuru.user.PageGeneratorManager.getMyOrdersPage(driver);
     }
 
     public BillingAgreementsPageObject openBillingAgreementsPage(WebDriver driver){
-        waitForElementClickable(driver, pageUIs.liveGuru.BasePageUI.BILLING_AGREEMENTS_LINK);
-        clickToElement(driver, pageUIs.liveGuru.BasePageUI.BILLING_AGREEMENTS_LINK);
-        return pageObjects.liveGuru.PageGeneratorManager.getBillingAgreementsPage(driver);
+        waitForElementClickable(driver, BasePageUI.BILLING_AGREEMENTS_LINK);
+        clickToElement(driver, BasePageUI.BILLING_AGREEMENTS_LINK);
+        return pageObjects.liveGuru.user.PageGeneratorManager.getBillingAgreementsPage(driver);
     }
 
     //Level_07_Switch_Page

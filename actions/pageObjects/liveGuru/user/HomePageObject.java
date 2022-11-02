@@ -1,8 +1,8 @@
-package pageObjects.liveGuru;
+package pageObjects.liveGuru.user;
 
 import commons.BasePage;
 import org.openqa.selenium.WebDriver;
-import pageUIs.liveGuru.HomePageUI;
+import pageUIs.liveGuru.user.HomePageUI;
 
 public class HomePageObject extends BasePage {
     private WebDriver driver;

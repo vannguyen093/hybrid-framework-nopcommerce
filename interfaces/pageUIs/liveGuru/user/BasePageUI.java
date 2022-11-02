@@ -1,4 +1,4 @@
-package pageUIs.liveGuru;
+package pageUIs.liveGuru.user;
 
 public class BasePageUI {
     public static final String ACCOUNT_DASHBOARD_LINK = "xpath=//div[@class='block-content']//a[text()='Account Dashboard']";

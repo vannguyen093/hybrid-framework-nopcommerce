@@ -1,4 +1,4 @@
-package pageUIs.liveGuru;
+package pageUIs.liveGuru.user;
 
 public class RegisterPageUI {
     public static final String FIRST_NAME_TEXTBOX = "xpath=//input[@id='firstname']";

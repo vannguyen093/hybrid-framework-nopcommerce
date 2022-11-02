@@ -1,4 +1,4 @@
-package pageUIs.liveGuru;
+package pageUIs.liveGuru.user;
 
 public class LoginPageUI {
     public static final String EMAIL_TEXTBOX = "xpath=//input[@id='email']";
