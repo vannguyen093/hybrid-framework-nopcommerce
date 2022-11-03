@@ -43,27 +43,26 @@ public class Live_Guru_User extends BaseTest {
 
         myAccountDashboardPage = registerPage.inputToRequiredRegisterField(firstName, lastName, email, password, password);
         Assert.assertEquals(myAccountDashboardPage.getRegisterSuccessMessage(), "Thank you for registering with Main Website Store.");
-
-        myAccountDashboardPage.clickToAccountButton();
-        homePage = myAccountDashboardPage.clickToLogoutButton();
     }
 
     @Test
-    public void User_02_Login_To_System() {
+    public void User_02_Verify_Info_After_Register_Successful() {
+        myAccountDashboardPage.openPagesAtDashboardByPageName(driver, "Account Information");
+        accountInforPage = PageGeneratorManager.getAccountInforPage(driver);
+
+        Assert.assertEquals(accountInforPage.getValueAtFirstNameTextbox(), firstName);
+        Assert.assertEquals(accountInforPage.getValueAtLastNameTextbox(), lastName);
+        Assert.assertEquals(accountInforPage.getValueAtEmailTextbox(), email);
+
+        accountInforPage.clickToLogOutLinkAtUserLiveGuru(driver);
+    }
+
+    @Test
+    public void User_03_Login_To_System() {
         loginPage = homePage.clickToMyAccountLink();
 
         myAccountDashboardPage = loginPage.loginAsUser(email, password);
         Assert.assertEquals(myAccountDashboardPage.getHelloUserText(), "Hello, Van Nguyen!");
-    }
-
-    @Test
-    public void User_03_Switch_Page() {
-        myAccountDashboardPage.openPagesAtDashboardByPageName(driver, "Account Information");
-        accountInforPage = PageGeneratorManager.getAccountInforPage(driver);
-
-        accountInforPage.openPagesAtDashboardByPageName(driver, "Address Book");
-        addressBookPage = PageGeneratorManager.getAddressBookPage(driver);
-
     }
 
     @AfterClass

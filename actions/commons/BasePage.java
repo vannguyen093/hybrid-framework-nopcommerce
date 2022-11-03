@@ -214,6 +214,10 @@ public class BasePage {
         return getWebElement(driver, locatorType).getAttribute(attributeName);
     }
 
+    public String getElementAttribute(WebDriver driver, String locatorType, String attributeName, String... dynamicValues) {
+        return getWebElement(driver, getDynamicXpath(locatorType, dynamicValues)).getAttribute(attributeName);
+    }
+
     public String getElementText(WebDriver driver, String locatorType) {
         return getWebElement(driver, locatorType).getText();
     }
@@ -458,12 +462,6 @@ public class BasePage {
 //        return PageGeneratorManager.getUserOrdersPage(driver);
 //    }
 
-    public UserHomePageObject clickToLogoutLinkAtUser(WebDriver driver) {
-        waitForElementClickable(driver, UserBasePageUI.LOGOUT_LINK);
-        clickToElement(driver, UserBasePageUI.LOGOUT_LINK);
-        return PageGeneratorManager.getUserHomePage(driver);
-    }
-
     //Level_09_Dynamic_Locator
     public BasePage openPageAtMyAccountByName(WebDriver driver, String pageName){
         waitForElementClickable(driver, UserBasePageUI.DYNAMIC_PAGE_AT_MY_ACCOUNT_AREA, pageName);
@@ -488,6 +486,12 @@ public class BasePage {
         clickToElement(driver, BasePageUI.DYNAMIC_PAGE_AT_DASHBOARD_AREA, pageName);
     }
 
+    public UserHomePageObject clickToLogoutLinkAtUser(WebDriver driver) {
+        waitForElementClickable(driver, UserBasePageUI.LOGOUT_LINK);
+        clickToElement(driver, UserBasePageUI.LOGOUT_LINK);
+        return PageGeneratorManager.getUserHomePage(driver);
+    }
+
     public AdminLoginPageObject clickToLogoutLinkAtAdmin(WebDriver driver) {
         waitForElementInvisible(driver, AdminBasePageUI.AJAX_BUSY);
         waitForElementClickable(driver, AdminBasePageUI.LOGOUT_LINK);
@@ -495,6 +499,14 @@ public class BasePage {
         return PageGeneratorManager.getAdminLoginPage(driver);
     }
 
+    public HomePageObject clickToLogOutLinkAtUserLiveGuru(WebDriver driver) {
+        waitForElementClickable(driver, BasePageUI.ACCOUNT_BUTTON);
+        clickToElement(driver, BasePageUI.ACCOUNT_BUTTON);
+        waitForElementClickable(driver, BasePageUI.LOGOUT_BUTTON);
+        clickToElement(driver, BasePageUI.LOGOUT_BUTTON);
+        return pageObjects.liveGuru.user.PageGeneratorManager.getHomePage(driver);
+    }
     private long longTimeout = 30;
+
     private long shortTimeout = 5;
 }
