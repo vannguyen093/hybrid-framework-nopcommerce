@@ -54,6 +54,26 @@ public class BaseTest {
         return driver;
     }
 
+    private String getEnvironmentUrl(String serverName){
+        String envUrl = null;
+        EnviromentList enviroment = EnviromentList.valueOf(serverName.toUpperCase());
+        switch (enviroment){
+            case DEV:
+                envUrl = "https://demo.nopcommerce.com/";
+                break;
+            case TESTING:
+                envUrl = "https://admin-demo.nopcommerce.com/";
+                break;
+            case STAGING:
+                envUrl = "https://staging.nopcommerce.com/";
+                break;
+            case PRODUCTION:
+                envUrl = "https://production.nopcommerce.com/";
+                break;
+        }
+        return envUrl;
+    }
+
     protected int generateFakeNumber() {
         Random random = new Random();
         return random.nextInt(99999);
