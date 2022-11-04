@@ -3,28 +3,28 @@ package pageObjects.liveGuru.user;
 import org.openqa.selenium.WebDriver;
 
 public class PageGeneratorManager {
-    public static HomePageObject getHomePage(WebDriver driver){
-        return new HomePageObject(driver);
+    public static UserHomePageObject getHomePage(WebDriver driver){
+        return new UserHomePageObject(driver);
     }
-    public static LoginPageObject getLoginPage(WebDriver driver){
-        return new LoginPageObject(driver);
+    public static UserLoginPageObject getLoginPage(WebDriver driver){
+        return new UserLoginPageObject(driver);
     }
     public static RegisterPageObject getRegisterPage(WebDriver driver){
         return new RegisterPageObject(driver);
     }
-    public static MyDashboardPageObject getMyAccountDashboardPage(WebDriver driver){
-        return new MyDashboardPageObject(driver);
+    public static UserMyDashboardPageObject getMyAccountDashboardPage(WebDriver driver){
+        return new UserMyDashboardPageObject(driver);
     }
-    public static AccountInforPageObject getAccountInforPage(WebDriver driver){
-        return new AccountInforPageObject(driver);
+    public static UserAccountInforPageObject getAccountInforPage(WebDriver driver){
+        return new UserAccountInforPageObject(driver);
     }
-    public static AddressBookPageObject getAddressBookPage(WebDriver driver){
-        return new AddressBookPageObject(driver);
+    public static UserAddressBookPageObject getAddressBookPage(WebDriver driver){
+        return new UserAddressBookPageObject(driver);
     }
-    public static MyOrderPageObject getMyOrdersPage(WebDriver driver){
-        return new MyOrderPageObject(driver);
+    public static UserMyOrderPageObject getMyOrdersPage(WebDriver driver){
+        return new UserMyOrderPageObject(driver);
     }
-    public static BillingAgreementsPageObject getBillingAgreementsPage(WebDriver driver){
-        return new BillingAgreementsPageObject(driver);
+    public static UserillingAgreementsPageObject getBillingAgreementsPage(WebDriver driver){
+        return new UserillingAgreementsPageObject(driver);
     }
 }

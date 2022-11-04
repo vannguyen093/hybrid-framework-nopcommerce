@@ -41,7 +41,7 @@ public class RegisterPageObject extends BasePage {
         clickToElement(driver, RegisterPageUI.REGISTER_BUTTON);
     }
 
-    public MyDashboardPageObject inputToRequiredRegisterField(String firstName, String lastName, String email, String password, String password1) {
+    public UserMyDashboardPageObject inputToRequiredRegisterField(String firstName, String lastName, String email, String password, String password1) {
         inputFirstNameTextbox(firstName);
         inputLastNameTextbox(lastName);
         inputEmailTextbox(email);

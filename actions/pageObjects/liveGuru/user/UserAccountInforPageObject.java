@@ -4,10 +4,10 @@ import commons.BasePage;
 import org.openqa.selenium.WebDriver;
 import pageUIs.liveGuru.user.AccountInfoPageUI;
 
-public class AccountInforPageObject extends BasePage {
+public class UserAccountInforPageObject extends BasePage {
     private WebDriver driver;
 
-    public AccountInforPageObject(WebDriver driver) {
+    public UserAccountInforPageObject(WebDriver driver) {
         this.driver = driver;
     }
 

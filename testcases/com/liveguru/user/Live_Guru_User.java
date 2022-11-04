@@ -11,14 +11,14 @@ import pageObjects.liveGuru.user.*;
 
 public class Live_Guru_User extends BaseTest {
     WebDriver driver;
-    HomePageObject homePage;
-    LoginPageObject loginPage;
+    UserHomePageObject homePage;
+    UserLoginPageObject loginPage;
     RegisterPageObject registerPage;
-    MyDashboardPageObject myAccountDashboardPage;
-    AccountInforPageObject accountInforPage;
-    AddressBookPageObject addressBookPage;
-    MyOrderPageObject myOrderPage;
-    BillingAgreementsPageObject billingAgreementsPage;
+    UserMyDashboardPageObject myAccountDashboardPage;
+    UserAccountInforPageObject accountInforPage;
+    UserAddressBookPageObject addressBookPage;
+    UserMyOrderPageObject myOrderPage;
+    UserillingAgreementsPageObject billingAgreementsPage;
     String firstName, lastName, email, password;
 
     @Parameters("browser")

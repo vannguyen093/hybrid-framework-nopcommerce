@@ -4,10 +4,10 @@ import commons.BasePage;
 import org.openqa.selenium.WebDriver;
 import pageUIs.liveGuru.user.LoginPageUI;
 
-public class LoginPageObject extends BasePage {
+public class UserLoginPageObject extends BasePage {
     private WebDriver driver;
 
-    public LoginPageObject(WebDriver driver) {
+    public UserLoginPageObject(WebDriver driver) {
         this.driver = driver;
     }
 
@@ -32,7 +32,7 @@ public class LoginPageObject extends BasePage {
         clickToElement(driver, LoginPageUI.LOGIN_BUTTON);
     }
 
-    public MyDashboardPageObject loginAsUser(String email, String password) {
+    public UserMyDashboardPageObject loginAsUser(String email, String password) {
         inputToEmailTextbox(email);
         inputPasswordTextbox(password);
         clickToLoginButton();

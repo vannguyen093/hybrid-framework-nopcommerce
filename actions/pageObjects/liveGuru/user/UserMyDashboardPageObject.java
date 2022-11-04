@@ -4,10 +4,10 @@ import commons.BasePage;
 import org.openqa.selenium.WebDriver;
 import pageUIs.liveGuru.user.MyDashboardtPageUI;
 
-public class MyDashboardPageObject extends BasePage {
+public class UserMyDashboardPageObject extends BasePage {
     private WebDriver driver;
 
-    public MyDashboardPageObject(WebDriver driver) {
+    public UserMyDashboardPageObject(WebDriver driver) {
         this.driver = driver;
     }
 

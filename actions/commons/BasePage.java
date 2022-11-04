@@ -9,7 +9,6 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import pageObjects.liveGuru.user.*;
 import pageObjects.nopCommerce.admin.AdminLoginPageObject;
-import pageObjects.nopCommerce.user.UserHomePageObject;
 import pageObjects.nopCommerce.PageGeneratorManager;
 import pageUIs.liveGuru.user.BasePageUI;
 import pageUIs.nopCommerce.admin.AdminBasePageUI;
@@ -413,31 +412,31 @@ public class BasePage {
     }
 
     //Level_08_Switch_Role
-    public MyDashboardPageObject openMyDashboardPage(WebDriver driver){
+    public UserMyDashboardPageObject openMyDashboardPage(WebDriver driver){
         waitForElementClickable(driver, BasePageUI.ACCOUNT_DASHBOARD_LINK);
         clickToElement(driver, BasePageUI.ACCOUNT_DASHBOARD_LINK);
         return pageObjects.liveGuru.user.PageGeneratorManager.getMyAccountDashboardPage(driver);
     }
 
-    public AccountInforPageObject openAccountInforPage(WebDriver driver){
+    public UserAccountInforPageObject openAccountInforPage(WebDriver driver){
         waitForElementClickable(driver, BasePageUI.ACCOUNT_INFOR_LINK);
         clickToElement(driver, BasePageUI.ACCOUNT_INFOR_LINK);
         return pageObjects.liveGuru.user.PageGeneratorManager.getAccountInforPage(driver);
     }
 
-    public AddressBookPageObject openAddressBookPage(WebDriver driver){
+    public UserAddressBookPageObject openAddressBookPage(WebDriver driver){
         waitForElementClickable(driver, BasePageUI.ADDRESS_BOOK_LINK);
         clickToElement(driver, BasePageUI.ADDRESS_BOOK_LINK);
         return pageObjects.liveGuru.user.PageGeneratorManager.getAddressBookPage(driver);
     }
 
-    public MyOrderPageObject openMyOrdersPage(WebDriver driver){
+    public UserMyOrderPageObject openMyOrdersPage(WebDriver driver){
         waitForElementClickable(driver, BasePageUI.MY_ORDERS_LINK);
         clickToElement(driver, BasePageUI.MY_ORDERS_LINK);
         return pageObjects.liveGuru.user.PageGeneratorManager.getMyOrdersPage(driver);
     }
 
-    public BillingAgreementsPageObject openBillingAgreementsPage(WebDriver driver){
+    public UserillingAgreementsPageObject openBillingAgreementsPage(WebDriver driver){
         waitForElementClickable(driver, BasePageUI.BILLING_AGREEMENTS_LINK);
         clickToElement(driver, BasePageUI.BILLING_AGREEMENTS_LINK);
         return pageObjects.liveGuru.user.PageGeneratorManager.getBillingAgreementsPage(driver);
@@ -486,7 +485,7 @@ public class BasePage {
         clickToElement(driver, BasePageUI.DYNAMIC_PAGE_AT_DASHBOARD_AREA, pageName);
     }
 
-    public UserHomePageObject clickToLogoutLinkAtUser(WebDriver driver) {
+    public pageObjects.nopCommerce.user.UserHomePageObject clickToLogoutLinkAtUser(WebDriver driver) {
         waitForElementClickable(driver, UserBasePageUI.LOGOUT_LINK);
         clickToElement(driver, UserBasePageUI.LOGOUT_LINK);
         return PageGeneratorManager.getUserHomePage(driver);
@@ -499,7 +498,7 @@ public class BasePage {
         return PageGeneratorManager.getAdminLoginPage(driver);
     }
 
-    public HomePageObject clickToLogOutLinkAtUserLiveGuru(WebDriver driver) {
+    public UserHomePageObject clickToLogOutLinkAtUserLiveGuru(WebDriver driver) {
         waitForElementClickable(driver, BasePageUI.ACCOUNT_BUTTON);
         clickToElement(driver, BasePageUI.ACCOUNT_BUTTON);
         waitForElementClickable(driver, BasePageUI.LOGOUT_BUTTON);
