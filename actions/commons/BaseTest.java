@@ -16,31 +16,32 @@ public class BaseTest {
     String projectPath = System.getProperty("user.dir");
 
     protected WebDriver getBrowserDriver(String browserName){
-        switch (browserName) {
-            case "firefox":
+        BrowserList browserList = BrowserList.valueOf(browserName.toUpperCase());
+        switch (browserList) {
+            case FIREFOX:
 //                WebDriverManager.firefoxdriver().setup();
                 System.setProperty("webdriver.gecko.driver", projectPath + "\\browserDrivers\\geckodriver.exe");
                 driver = new FirefoxDriver();
                 break;
-            case "h_firefox":
+            case H_FIREFOX:
                 WebDriverManager.firefoxdriver().setup();
                 FirefoxOptions options = new FirefoxOptions();
                 options.addArguments("--headless");
                 options.addArguments("window-size=1920x1080");
                 driver = new FirefoxDriver(options);
                 break;
-            case "chrome":
+            case CHROME:
                 WebDriverManager.chromedriver().setup();
                 driver = new ChromeDriver();
                 break;
-            case "h_chrome":
+            case H_CHROME:
                 WebDriverManager.chromedriver().setup();
                 ChromeOptions optionChrome = new ChromeOptions();
                 optionChrome.addArguments("--headless");
                 optionChrome.addArguments("window-size=1920x1080");
                 driver = new ChromeDriver(optionChrome);
                 break;
-            case "edge":
+            case EDGE:
                 WebDriverManager.edgedriver().setup();
                 driver = new EdgeDriver();
                 break;
