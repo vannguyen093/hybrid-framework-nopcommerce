@@ -16,31 +16,32 @@ public class BaseTest {
     String projectPath = System.getProperty("user.dir");
 
     protected WebDriver getBrowserDriver(String browserName){
-        switch (browserName) {
-            case "firefox":
+        BrowserList browserList = BrowserList.valueOf(browserName.toUpperCase());
+        switch (browserList) {
+            case FIREFOX:
 //                WebDriverManager.firefoxdriver().setup();
                 System.setProperty("webdriver.gecko.driver", projectPath + "\\browserDrivers\\geckodriver.exe");
                 driver = new FirefoxDriver();
                 break;
-            case "h_firefox":
+            case H_FIREFOX:
                 WebDriverManager.firefoxdriver().setup();
                 FirefoxOptions options = new FirefoxOptions();
                 options.addArguments("--headless");
                 options.addArguments("window-size=1920x1080");
                 driver = new FirefoxDriver(options);
                 break;
-            case "chrome":
+            case CHROME:
                 WebDriverManager.chromedriver().setup();
                 driver = new ChromeDriver();
                 break;
-            case "h_chrome":
+            case H_CHROME:
                 WebDriverManager.chromedriver().setup();
                 ChromeOptions optionChrome = new ChromeOptions();
                 optionChrome.addArguments("--headless");
                 optionChrome.addArguments("window-size=1920x1080");
                 driver = new ChromeDriver(optionChrome);
                 break;
-            case "edge":
+            case EDGE:
                 WebDriverManager.edgedriver().setup();
                 driver = new EdgeDriver();
                 break;
@@ -49,8 +50,28 @@ public class BaseTest {
         }
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
         driver.manage().window().maximize();
-        driver.get(GlobalConstants.USER_PAGE_URL);
+        driver.get(GlobalConstants.USER_LIVE_GURU_URL);
         return driver;
+    }
+
+    private String getEnvironmentUrl(String serverName){
+        String envUrl = null;
+        EnviromentList enviroment = EnviromentList.valueOf(serverName.toUpperCase());
+        switch (enviroment){
+            case DEV:
+                envUrl = "https://demo.nopcommerce.com/";
+                break;
+            case TESTING:
+                envUrl = "https://admin-demo.nopcommerce.com/";
+                break;
+            case STAGING:
+                envUrl = "https://staging.nopcommerce.com/";
+                break;
+            case PRODUCTION:
+                envUrl = "https://production.nopcommerce.com/";
+                break;
+        }
+        return envUrl;
     }
 
     protected int generateFakeNumber() {

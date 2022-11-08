@@ -7,85 +7,66 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-import pageObjects.liveGuru.*;
+import pageObjects.liveGuru.user.*;
 
 public class Live_Guru_User extends BaseTest {
-  WebDriver driver;
-  HomePageObject homePage;
-  LoginPageObject loginPage;
-  RegisterPageObject registerPage;
-  MyDashboardPageObject myAccountDashboardPage;
-  AccountInforPageObject accountInforPage;
-  AddressBookPageObject addressBookPage;
-  MyOrderPageObject myOrderPage;
-  BillingAgreementsPageObject billingAgreementsPage;
-  String firstName, lastName, email, password;
+    WebDriver driver;
+    UserHomePageObject homePage;
+    UserLoginPageObject loginPage;
+    RegisterPageObject registerPage;
+    UserMyDashboardPageObject myAccountDashboardPage;
+    UserAccountInforPageObject accountInforPage;
+    UserAddressBookPageObject addressBookPage;
+    UserMyOrderPageObject myOrderPage;
+    UserillingAgreementsPageObject billingAgreementsPage;
+    String firstName, lastName, email, password;
 
-  @Parameters("browser")
-  @BeforeClass
-  public void beforeClass(String browserName) {
+    @Parameters("browser")
+    @BeforeClass
+    public void beforeClass(String browserName) {
 
-    driver = getBrowserDriver(browserName);
+        driver = getBrowserDriver(browserName);
 
-    homePage = PageGeneratorManager.getHomePage(driver);
+        homePage = PageGeneratorManager.getHomePage(driver);
 
-    firstName = "Van";
-    lastName = "Nguyen";
-    email = "vannguyen" + generateFakeNumber() + "@gmail.com";
-    password = "123123";
-  }
-  
-  @Test
-  public void User_01_Register_To_System() {
-    homePage.clickToMyAccountLink();
+        firstName = "Van";
+        lastName = "Nguyen";
+        email = "vannguyen" + generateFakeNumber() + "@gmail.com";
+        password = "123123";
+    }
 
-    loginPage = PageGeneratorManager.getLoginPage(driver);
-    loginPage.clickToCreateAnAccountButton();
+    @Test
+    public void User_01_Register_To_System() {
+        loginPage = homePage.clickToMyAccountLink();
 
-    registerPage = PageGeneratorManager.getRegisterPage(driver);
-    registerPage.inputFirstNameTextbox(firstName);
-    registerPage.inputLastNameTextbox(lastName);
-    registerPage.inputEmailTextbox(email);
-    registerPage.inputPasswordTextbox(password);
-    registerPage.inputConfirmPasswordTextbox(password);
-    registerPage.clickRegisterButton();
+        registerPage = loginPage.clickToCreateAnAccountButton();
 
-    myAccountDashboardPage = PageGeneratorManager.getMyAccountDashboardPage(driver);
-    Assert.assertEquals(myAccountDashboardPage.getRegisterSuccessMessage(), "Thank you for registering with Main Website Store.");
-    myAccountDashboardPage.clickToAccountButton();
-    myAccountDashboardPage.clickToLogoutButton();
-    homePage = PageGeneratorManager.getHomePage(driver);
-  }
+        myAccountDashboardPage = registerPage.inputToRequiredRegisterField(firstName, lastName, email, password, password);
+        Assert.assertEquals(myAccountDashboardPage.getRegisterSuccessMessage(), "Thank you for registering with Main Website Store.");
+    }
 
-  @Test
-  public void User_02_Login_To_System() {
-    homePage.clickToMyAccountLink();
+    @Test
+    public void User_02_Verify_Info_After_Register_Successful() {
+        myAccountDashboardPage.openPagesAtDashboardByPageName(driver, "Account Information");
+        accountInforPage = PageGeneratorManager.getAccountInforPage(driver);
 
-    loginPage = PageGeneratorManager.getLoginPage(driver);
-    loginPage.inputToEmailTextbox(email);
-    loginPage.inputPasswordTextbox(password);
-    loginPage.clickToLoginButton();
+        Assert.assertEquals(accountInforPage.getValueAtFirstNameTextbox(), firstName);
+        Assert.assertEquals(accountInforPage.getValueAtLastNameTextbox(), lastName);
+        Assert.assertEquals(accountInforPage.getValueAtEmailTextbox(), email);
 
-    myAccountDashboardPage = PageGeneratorManager.getMyAccountDashboardPage(driver);
-    Assert.assertEquals(myAccountDashboardPage.getHelloUserText(), "Hello, Van Nguyen!");
-  }
+        accountInforPage.clickToLogOutLinkAtUserLiveGuru(driver);
+    }
 
-  @Test
-  public void User_03_Switch_Page() {
-    accountInforPage = myAccountDashboardPage.openAccountInforPage(driver);
+    @Test
+    public void User_03_Login_To_System() {
+        loginPage = homePage.clickToMyAccountLink();
 
-    addressBookPage = accountInforPage.openAddressBookPage(driver);
+        myAccountDashboardPage = loginPage.loginAsUser(email, password);
+        Assert.assertEquals(myAccountDashboardPage.getHelloUserText(), "Hello, Van Nguyen!");
+    }
 
-    myOrderPage = addressBookPage.openMyOrdersPage(driver);
-
-    billingAgreementsPage = myOrderPage.openBillingAgreementsPage(driver);
-
-    myAccountDashboardPage = billingAgreementsPage.openMyDashboardPage(driver);
-
-  }
-
-  @AfterClass
-  public void afterClass() {
-    driver.quit();
-  }
+    @AfterClass
+    public void afterClass() {
+        driver.quit();
+    }
 }

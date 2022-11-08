@@ -1,8 +1,8 @@
-package pageObjects.liveGuru;
+package pageObjects.liveGuru.user;
 
 import commons.BasePage;
 import org.openqa.selenium.WebDriver;
-import pageUIs.liveGuru.RegisterPageUI;
+import pageUIs.liveGuru.user.RegisterPageUI;
 
 public class RegisterPageObject extends BasePage {
     private WebDriver driver;
@@ -39,5 +39,15 @@ public class RegisterPageObject extends BasePage {
     public void clickRegisterButton() {
         waitForElementClickable(driver, RegisterPageUI.REGISTER_BUTTON);
         clickToElement(driver, RegisterPageUI.REGISTER_BUTTON);
+    }
+
+    public UserMyDashboardPageObject inputToRequiredRegisterField(String firstName, String lastName, String email, String password, String password1) {
+        inputFirstNameTextbox(firstName);
+        inputLastNameTextbox(lastName);
+        inputEmailTextbox(email);
+        inputPasswordTextbox(password);
+        inputConfirmPasswordTextbox(password1);
+        clickRegisterButton();
+        return PageGeneratorManager.getMyAccountDashboardPage(driver);
     }
 }
