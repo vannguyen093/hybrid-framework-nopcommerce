@@ -48,7 +48,7 @@ public class BaseTest {
             default:
                 throw new RuntimeException("Browser not supported: " + browserName);
         }
-        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(GlobalConstants.LONG_TIMEOUT, TimeUnit.SECONDS);
         driver.manage().window().maximize();
         driver.get(GlobalConstants.USER_LIVE_GURU_URL);
         return driver;
