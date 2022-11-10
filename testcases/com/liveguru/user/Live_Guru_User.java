@@ -23,9 +23,9 @@ public class Live_Guru_User extends BaseTest {
 
     @Parameters("browser")
     @BeforeClass
-    public void beforeClass(String browserName) {
+    public void beforeClass(String browserName, String appUrl) {
 
-        driver = getBrowserDriver(browserName);
+        driver = getBrowserDriver(browserName,appUrl);
 
         homePage = PageGeneratorManager.getHomePage(driver);
 

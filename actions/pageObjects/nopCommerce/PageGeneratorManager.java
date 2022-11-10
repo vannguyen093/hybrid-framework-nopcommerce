@@ -1,6 +1,7 @@
 package pageObjects.nopCommerce;
 
 import org.openqa.selenium.WebDriver;
+import pageObjects.jquery.HomePageObject;
 import pageObjects.nopCommerce.admin.AdminDashboardPageObject;
 import pageObjects.nopCommerce.admin.AdminLoginPageObject;
 import pageObjects.nopCommerce.user.*;

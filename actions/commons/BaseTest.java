@@ -15,7 +15,7 @@ public class BaseTest {
     private WebDriver driver;
     String projectPath = System.getProperty("user.dir");
 
-    protected WebDriver getBrowserDriver(String browserName){
+    protected WebDriver getBrowserDriver(String browserName, String appUrl){
         BrowserList browserList = BrowserList.valueOf(browserName.toUpperCase());
         switch (browserList) {
             case FIREFOX:
@@ -50,7 +50,7 @@ public class BaseTest {
         }
         driver.manage().timeouts().implicitlyWait(GlobalConstants.LONG_TIMEOUT, TimeUnit.SECONDS);
         driver.manage().window().maximize();
-        driver.get(GlobalConstants.USER_LIVE_GURU_URL);
+        driver.get(appUrl);
         return driver;
     }
 

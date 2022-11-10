@@ -104,7 +104,7 @@ public class BasePage {
         driver.switchTo().window(parentID);
     }
 
-    private By getByLocator(String locatorType) {
+    public By getByLocator(String locatorType) {
         By by = null;
         if (locatorType.startsWith("id=")||locatorType.startsWith("ID=")||locatorType.startsWith("Id=")){
             by = By.id(locatorType.substring(3));
@@ -122,18 +122,18 @@ public class BasePage {
         return by;
     }
 
-    private String getDynamicXpath(String locatorType, String... dynamicValues){
+    public String getDynamicXpath(String locatorType, String... dynamicValues){
         if(locatorType.startsWith("xpath=")){
             locatorType = String.format(locatorType, (Object[]) dynamicValues);
         }
         return locatorType;
     }
 
-    private WebElement getWebElement(WebDriver driver, String locatorType) {
+    public WebElement getWebElement(WebDriver driver, String locatorType) {
         return driver.findElement(getByLocator(locatorType));
     }
 
-    private List<WebElement> getListWebElements(WebDriver driver, String locatorType) {
+    public List<WebElement> getListWebElements(WebDriver driver, String locatorType) {
         return driver.findElements(getByLocator(locatorType));
     }
 
@@ -290,6 +290,16 @@ public class BasePage {
     public void hoverMouseToElement(WebDriver driver, String locatorType) {
         Actions action = new Actions(driver);
         action.moveToElement(getWebElement(driver, locatorType)).perform();
+    }
+
+    public void pressKeyToElement(WebDriver driver, String locatorType, Keys key){
+        Actions action = new Actions(driver);
+        action.sendKeys(getWebElement(driver, locatorType), key).perform();
+    }
+
+    public void pressKeyToElement(WebDriver driver, String locatorType, Keys key, String... dynamicValues){
+        Actions action = new Actions(driver);
+        action.sendKeys(getWebElement(driver, getDynamicXpath(locatorType, dynamicValues)), key).perform();
     }
 
     public void scrollToBottomPage(WebDriver driver) {
