@@ -22,9 +22,9 @@ public class Level_09_Dynamic_Locator extends BaseTest {
 
     @Parameters("browser")
     @BeforeClass
-    public void beforeClass(String browserName) {
+    public void beforeClass(String browserName, String appUrl) {
 
-        driver = getBrowserDriver(browserName);
+        driver = getBrowserDriver(browserName,appUrl);
 
         homePage = PageGeneratorManager.getUserHomePage(driver);
 
