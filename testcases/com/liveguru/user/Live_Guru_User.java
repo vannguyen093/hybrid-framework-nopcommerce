@@ -18,7 +18,7 @@ public class Live_Guru_User extends BaseTest {
     UserAccountInforPageObject accountInforPage;
     UserAddressBookPageObject addressBookPage;
     UserMyOrderPageObject myOrderPage;
-    UserillingAgreementsPageObject billingAgreementsPage;
+    UserBillingAgreementsPageObject billingAgreementsPage;
     String firstName, lastName, email, password;
 
     @Parameters("browser")

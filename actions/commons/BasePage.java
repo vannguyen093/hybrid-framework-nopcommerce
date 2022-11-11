@@ -56,8 +56,13 @@ public class BasePage {
         return explicitWait.until(ExpectedConditions.alertIsPresent());
     }
 
+    public void switchToAlert(WebDriver driver){
+    }
+
     public void acceptAlert(WebDriver driver) {
+        driver.switchTo().alert();
         waitForAlertPresence(driver).accept();
+        driver.switchTo().defaultContent();
     }
 
     public void cancelAlert(WebDriver driver) {
@@ -159,7 +164,7 @@ public class BasePage {
 
     public void selectItemInDefaultDropdown(WebDriver driver, String locatorType, String textItem) {
         Select select = new Select(getWebElement(driver, locatorType));
-        select.selectByValue(textItem);
+        select.selectByVisibleText(textItem);
     }
 
     public void selectItemInDefaultDropdown(WebDriver driver, String locatorType, String textItem, String... dynamicValues) {
@@ -460,7 +465,7 @@ public class BasePage {
         return pageObjects.liveGuru.user.PageGeneratorManager.getMyOrdersPage(driver);
     }
 
-    public UserillingAgreementsPageObject openBillingAgreementsPage(WebDriver driver){
+    public UserBillingAgreementsPageObject openBillingAgreementsPage(WebDriver driver){
         waitForElementClickable(driver, BasePageUI.BILLING_AGREEMENTS_LINK);
         clickToElement(driver, BasePageUI.BILLING_AGREEMENTS_LINK);
         return pageObjects.liveGuru.user.PageGeneratorManager.getBillingAgreementsPage(driver);
