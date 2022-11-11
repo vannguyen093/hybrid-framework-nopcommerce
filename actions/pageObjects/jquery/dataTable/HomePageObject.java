@@ -1,10 +1,10 @@
-package pageObjects.jquery;
+package pageObjects.jquery.dataTable;
 
 import commons.BasePage;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import pageUIs.jquery.HomePageUI;
+import pageUIs.jquery.dataTable.HomePageUI;
 
 import java.util.ArrayList;
 import java.util.List;

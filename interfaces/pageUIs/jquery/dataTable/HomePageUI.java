@@ -1,4 +1,4 @@
-package pageUIs.jquery;
+package pageUIs.jquery.dataTable;
 
 public class HomePageUI {
     public static final String PAGING_PAGE_BY_NUMBER = "xpath=//li[@class='qgrd-pagination-page']/a[text()='%s']";
