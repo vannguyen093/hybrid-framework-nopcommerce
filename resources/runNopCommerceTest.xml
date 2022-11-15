@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <suite name="NopCommerce">
+
+  <listeners>
+    <listener class-name="commons.MethodListener.class"/>
+  </listeners>
+
 <parameter name="url" value="https://demo.nopcommerce.com/"/>
+
   <test name="Run on Firefox">
     <parameter name="browser" value="firefox" />
     <classes>
