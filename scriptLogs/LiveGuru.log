@@ -10,3 +10,137 @@
 [2022-11-16 10:55:37,396] Login - Step 01: Click to My Account Link
 [2022-11-16 10:55:38,413] Login - Step 02: Input vannguyen69101@gmail.com, 123123to Email and Password textbox
 [2022-11-16 10:55:39,621] Login - Step 03: Verify the Title of Dashboard Page
+[2022-11-16 11:01:11,660] Register - Step 01: Click to 'My Account Link'
+[2022-11-16 11:01:12,860] Register - Step 02: Click to 'Create an Account' Button
+[2022-11-16 11:01:13,721] Register - Step 03: Input Van, Nguyen, vannguyen13317@gmail.com, 123123, 123123 to the required fields
+[2022-11-16 11:01:15,629] Register - Step 04: Verify Register Success Message is Displayed
+[2022-11-16 11:01:15,719]  -------------------------- PASSED -------------------------- 
+[2022-11-16 11:01:15,721] Verify Info After Register - Step 01: Navigate to Dashboard Page
+[2022-11-16 11:01:16,473] Verify Info After Register - Step 02: Verify Info At First Name Textbox Van
+[2022-11-16 11:01:16,546]  -------------------------- PASSED -------------------------- 
+[2022-11-16 11:01:16,547] Verify Info After Register - Step 03: Verify Info At Last Name Textbox Nguyen
+[2022-11-16 11:01:16,622]  -------------------------- PASSED -------------------------- 
+[2022-11-16 11:01:16,622] Verify Info After Register - Step 04: Verify Info At Email Textbox vannguyen13317@gmail.com
+[2022-11-16 11:01:16,719]  -------------------------- PASSED -------------------------- 
+[2022-11-16 11:01:16,720] Verify Info After Register - Step 05: Click to Log out Link
+[2022-11-16 11:01:18,040] Login - Step 01: Click to My Account Link
+[2022-11-16 11:01:19,073] Login - Step 02: Input vannguyen13317@gmail.com, 123123 to Email and Password textbox
+[2022-11-16 11:01:20,394] Login - Step 03: Verify the Title of Dashboard Page
+[2022-11-16 11:01:20,449]  -------------------------- PASSED -------------------------- 
+[2022-11-16 11:05:20,605] Register - Step 01: Click to 'My Account Link'
+[2022-11-16 11:05:21,678] Register - Step 02: Click to 'Create an Account' Button
+[2022-11-16 11:05:22,413] Register - Step 03: Input 'Van', 'Nguyen', 'vannguyen1651@gmail.com', '123123', '123123' to the required fields
+[2022-11-16 11:05:24,839] Register - Step 04: Verify Register Success Message is Displayed
+[2022-11-16 11:05:24,892]  -------------------------- PASSED -------------------------- 
+[2022-11-16 11:05:24,895] Verify Info After Register - Step 01: Navigate to Dashboard Page
+[2022-11-16 11:05:25,764] Verify Info After Register - Step 02: Verify Info At First Name Textbox 'Van'
+[2022-11-16 11:05:25,835]  -------------------------- PASSED -------------------------- 
+[2022-11-16 11:05:25,835] Verify Info After Register - Step 03: Verify Info At Last Name Textbox 'Nguyen'
+[2022-11-16 11:05:25,909]  -------------------------- PASSED -------------------------- 
+[2022-11-16 11:05:25,910] Verify Info After Register - Step 04: Verify Info At Email Textbox 'vannguyen1651@gmail.com'
+[2022-11-16 11:05:25,973]  -------------------------- PASSED -------------------------- 
+[2022-11-16 11:05:25,973] Verify Info After Register - Step 05: Click to 'Log out' Link
+[2022-11-16 11:05:27,284] Login - Step 01: Click to 'My Account' Link
+[2022-11-16 11:05:28,234] Login - Step 02: Input 'vannguyen1651@gmail.com', '123123' to Email and Password textbox
+[2022-11-16 11:05:29,542] Login - Step 03: Verify the title of Dashboard Page
+[2022-11-16 11:05:29,587]  -------------------------- PASSED -------------------------- 
+[2022-11-16 11:15:33,295] Register - Step 01: Click to 'My Account Link'
+[2022-11-16 11:15:34,633] Register - Step 02: Click to 'Create an Account' Button
+[2022-11-16 11:15:35,574] Register - Step 03: Input 'Van', 'Nguyen', 'vannguyen566@gmail.com', '123123', '123123' to the required fields
+[2022-11-16 11:15:37,749] Register - Step 04: Verify Register Success Message is Displayed
+[2022-11-16 11:15:37,852]  -------------------------- PASSED -------------------------- 
+[2022-11-16 11:15:37,858] Verify Info After Register - Step 01: Navigate to Dashboard Page
+[2022-11-16 11:15:38,642] Verify Info After Register - Step 02: Verify Info At First Name Textbox 'Van'
+[2022-11-16 11:15:38,709]  -------------------------- PASSED -------------------------- 
+[2022-11-16 11:15:38,710] Verify Info After Register - Step 03: Verify Info At Last Name Textbox 'Nguyen'
+[2022-11-16 11:15:38,800]  -------------------------- PASSED -------------------------- 
+[2022-11-16 11:15:38,801] Verify Info After Register - Step 04: Verify Info At Email Textbox 'vannguyen566@gmail.com'
+[2022-11-16 11:15:38,864]  -------------------------- PASSED -------------------------- 
+[2022-11-16 11:15:38,864] Verify Info After Register - Step 05: Click to 'Log out' Link
+[2022-11-16 11:15:40,188] Login - Step 01: Click to 'My Account' Link
+[2022-11-16 11:15:41,311] Login - Step 02: Input 'vannguyen566@gmail.com', '123123' to Email and Password textbox
+[2022-11-16 11:15:42,559] Login - Step 03: Verify the title of Dashboard Page
+[2022-11-16 11:15:42,620]  -------------------------- PASSED -------------------------- 
+[2022-11-16 11:17:37,655] Register - Step 01: Click to 'My Account Link'
+[2022-11-16 11:17:38,740] Register - Step 02: Click to 'Create an Account' Button
+[2022-11-16 11:17:39,930] Register - Step 03: Input 'Van', 'Nguyen', 'vannguyen97159@gmail.com', '123123', '123123' to the required fields
+[2022-11-16 11:17:41,874] Register - Step 04: Verify Register Success Message is Displayed
+[2022-11-16 11:17:41,974]  -------------------------- PASSED -------------------------- 
+[2022-11-16 11:17:41,977] Verify Info After Register - Step 01: Navigate to Dashboard Page
+[2022-11-16 11:17:42,741] Verify Info After Register - Step 02: Verify Info At First Name Textbox 'Van'
+[2022-11-16 11:17:42,820]  -------------------------- PASSED -------------------------- 
+[2022-11-16 11:17:42,820] Verify Info After Register - Step 03: Verify Info At Last Name Textbox 'Nguyen'
+[2022-11-16 11:17:42,897]  -------------------------- PASSED -------------------------- 
+[2022-11-16 11:17:42,898] Verify Info After Register - Step 04: Verify Info At Email Textbox 'vannguyen97159@gmail.com'
+[2022-11-16 11:17:42,973]  -------------------------- PASSED -------------------------- 
+[2022-11-16 11:17:42,973] Verify Info After Register - Step 05: Click to 'Log out' Link
+[2022-11-16 11:17:44,301] Login - Step 01: Click to 'My Account' Link
+[2022-11-16 11:17:45,307] Login - Step 02: Input 'vannguyen97159@gmail.com', '123123' to Email and Password textbox
+[2022-11-16 11:17:46,663] Login - Step 03: Verify the title of Dashboard Page
+[2022-11-16 11:17:46,716]  -------------------------- PASSED -------------------------- 
+[2022-11-16 15:56:42,485] Register - Step 01: Click to 'My Account Link'
+[2022-11-16 15:56:43,809] Register - Step 02: Click to 'Create an Account' Button
+[2022-11-16 15:56:46,355] Register - Step 03: Input 'Van', 'Nguyen', 'vannguyen40532@gmail.com', '123123', '123123' to the required fields
+[2022-11-16 15:56:49,457] Register - Step 04: Verify Register Success Message is Displayed
+[2022-11-16 15:56:49,584]  -------------------------- PASSED -------------------------- 
+[2022-11-16 15:56:49,588] Verify Info After Register - Step 01: Navigate to Dashboard Page
+[2022-11-16 15:56:50,557] Verify Info After Register - Step 02: Verify Info At First Name Textbox 'Van'
+[2022-11-16 15:56:50,640]  -------------------------- PASSED -------------------------- 
+[2022-11-16 15:56:50,640] Verify Info After Register - Step 03: Verify Info At Last Name Textbox 'Nguyen'
+[2022-11-16 15:56:50,714]  -------------------------- PASSED -------------------------- 
+[2022-11-16 15:56:50,715] Verify Info After Register - Step 04: Verify Info At Email Textbox 'vannguyen40532@gmail.com'
+[2022-11-16 15:56:50,804]  -------------------------- PASSED -------------------------- 
+[2022-11-16 15:56:50,804] Verify Info After Register - Step 05: Click to 'Log out' Link
+[2022-11-16 15:56:52,059] Login - Step 01: Click to 'My Account' Link
+[2022-11-16 15:56:53,135] Login - Step 02: Input 'vannguyen40532@gmail.com', '123123' to Email and Password textbox
+[2022-11-16 15:56:54,484] Login - Step 03: Verify the title of Dashboard Page
+[2022-11-16 15:56:54,527]  -------------------------- PASSED -------------------------- 
+[2022-11-16 15:57:38,916] Register - Step 01: Click to 'My Account Link'
+[2022-11-16 15:57:40,109] Register - Step 02: Click to 'Create an Account' Button
+[2022-11-16 15:57:40,926] Register - Step 03: Input 'Van', 'Nguyen', 'vannguyen22917@gmail.com', '123123', '123123' to the required fields
+[2022-11-16 15:57:43,156] Register - Step 04: Verify Register Success Message is Displayed
+[2022-11-16 15:57:43,234]  -------------------------- FAILED -------------------------- 
+[2022-11-16 15:57:43,252] Verify Info After Register - Step 01: Navigate to Dashboard Page
+[2022-11-16 15:57:44,072] Verify Info After Register - Step 02: Verify Info At First Name Textbox 'Van'
+[2022-11-16 15:57:44,159]  -------------------------- PASSED -------------------------- 
+[2022-11-16 15:57:44,159] Verify Info After Register - Step 03: Verify Info At Last Name Textbox 'Nguyen'
+[2022-11-16 15:57:44,238]  -------------------------- PASSED -------------------------- 
+[2022-11-16 15:57:44,238] Verify Info After Register - Step 04: Verify Info At Email Textbox 'vannguyen22917@gmail.com'
+[2022-11-16 15:57:44,295]  -------------------------- PASSED -------------------------- 
+[2022-11-16 15:57:44,295] Verify Info After Register - Step 05: Click to 'Log out' Link
+[2022-11-16 15:57:45,632] Login - Step 01: Click to 'My Account' Link
+[2022-11-16 15:57:46,673] Login - Step 02: Input 'vannguyen22917@gmail.com', '123123' to Email and Password textbox
+[2022-11-16 15:57:47,964] Login - Step 03: Verify the title of Dashboard Page
+[2022-11-16 15:57:48,015]  -------------------------- PASSED -------------------------- 
+[2022-11-16 16:06:24,113] Register - Step 01: Click to 'My Account Link'
+[2022-11-16 16:06:25,273] Register - Step 02: Click to 'Create an Account' Button
+[2022-11-16 16:06:26,036] Register - Step 03: Input 'Van', 'Nguyen', 'vannguyen72417@gmail.com', '123123', '123123' to the required fields
+[2022-11-16 16:06:27,913] Register - Step 04: Verify Register Success Message is Displayed
+[2022-11-16 16:06:27,984]  -------------------------- FAILED -------------------------- 
+[2022-11-16 16:06:28,127] Verify Info After Register - Step 01: Navigate to Dashboard Page
+[2022-11-16 16:06:29,134] Verify Info After Register - Step 02: Verify Info At First Name Textbox 'Van'
+[2022-11-16 16:06:29,189]  -------------------------- PASSED -------------------------- 
+[2022-11-16 16:06:29,189] Verify Info After Register - Step 03: Verify Info At Last Name Textbox 'Nguyen'
+[2022-11-16 16:06:29,253]  -------------------------- PASSED -------------------------- 
+[2022-11-16 16:06:29,253] Verify Info After Register - Step 04: Verify Info At Email Textbox 'vannguyen72417@gmail.com'
+[2022-11-16 16:06:29,324]  -------------------------- PASSED -------------------------- 
+[2022-11-16 16:06:29,325] Verify Info After Register - Step 05: Click to 'Log out' Link
+[2022-11-16 16:06:30,740] Login - Step 01: Click to 'My Account' Link
+[2022-11-16 16:06:31,815] Login - Step 02: Input 'vannguyen72417@gmail.com', '123123' to Email and Password textbox
+[2022-11-16 16:06:33,037] Login - Step 03: Verify the title of Dashboard Page
+[2022-11-16 16:06:33,094]  -------------------------- PASSED -------------------------- 
+[2022-11-16 16:42:42,720] Register - Step 01: Click to 'My Account Link'
+[2022-11-16 16:42:44,034] Register - Step 02: Click to 'Create an Account' Button
+[2022-11-16 16:42:44,904] Register - Step 03: Input 'Van', 'Nguyen', 'vannguyen34688@gmail.com', '123123', '123123' to the required fields
+[2022-11-16 16:42:47,510] Register - Step 04: Verify Register Success Message is Displayed
+[2022-11-16 16:42:47,572]  -------------------------- FAILED -------------------------- 
+[2022-11-16 16:53:27,447]  -------------------------- FAILED -------------------------- 
+[2022-11-16 16:53:28,720]  -------------------------- PASSED -------------------------- 
+[2022-11-16 16:53:28,824]  -------------------------- PASSED -------------------------- 
+[2022-11-16 16:53:28,883]  -------------------------- PASSED -------------------------- 
+[2022-11-16 16:53:32,562]  -------------------------- PASSED -------------------------- 
+[2022-11-16 16:57:32,890]  -------------------------- FAILED -------------------------- 
+[2022-11-16 16:57:33,939]  -------------------------- PASSED -------------------------- 
+[2022-11-16 16:57:34,038]  -------------------------- PASSED -------------------------- 
+[2022-11-16 16:57:34,117]  -------------------------- PASSED -------------------------- 
+[2022-11-16 16:57:38,041]  -------------------------- PASSED -------------------------- 

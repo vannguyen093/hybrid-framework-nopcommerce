@@ -2,7 +2,6 @@ package com.liveguru.user;
 
 import commons.BaseTest;
 import org.openqa.selenium.WebDriver;
-import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
@@ -10,16 +9,13 @@ import org.testng.annotations.Test;
 import pageObjects.liveGuru.user.*;
 
 
-public class Live_Guru_User_Log extends BaseTest {
+public class Live_Guru_User_ReportNG_Screenshot extends BaseTest {
     WebDriver driver;
     UserHomePageObject homePage;
     UserLoginPageObject loginPage;
     RegisterPageObject registerPage;
     UserMyDashboardPageObject myAccountDashboardPage;
     UserAccountInforPageObject accountInforPage;
-    UserAddressBookPageObject addressBookPage;
-    UserMyOrderPageObject myOrderPage;
-    UserBillingAgreementsPageObject billingAgreementsPage;
     String firstName, lastName, email, password;
 
     @Parameters({"browser", "url"})
@@ -48,7 +44,7 @@ public class Live_Guru_User_Log extends BaseTest {
         myAccountDashboardPage = registerPage.inputToRequiredRegisterField(firstName, lastName, email, password, password);
 
         log.info("Register - Step 04: Verify Register Success Message is Displayed");
-        verifyEquals(myAccountDashboardPage.getRegisterSuccessMessage(), "Thank you for registering with Main Website Store.");
+        verifyEquals(myAccountDashboardPage.getRegisterSuccessMessage(), "Thank you for registering with Main Website Store..");
     }
 
     @Test
