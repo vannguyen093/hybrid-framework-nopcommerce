@@ -23,6 +23,7 @@ public class Datatable extends BaseTest {
     AdminHomePageObject adminHomePage;
     String firstName, lastName, fullName, email, password, adminUserName, adminPassword;
 
+
     @Parameters({"browser", "url"})
     @BeforeClass
     public void beforeClass(String browserName, String appUrl) {

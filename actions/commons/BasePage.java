@@ -15,12 +15,14 @@ import pageUIs.liveGuru.user.BasePageLiveGuruUI;
 import pageUIs.nopCommerce.admin.AdminBasePageUI;
 import pageUIs.nopCommerce.user.BasePageNopCommerceUI;
 
+import java.util.Date;
 import java.util.List;
 import java.util.Set;
+import java.util.concurrent.TimeUnit;
 
 public class BasePage {
 
-    public static BasePage getBasePageObject(){
+    public static BasePage getBasePageObject() {
         return new BasePage();
     }
 
@@ -57,7 +59,7 @@ public class BasePage {
         return explicitWait.until(ExpectedConditions.alertIsPresent());
     }
 
-    public void switchToAlert(WebDriver driver){
+    public void switchToAlert(WebDriver driver) {
     }
 
     public void acceptAlert(WebDriver driver) {
@@ -112,15 +114,15 @@ public class BasePage {
 
     public By getByLocator(String locatorType) {
         By by = null;
-        if (locatorType.startsWith("id=")||locatorType.startsWith("ID=")||locatorType.startsWith("Id=")){
+        if (locatorType.startsWith("id=") || locatorType.startsWith("ID=") || locatorType.startsWith("Id=")) {
             by = By.id(locatorType.substring(3));
-        } else if (locatorType.startsWith("class=")||locatorType.startsWith("Class=")||locatorType.startsWith("CLASS=")){
+        } else if (locatorType.startsWith("class=") || locatorType.startsWith("Class=") || locatorType.startsWith("CLASS=")) {
             by = By.className(locatorType.substring(6));
-        } else if (locatorType.startsWith("name=")||locatorType.startsWith("NAME=")||locatorType.startsWith("Name=")){
+        } else if (locatorType.startsWith("name=") || locatorType.startsWith("NAME=") || locatorType.startsWith("Name=")) {
             by = By.name(locatorType.substring(5));
-        } else if (locatorType.startsWith("css=")||locatorType.startsWith("CSS=")||locatorType.startsWith("Css=")){
+        } else if (locatorType.startsWith("css=") || locatorType.startsWith("CSS=") || locatorType.startsWith("Css=")) {
             by = By.cssSelector(locatorType.substring(4));
-        } else if (locatorType.startsWith("xpath=")||locatorType.startsWith("Xpath=")||locatorType.startsWith("XPATH=")){
+        } else if (locatorType.startsWith("xpath=") || locatorType.startsWith("Xpath=") || locatorType.startsWith("XPATH=")) {
             by = By.xpath(locatorType.substring(6));
         } else {
             throw new RuntimeException("Locator type not supported");
@@ -128,8 +130,8 @@ public class BasePage {
         return by;
     }
 
-    public String getDynamicXpath(String locatorType, String... dynamicValues){
-        if(locatorType.startsWith("xpath=")){
+    public String getDynamicXpath(String locatorType, String... dynamicValues) {
+        if (locatorType.startsWith("xpath=")) {
             locatorType = String.format(locatorType, (Object[]) dynamicValues);
         }
         return locatorType;
@@ -276,11 +278,37 @@ public class BasePage {
     }
 
     public boolean isElementDisplayed(WebDriver driver, String locatorType) {
-        return getWebElement(driver, locatorType).isDisplayed();
+        try {
+            return getWebElement(driver, locatorType).isDisplayed();
+        } catch (NoSuchElementException e) {
+            return false;
+        }
     }
 
     public boolean isElementDisplayed(WebDriver driver, String locatorType, String... dynamicValues) {
-        return getWebElement(driver, getDynamicXpath(locatorType, dynamicValues)).isDisplayed();
+        try {
+            return getWebElement(driver, getDynamicXpath(locatorType, dynamicValues)).isDisplayed();
+        } catch (NoSuchElementException e) {
+            return false;
+        }
+    }
+
+    public void overrideGlobalTimeout(WebDriver driver, long timeOut){
+        driver.manage().timeouts().implicitlyWait(timeOut, TimeUnit.SECONDS);
+    }
+
+    public boolean isElementUndisplayed(WebDriver driver, String locator){
+        overrideGlobalTimeout(driver, shortTimeOut);
+        List<WebElement> elements  = getListWebElements(driver, locator);
+        overrideGlobalTimeout(driver, longTimeOut);
+
+        if( elements.size() == 0 ){
+            return true;
+        } else if( elements.size() > 0 && !elements.get(0).isDisplayed() ) {
+            return true;
+        } else {
+            return false;
+        }
     }
 
     public boolean isElementEnabled(WebDriver driver, String locatorType) {
@@ -312,12 +340,12 @@ public class BasePage {
         action.moveToElement(getWebElement(driver, locatorType)).perform();
     }
 
-    public void pressKeyToElement(WebDriver driver, String locatorType, Keys key){
+    public void pressKeyToElement(WebDriver driver, String locatorType, Keys key) {
         Actions action = new Actions(driver);
         action.sendKeys(getWebElement(driver, locatorType), key).perform();
     }
 
-    public void pressKeyToElement(WebDriver driver, String locatorType, Keys key, String... dynamicValues){
+    public void pressKeyToElement(WebDriver driver, String locatorType, Keys key, String... dynamicValues) {
         Actions action = new Actions(driver);
         action.sendKeys(getWebElement(driver, getDynamicXpath(locatorType, dynamicValues)), key).perform();
     }
@@ -427,6 +455,15 @@ public class BasePage {
         explicitWait.until(ExpectedConditions.invisibilityOfElementLocated(getByLocator(getDynamicXpath(locatorType, dynamicValues))));
     }
 
+    /*
+    * Wait for element undisplayed in DOM or not in DOM and override implicit timeout*/
+    public void waitForElementUndisplayed(WebDriver driver, String locatorType) {
+        WebDriverWait explicitWait = new WebDriverWait(driver, shortTimeOut);
+        overrideGlobalTimeout(driver, shortTimeOut);
+        explicitWait.until(ExpectedConditions.invisibilityOfElementLocated(getByLocator(locatorType)));
+        overrideGlobalTimeout(driver, longTimeOut);
+    }
+
     public void waitForAllElementInvisible(WebDriver driver, String locatorType) {
         WebDriverWait explicitWait = new WebDriverWait(driver, GlobalConstants.LONG_TIMEOUT);
         explicitWait.until(ExpectedConditions.invisibilityOfAllElements(getListWebElements(driver, locatorType)));
@@ -437,20 +474,20 @@ public class BasePage {
         explicitWait.until(ExpectedConditions.invisibilityOfAllElements(getListWebElements(driver, getDynamicXpath(locatorType, dynamicValues))));
     }
 
-    public void waitForElementClickable(WebDriver driver, String locatorType){
+    public void waitForElementClickable(WebDriver driver, String locatorType) {
         WebDriverWait explicitWait = new WebDriverWait(driver, GlobalConstants.LONG_TIMEOUT);
         explicitWait.until(ExpectedConditions.elementToBeClickable(getByLocator(locatorType)));
     }
 
-    public void waitForElementClickable(WebDriver driver, String locatorType, String... dynamicValues){
+    public void waitForElementClickable(WebDriver driver, String locatorType, String... dynamicValues) {
         WebDriverWait explicitWait = new WebDriverWait(driver, GlobalConstants.LONG_TIMEOUT);
         explicitWait.until(ExpectedConditions.elementToBeClickable(getByLocator(getDynamicXpath(locatorType, dynamicValues))));
     }
 
-    public void uploadMultipleFiles(WebDriver driver, String... fileNames){
+    public void uploadMultipleFiles(WebDriver driver, String... fileNames) {
         String filePath = GlobalConstants.UPLOAD_FILE;
         String fullFileName = "";
-        for(String file : fileNames){
+        for (String file : fileNames) {
             fullFileName = fullFileName + filePath + file + "\n";
         }
         fullFileName = fullFileName.trim();
@@ -458,60 +495,60 @@ public class BasePage {
     }
 
     //Level_08_Switch_Role
-    public UserMyDashboardPageObject openMyDashboardPage(WebDriver driver){
+    public UserMyDashboardPageObject openMyDashboardPage(WebDriver driver) {
         waitForElementClickable(driver, BasePageLiveGuruUI.ACCOUNT_DASHBOARD_LINK);
         clickToElement(driver, BasePageLiveGuruUI.ACCOUNT_DASHBOARD_LINK);
         return pageObjects.liveGuru.user.PageGeneratorManager.getMyAccountDashboardPage(driver);
     }
 
-    public UserAccountInforPageObject openAccountInforPage(WebDriver driver){
+    public UserAccountInforPageObject openAccountInforPage(WebDriver driver) {
         waitForElementClickable(driver, BasePageLiveGuruUI.ACCOUNT_INFOR_LINK);
         clickToElement(driver, BasePageLiveGuruUI.ACCOUNT_INFOR_LINK);
         return pageObjects.liveGuru.user.PageGeneratorManager.getAccountInforPage(driver);
     }
 
-    public UserAddressBookPageObject openAddressBookPage(WebDriver driver){
+    public UserAddressBookPageObject openAddressBookPage(WebDriver driver) {
         waitForElementClickable(driver, BasePageLiveGuruUI.ADDRESS_BOOK_LINK);
         clickToElement(driver, BasePageLiveGuruUI.ADDRESS_BOOK_LINK);
         return pageObjects.liveGuru.user.PageGeneratorManager.getAddressBookPage(driver);
     }
 
-    public UserMyOrderPageObject openMyOrdersPage(WebDriver driver){
+    public UserMyOrderPageObject openMyOrdersPage(WebDriver driver) {
         waitForElementClickable(driver, BasePageLiveGuruUI.MY_ORDERS_LINK);
         clickToElement(driver, BasePageLiveGuruUI.MY_ORDERS_LINK);
         return pageObjects.liveGuru.user.PageGeneratorManager.getMyOrdersPage(driver);
     }
 
-    public UserBillingAgreementsPageObject openBillingAgreementsPage(WebDriver driver){
+    public UserBillingAgreementsPageObject openBillingAgreementsPage(WebDriver driver) {
         waitForElementClickable(driver, BasePageLiveGuruUI.BILLING_AGREEMENTS_LINK);
         clickToElement(driver, BasePageLiveGuruUI.BILLING_AGREEMENTS_LINK);
         return pageObjects.liveGuru.user.PageGeneratorManager.getBillingAgreementsPage(driver);
     }
 
     //Level_07_Switch_Page
-//    public UserCustomerInfoPageObject openCustomerInfoPage(WebDriver driver){
-//        waitForElementClickable(driver, UserBasePageUI.CUSTOMER_INFO_LINK);
-//        clickToElement(driver, UserBasePageUI.CUSTOMER_INFO_LINK);
-//        return PageGeneratorManager.getUserCustomerInfoPage(driver);
-//    }
-//
-//    public UserAddressesPageObject openAddressesPage(WebDriver driver){
-//        waitForElementClickable(driver, UserBasePageUI.ADDRESSES_LINK);
-//        clickToElement(driver, UserBasePageUI.ADDRESSES_LINK);
-//        return PageGeneratorManager.getUserAddressesPage(driver);
-//    }
-//
-//    public UserOrdersPageObject openOrdersPage(WebDriver driver){
-//        waitForElementClickable(driver, UserBasePageUI.ORDERS_LINK);
-//        clickToElement(driver, UserBasePageUI.ORDERS_LINK);
-//        return PageGeneratorManager.getUserOrdersPage(driver);
-//    }
+    //    public UserCustomerInfoPageObject openCustomerInfoPage(WebDriver driver){
+    //        waitForElementClickable(driver, UserBasePageUI.CUSTOMER_INFO_LINK);
+    //        clickToElement(driver, UserBasePageUI.CUSTOMER_INFO_LINK);
+    //        return PageGeneratorManager.getUserCustomerInfoPage(driver);
+    //    }
+    //
+    //    public UserAddressesPageObject openAddressesPage(WebDriver driver){
+    //        waitForElementClickable(driver, UserBasePageUI.ADDRESSES_LINK);
+    //        clickToElement(driver, UserBasePageUI.ADDRESSES_LINK);
+    //        return PageGeneratorManager.getUserAddressesPage(driver);
+    //    }
+    //
+    //    public UserOrdersPageObject openOrdersPage(WebDriver driver){
+    //        waitForElementClickable(driver, UserBasePageUI.ORDERS_LINK);
+    //        clickToElement(driver, UserBasePageUI.ORDERS_LINK);
+    //        return PageGeneratorManager.getUserOrdersPage(driver);
+    //    }
 
     //Level_09_Dynamic_Locator
-    public BasePage openPageAtMyAccountByName(WebDriver driver, String pageName){
+    public BasePage openPageAtMyAccountByName(WebDriver driver, String pageName) {
         waitForElementClickable(driver, BasePageNopCommerceUI.DYNAMIC_PAGE_AT_MY_ACCOUNT_AREA, pageName);
         clickToElement(driver, BasePageNopCommerceUI.DYNAMIC_PAGE_AT_MY_ACCOUNT_AREA, pageName);
-        switch (pageName){
+        switch (pageName) {
             case "Customer info":
                 return pageObjects.nopCommerce.PageGeneratorManager.getUserCustomerInfoPage(driver);
             case "Addresses":
@@ -522,11 +559,13 @@ public class BasePage {
                 throw new RuntimeException("Invalid page name at My Account Area");
         }
     }
-    public void openPagesAtMyAccountByPageName(WebDriver driver, String pageName){
+
+    public void openPagesAtMyAccountByPageName(WebDriver driver, String pageName) {
         waitForElementClickable(driver, BasePageNopCommerceUI.DYNAMIC_PAGE_AT_MY_ACCOUNT_AREA, pageName);
         clickToElement(driver, BasePageNopCommerceUI.DYNAMIC_PAGE_AT_MY_ACCOUNT_AREA, pageName);
     }
-    public void openPagesAtDashboardByPageName(WebDriver driver, String pageName){
+
+    public void openPagesAtDashboardByPageName(WebDriver driver, String pageName) {
         waitForElementClickable(driver, BasePageLiveGuruUI.DYNAMIC_PAGE_AT_DASHBOARD_AREA, pageName);
         clickToElement(driver, BasePageLiveGuruUI.DYNAMIC_PAGE_AT_DASHBOARD_AREA, pageName);
     }
@@ -551,4 +590,7 @@ public class BasePage {
         clickToElement(driver, BasePageLiveGuruUI.LOGOUT_BUTTON);
         return pageObjects.liveGuru.user.PageGeneratorManager.getHomePage(driver);
     }
+
+    private long longTimeOut = GlobalConstants.LONG_TIMEOUT;
+    private long shortTimeOut = GlobalConstants.SHORT_TIMEOUT;
 }

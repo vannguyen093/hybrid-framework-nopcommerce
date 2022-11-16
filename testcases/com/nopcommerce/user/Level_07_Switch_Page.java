@@ -20,6 +20,7 @@ public class Level_07_Switch_Page extends BaseTest {
     private UserAddressesPageObject addressesPage;
     private UserOrdersPageObject ordersPage;
 
+
     @Parameters("browser")
     @BeforeClass
     public void beforeClass(String browserName, String appUrl) {

@@ -19,7 +19,8 @@ public class Level_06_Page_Generator_Manager_I extends BaseTest {
   UserRegisterPageObject registerPage;
   UserLoginPageObject loginPage;
 
-  @Parameters("browser")
+
+    @Parameters("browser")
   @BeforeClass
   public void beforeClass(String browserName, String appUrl) {
 

@@ -20,7 +20,8 @@ public class Level_04_Multiple_Browser extends BaseTest{
   private UserRegisterPageObject registerPage;
   private UserLoginPageObject loginPage;
 
-  @Parameters("browser")
+
+    @Parameters("browser")
   @BeforeClass
   public void beforeClass(String browserName, String appUrl) {
 
