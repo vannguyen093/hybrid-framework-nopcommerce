@@ -4,7 +4,8 @@
   <listeners>
     <listener class-name="commons.MethodListener"/>
 <!--    <listener class-name="reportConfig.ReportNGListener"/>-->
-    <listener class-name="reportConfig.ExtentReportListenerV5"/>
+<!--    <listener class-name="reportConfig.ExtentReportListener"/>-->
+    <listener class-name="reportConfig.AllureTestListener"/>
 <!--    <listener class-name="org.uncommons.reportng.HTMLReporter" />-->
 <!--    <listener class-name="org.uncommons.reportng.JUnitXMLReporter" />-->
   </listeners>
@@ -13,7 +14,7 @@
   <test name="Run on Firefox">
     <parameter name="browser" value="firefox" />
     <classes>
-      <class name="com.liveguru.user.Live_Guru_User_Extend_Report"/>
+      <class name="com.liveguru.user.Live_Guru_User_Allure_Report"/>
     </classes>
   </test>
 

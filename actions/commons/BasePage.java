@@ -1,5 +1,6 @@
 package commons;
 
+import io.qameta.allure.Step;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.Color;
@@ -565,6 +566,7 @@ public class BasePage {
         clickToElement(driver, BasePageNopCommerceUI.DYNAMIC_PAGE_AT_MY_ACCOUNT_AREA, pageName);
     }
 
+    @Step("Navigate to Dashboard Page")
     public void openPagesAtDashboardByPageName(WebDriver driver, String pageName) {
         waitForElementClickable(driver, BasePageLiveGuruUI.DYNAMIC_PAGE_AT_DASHBOARD_AREA, pageName);
         clickToElement(driver, BasePageLiveGuruUI.DYNAMIC_PAGE_AT_DASHBOARD_AREA, pageName);
@@ -583,6 +585,7 @@ public class BasePage {
         return PageGeneratorManager.getAdminLoginPage(driver);
     }
 
+    @Step("Click to 'Log out' Link")
     public UserHomePageObject clickToLogOutLinkAtUserLiveGuru(WebDriver driver) {
         waitForElementClickable(driver, BasePageLiveGuruUI.ACCOUNT_BUTTON);
         clickToElement(driver, BasePageLiveGuruUI.ACCOUNT_BUTTON);

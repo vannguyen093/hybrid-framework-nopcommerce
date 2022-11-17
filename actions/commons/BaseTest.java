@@ -11,13 +11,21 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.testng.Assert;
 import org.testng.Reporter;
+import org.testng.annotations.BeforeSuite;
 
+import java.io.File;
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
 public class BaseTest {
     private WebDriver driver;
     protected final Log log;
+
+    @BeforeSuite
+    public void initBeforeSuite() {
+        deleteAllureReport();
+    }
+
     String projectPath = System.getProperty("user.dir");
 
     protected BaseTest() {
@@ -139,5 +147,20 @@ public class BaseTest {
     protected int generateFakeNumber() {
         Random random = new Random();
         return random.nextInt(99999);
+    }
+
+    public void deleteAllureReport(){
+        try {
+            String pathFolderDownload = GlobalConstants.PROJECT_PATH + "/allure-json";
+            File file = new File(pathFolderDownload);
+            File[] files = file.listFiles();
+            for (int i = 0; i < files.length; i++) {
+                if (files[i].isFile()){
+                    new File(files[i].toString()).delete();
+                }
+            }
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
     }
 }
