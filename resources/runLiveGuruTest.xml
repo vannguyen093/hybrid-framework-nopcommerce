@@ -1,10 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<suite name="NopCommerce">
+<suite name="LiveGuru">
 
+  <listeners>
+    <listener class-name="commons.MethodListener"/>
+<!--    <listener class-name="reportConfig.ReportNGListener"/>-->
+<!--    <listener class-name="reportConfig.ExtentReportListener"/>-->
+    <listener class-name="reportConfig.AllureTestListener"/>
+<!--    <listener class-name="org.uncommons.reportng.HTMLReporter" />-->
+<!--    <listener class-name="org.uncommons.reportng.JUnitXMLReporter" />-->
+  </listeners>
+
+  <parameter name="url" value="http://live.techpanda.org/index.php/" />
   <test name="Run on Firefox">
     <parameter name="browser" value="firefox" />
     <classes>
-      <class name="com.liveguru.user.Live_Guru_User"/>
+      <class name="com.liveguru.user.Live_Guru_User_Allure_Report"/>
     </classes>
   </test>
 

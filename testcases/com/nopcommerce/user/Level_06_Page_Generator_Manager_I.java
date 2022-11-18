@@ -19,11 +19,12 @@ public class Level_06_Page_Generator_Manager_I extends BaseTest {
   UserRegisterPageObject registerPage;
   UserLoginPageObject loginPage;
 
-  @Parameters("browser")
-  @BeforeClass
-  public void beforeClass(String browserName) {
 
-    driver = getBrowserDriver(browserName);
+    @Parameters("browser")
+  @BeforeClass
+  public void beforeClass(String browserName, String appUrl) {
+
+    driver = getBrowserDriver(browserName,appUrl);
 
     homePage = new UserHomePageObject(driver);
 
