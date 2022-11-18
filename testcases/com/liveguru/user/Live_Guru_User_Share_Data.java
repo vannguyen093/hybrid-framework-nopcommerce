@@ -28,11 +28,6 @@ public class Live_Guru_User_Share_Data extends BaseTest {
         homePage = PageGeneratorManager.getHomePage(driver);
         email = Common_01_Register_End_User.email;
         password = Common_01_Register_End_User.password;
-    }
-
-
-    @Test
-    public void User_01_Login_To_System() {
         log.info("Login - Step 01: Click to 'My Account' Link");
         loginPage = homePage.clickToMyAccountLink();
 
@@ -43,6 +38,12 @@ public class Live_Guru_User_Share_Data extends BaseTest {
 
         log.info("Login - Step 03: Verify the title of Dashboard Page");
         verifyEquals(myAccountDashboardPage.getHelloUserText(), "Hello, Van Nguyen!");
+    }
+
+
+    @Test
+    public void User_01_Login_To_System() {
+
     }
 
     @AfterClass

@@ -164,3 +164,16 @@
 [2022-11-18 15:23:09,119] Login - Step 02: Input 'null', 'null' to Email and Password textbox
 [2022-11-18 15:23:15,787] Login - Step 03: Verify the title of Dashboard Page
 [2022-11-18 15:23:15,848]  -------------------------- PASSED -------------------------- 
+[2022-11-18 16:17:04,822] Login - Step 01: Click to 'My Account' Link
+[2022-11-18 16:17:06,040] Login - Step 02: Input 'null', 'null' to Email and Password textbox
+[2022-11-18 16:17:12,995] Login - Step 03: Verify the title of Dashboard Page
+[2022-11-18 16:17:13,044]  -------------------------- PASSED -------------------------- 
+[2022-11-18 16:29:51,540] Pre-Condition - Step 01: Click to 'My Account Link'
+[2022-11-18 16:29:53,041] Pre-Condition - Step 02: Click to 'Create an Account' Button
+[2022-11-18 16:29:54,174] Pre-Condition - Step 03: Input 'Van', 'Nguyen', 'vannguyen33844@gmail.com', '123123', '123123' to the required fields
+[2022-11-18 16:29:56,492] Pre-Condition - Step 04: Verify Register Success Message is Displayed
+[2022-11-18 16:29:56,603]  -------------------------- PASSED -------------------------- 
+[2022-11-18 16:30:03,292] Login - Step 01: Click to 'My Account' Link
+[2022-11-18 16:30:04,427] Login - Step 02: Input 'null', 'null' to Email and Password textbox
+[2022-11-18 16:30:11,337] Login - Step 03: Verify the title of Dashboard Page
+[2022-11-18 16:30:11,388]  -------------------------- PASSED -------------------------- 
