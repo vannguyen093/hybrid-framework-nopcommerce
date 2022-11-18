@@ -1,0 +1,4 @@
+[2022-11-18 15:23:08,178] Login - Step 01: Click to 'My Account' Link
+[2022-11-18 15:23:09,119] Login - Step 02: Input 'null', 'null' to Email and Password textbox
+[2022-11-18 15:23:15,787] Login - Step 03: Verify the title of Dashboard Page
+[2022-11-18 15:23:15,848]  -------------------------- PASSED -------------------------- 
