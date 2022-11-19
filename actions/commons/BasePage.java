@@ -607,4 +607,77 @@ public class BasePage {
 
     private long longTimeOut = GlobalConstants.LONG_TIMEOUT;
     private long shortTimeOut = GlobalConstants.SHORT_TIMEOUT;
+
+    /**
+     * Enter to dynamic Textbox by ID
+     *
+     * @author VanNL
+     * @param driver
+     * @param textboxID
+     * @param value
+     */
+    public void inputToTextboxByID(WebDriver driver, String textboxID, String value) {
+        waitForElementVisible(driver, BasePageNopCommerceUI.DYNAMIC_TEXTBOX_BY_ID, textboxID);
+        sendkeysToElement(driver, BasePageNopCommerceUI.DYNAMIC_TEXTBOX_BY_ID, value, textboxID);
+    }
+
+    /**
+     * Click to dynamic Button by Text
+     *
+     * @author VanNL
+     * @param driver
+     * @param buttonText
+     */
+    public void clickToButtonByText(WebDriver driver, String buttonText) {
+        waitForElementClickable(driver, BasePageNopCommerceUI.DYNAMIC_BUTTON_BY_TEXT, buttonText);
+        clickToElement(driver, BasePageNopCommerceUI.DYNAMIC_BUTTON_BY_TEXT, buttonText);
+    }
+
+    /**
+     * Select item in dynamic dropdown by Name attribute
+     *
+     * @author VanNL
+     * @param driver
+     * @param dropdownAttributeName
+     * @param itemValue
+     */
+    public void selectToDropdownByName(WebDriver driver, String dropdownAttributeName, String itemValue) {
+        waitForElementClickable(driver, BasePageNopCommerceUI.DYNAMIC_DROPDOWN_BY_NAME, dropdownAttributeName);
+        selectItemInDefaultDropdown(driver, BasePageNopCommerceUI.DYNAMIC_DROPDOWN_BY_NAME, itemValue, dropdownAttributeName);
+    }
+
+    /**
+     * Click to dynamic Radio Button by Label Text
+     *
+     * @author VanNL
+     * @param driver
+     * @param labelText
+     */
+    public void clickToRadioButtonByLabelText(WebDriver driver, String labelText) {
+        waitForElementClickable(driver, BasePageNopCommerceUI.DYNAMIC_RADIO_BUTTON_BY_LABEL_TEXT, labelText);
+        checkToDefaultCheckboxRadio(driver, BasePageNopCommerceUI.DYNAMIC_RADIO_BUTTON_BY_LABEL_TEXT, labelText);
+    }
+
+    /**
+     * Click to dynamic Checkbox by Label Text
+     *
+     * @author VanNL
+     * @param driver
+     * @param labelText
+     */
+    public void clickToCheckboxByLabelText(WebDriver driver, String labelText) {
+        waitForElementClickable(driver, BasePageNopCommerceUI.DYNAMIC_CHECKBOX_BY_LABEL_TEXT, labelText);
+        checkToDefaultCheckboxRadio(driver, BasePageNopCommerceUI.DYNAMIC_CHECKBOX_BY_LABEL_TEXT, labelText);
+    }
+
+    /**
+     * Get value in textbox by textbox I
+     * @param driver
+     * @param textboxID
+     * @return
+     */
+    public String getTextboxValueById(WebDriver driver, String textboxID) {
+        waitForElementVisible(driver, BasePageNopCommerceUI.DYNAMIC_TEXTBOX_BY_ID, textboxID);
+        return getElementAttribute(driver, BasePageNopCommerceUI.DYNAMIC_TEXTBOX_BY_ID, "value", textboxID);
+    }
 }
