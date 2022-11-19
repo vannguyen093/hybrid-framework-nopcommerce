@@ -14,7 +14,7 @@ import reportConfig.ExtentTestManager;
 import java.lang.reflect.Method;
 
 
-public class Live_Guru_User_Extend_Report extends BaseTest {
+public class Level_12_Extend_Report extends BaseTest {
     WebDriver driver;
     UserHomePageObject homePage;
     UserLoginPageObject loginPage;

@@ -12,7 +12,7 @@ import pageObjects.liveGuru.admin.AdminHomePageObject;
 import pageObjects.liveGuru.admin.AdminLoginPageObject;
 import pageObjects.liveGuru.user.*;
 
-public class Datatable extends BaseTest {
+public class Level_10_Datatable extends BaseTest {
     WebDriver driver;
     UserHomePageObject homePage;
     UserLoginPageObject loginPage;
