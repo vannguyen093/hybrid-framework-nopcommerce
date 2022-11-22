@@ -7,4 +7,5 @@ public class AdminPostAddNewPageUI {
     public static final String PUBLISH_PRIMARY_BUTTON = "css=button.editor-post-publish-panel__toggle";
     public static final String PUBLISH_SECONDARY_BUTTON = "css=button.editor-post-publish-button";
     public static final String PUBLISHED_MESSAGE = "xpath=//div[@class='components-snackbar__content' and text()='%s']";
+
 }

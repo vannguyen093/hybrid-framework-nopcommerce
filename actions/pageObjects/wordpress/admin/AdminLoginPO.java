@@ -2,6 +2,7 @@ package pageObjects.wordpress.admin;
 
 import commons.BasePage;
 import org.openqa.selenium.WebDriver;
+import pageObjects.wordpress.PageGenerateManager;
 import pageUIs.wordpress.admin.AdminLoginPageUI;
 
 public class AdminLoginPO extends BasePage {

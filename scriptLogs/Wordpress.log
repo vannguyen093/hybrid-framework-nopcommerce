@@ -39,3 +39,198 @@
 [2022-11-22 16:27:35,556] Search_Post - Step 01: Open 'Search post' page
 [2022-11-22 16:27:36,734] OS name = windows 10
 [2022-11-22 16:27:36,734] Driver instance name = firefoxdriver: firefox on windows (fc5d7f59-9b7e-4f9f-b155-dac3dc48a8b3)
+[2022-11-22 19:50:16,135] Pre-Condition - Step 01: Open browser and admin url
+[2022-11-22 19:50:29,787] Pre-Condition - Step 02: Enter to Username textbox with value is vannguyen093
+[2022-11-22 19:50:30,073] Pre-Condition - Step 03: Enter to Password textbox with value is vannguyen093
+[2022-11-22 19:50:30,199] Pre-Condition - Step 04: Click to 'Login' button
+[2022-11-22 19:50:33,229] Create_Post - Step 01: Click to 'Post' menu link
+[2022-11-22 19:50:35,270] Create_Post - Step 02: Get 'Search post' url
+[2022-11-22 19:50:35,275] Create_Post - Step 03: Click to 'Add New' button
+[2022-11-22 19:50:38,916] Create_Post - Step 04: Enter to post title
+[2022-11-22 19:50:39,710] Create_Post - Step 05: Enter to post body
+[2022-11-22 19:50:42,032] Create_Post - Step 06: Click to 'Pulish' primary button
+[2022-11-22 19:50:42,630] Create_Post - Step 06: Click to 'Pulish' secondary button
+[2022-11-22 19:50:43,324] Create_Post - Step 07: Verify 'Post published.' message is displayed
+[2022-11-22 19:50:47,468]  -------------------------- PASSED -------------------------- 
+[2022-11-22 19:50:47,619] Search_Post - Step 01: Open 'Search post' page
+[2022-11-22 19:50:49,704] OS name = windows 10
+[2022-11-22 19:50:49,704] Driver instance name = firefoxdriver: firefox on windows (cb74e635-d9f9-4ff5-b554-beec98e4b538)
+[2022-11-22 21:17:06,757] Pre-Condition - Step 01: Open browser and admin url
+[2022-11-22 21:17:15,708] Pre-Condition - Step 02: Enter to Username textbox with value is vannguyen093
+[2022-11-22 21:17:15,934] Pre-Condition - Step 03: Enter to Password textbox with value is vannguyen093
+[2022-11-22 21:17:16,029] Pre-Condition - Step 04: Click to 'Login' button
+[2022-11-22 21:17:18,831] Create_Post - Step 01: Click to 'Post' menu link
+[2022-11-22 21:17:21,384] Create_Post - Step 02: Get 'Search post' url
+[2022-11-22 21:17:21,388] Create_Post - Step 03: Click to 'Add New' button
+[2022-11-22 21:17:26,400] Create_Post - Step 04: Enter to post title
+[2022-11-22 21:17:27,798] Create_Post - Step 05: Enter to post body
+[2022-11-22 21:17:30,356] Create_Post - Step 06: Click to 'Pulish' primary button
+[2022-11-22 21:17:31,034] Create_Post - Step 06: Click to 'Pulish' secondary button
+[2022-11-22 21:17:31,424] Create_Post - Step 07: Verify 'Post published.' message is displayed
+[2022-11-22 21:17:33,787]  -------------------------- PASSED -------------------------- 
+[2022-11-22 21:17:33,936] Search_Post - Step 01: Open 'Search post' page
+[2022-11-22 21:17:36,294] Search_Post - Step 02: Enter to 'Search' textbox
+[2022-11-22 21:17:36,464] Search_Post - Step 03: Click to 'Search Posts' button
+[2022-11-22 21:17:38,633] Search_Post - Step 04: Verify Search table contains 'Live Coding Title 7602'
+[2022-11-22 21:17:38,746]  -------------------------- PASSED -------------------------- 
+[2022-11-22 21:17:38,747] Search_Post - Step 05: Verify Search table contains 'vannguyen093'
+[2022-11-22 21:17:38,824]  -------------------------- PASSED -------------------------- 
+[2022-11-22 21:17:38,824] Search_Post - Step 06: Open User Site
+[2022-11-22 21:17:40,145] Search_Post - Step 07: Verify post info displayed at Home Page
+[2022-11-22 21:18:10,451] OS name = windows 10
+[2022-11-22 21:18:10,451] Driver instance name = firefoxdriver: firefox on windows (cd791ac2-26ee-45be-8072-8d972cec8091)
+[2022-11-22 21:18:50,930] Pre-Condition - Step 01: Open browser and admin url
+[2022-11-22 21:18:57,396] Pre-Condition - Step 02: Enter to Username textbox with value is vannguyen093
+[2022-11-22 21:18:57,604] Pre-Condition - Step 03: Enter to Password textbox with value is vannguyen093
+[2022-11-22 21:18:57,701] Pre-Condition - Step 04: Click to 'Login' button
+[2022-11-22 21:19:00,144] Create_Post - Step 01: Click to 'Post' menu link
+[2022-11-22 21:19:01,586] Create_Post - Step 02: Get 'Search post' url
+[2022-11-22 21:19:01,591] Create_Post - Step 03: Click to 'Add New' button
+[2022-11-22 21:19:04,642] Create_Post - Step 04: Enter to post title
+[2022-11-22 21:19:05,764] Create_Post - Step 05: Enter to post body
+[2022-11-22 21:19:08,295] Create_Post - Step 06: Click to 'Pulish' primary button
+[2022-11-22 21:19:09,380] Create_Post - Step 06: Click to 'Pulish' secondary button
+[2022-11-22 21:19:09,770] Create_Post - Step 07: Verify 'Post published.' message is displayed
+[2022-11-22 21:19:11,274]  -------------------------- PASSED -------------------------- 
+[2022-11-22 21:19:11,379] Search_Post - Step 01: Open 'Search post' page
+[2022-11-22 21:19:13,306] Search_Post - Step 02: Enter to 'Search' textbox
+[2022-11-22 21:19:13,470] Search_Post - Step 03: Click to 'Search Posts' button
+[2022-11-22 21:19:15,487] Search_Post - Step 04: Verify Search table contains 'Live Coding Title 77276'
+[2022-11-22 21:19:15,605]  -------------------------- PASSED -------------------------- 
+[2022-11-22 21:19:15,606] Search_Post - Step 05: Verify Search table contains 'Vannguyen093'
+[2022-11-22 21:22:46,156] Pre-Condition - Step 01: Open browser and admin url
+[2022-11-22 21:22:53,754] Pre-Condition - Step 02: Enter to Username textbox with value is vannguyen093
+[2022-11-22 21:22:53,958] Pre-Condition - Step 03: Enter to Password textbox with value is vannguyen093
+[2022-11-22 21:22:54,061] Pre-Condition - Step 04: Click to 'Login' button
+[2022-11-22 21:22:56,332] Create_Post - Step 01: Click to 'Post' menu link
+[2022-11-22 21:22:57,674] Create_Post - Step 02: Get 'Search post' url
+[2022-11-22 21:22:57,679] Create_Post - Step 03: Click to 'Add New' button
+[2022-11-22 21:23:00,754] Create_Post - Step 04: Enter to post title
+[2022-11-22 21:23:01,630] Create_Post - Step 05: Enter to post body
+[2022-11-22 21:23:04,379] Create_Post - Step 06: Click to 'Pulish' primary button
+[2022-11-22 21:23:05,610] Create_Post - Step 06: Click to 'Pulish' secondary button
+[2022-11-22 21:23:06,016] Create_Post - Step 07: Verify 'Post published.' message is displayed
+[2022-11-22 21:23:07,831]  -------------------------- PASSED -------------------------- 
+[2022-11-22 21:23:07,971] Search_Post - Step 01: Open 'Search post' page
+[2022-11-22 21:23:10,148] Search_Post - Step 02: Enter to 'Search' textbox
+[2022-11-22 21:23:10,303] Search_Post - Step 03: Click to 'Search Posts' button
+[2022-11-22 21:23:12,222] Search_Post - Step 04: Verify Search table contains 'Live Coding Title 38366'
+[2022-11-22 21:23:12,337]  -------------------------- PASSED -------------------------- 
+[2022-11-22 21:23:12,337] Search_Post - Step 05: Verify Search table contains 'vannguyen093'
+[2022-11-22 21:23:12,418]  -------------------------- PASSED -------------------------- 
+[2022-11-22 21:23:12,418] Search_Post - Step 06: Open User Site
+[2022-11-22 21:23:13,637] Search_Post - Step 07: Verify post info displayed at Home Page
+[2022-11-22 21:23:43,860] OS name = windows 10
+[2022-11-22 21:23:43,861] Driver instance name = firefoxdriver: firefox on windows (44d83b99-d85c-47c8-b21f-df197ee6474f)
+[2022-11-22 21:27:10,244] Pre-Condition - Step 01: Open browser and admin url
+[2022-11-22 21:27:16,974] Pre-Condition - Step 02: Enter to Username textbox with value is vannguyen093
+[2022-11-22 21:27:17,203] Pre-Condition - Step 03: Enter to Password textbox with value is vannguyen093
+[2022-11-22 21:27:17,302] Pre-Condition - Step 04: Click to 'Login' button
+[2022-11-22 21:27:19,705] Create_Post - Step 01: Click to 'Post' menu link
+[2022-11-22 21:27:21,633] Create_Post - Step 02: Get 'Search post' url
+[2022-11-22 21:27:21,637] Create_Post - Step 03: Click to 'Add New' button
+[2022-11-22 21:27:24,404] Create_Post - Step 04: Enter to post title
+[2022-11-22 21:27:25,266] Create_Post - Step 05: Enter to post body
+[2022-11-22 21:27:27,712] Create_Post - Step 06: Click to 'Pulish' primary button
+[2022-11-22 21:27:28,881] Create_Post - Step 06: Click to 'Pulish' secondary button
+[2022-11-22 21:27:29,319] Create_Post - Step 07: Verify 'Post published.' message is displayed
+[2022-11-22 21:27:30,826]  -------------------------- PASSED -------------------------- 
+[2022-11-22 21:27:30,942] Search_Post - Step 01: Open 'Search post' page
+[2022-11-22 21:27:32,123] Search_Post - Step 02: Enter to 'Search' textbox
+[2022-11-22 21:27:32,290] Search_Post - Step 03: Click to 'Search Posts' button
+[2022-11-22 21:27:34,359] Search_Post - Step 04: Verify Search table contains 'Live Coding Title 85939'
+[2022-11-22 21:27:34,457]  -------------------------- PASSED -------------------------- 
+[2022-11-22 21:27:34,458] Search_Post - Step 05: Verify Search table contains 'vannguyen093'
+[2022-11-22 21:27:34,541]  -------------------------- PASSED -------------------------- 
+[2022-11-22 21:27:34,541] Search_Post - Step 06: Open User Site
+[2022-11-22 21:27:35,760] Search_Post - Step 07: Verify post info displayed at Home Page
+[2022-11-22 21:27:35,843]  -------------------------- PASSED -------------------------- 
+[2022-11-22 21:27:36,021] OS name = windows 10
+[2022-11-22 21:27:36,021] Driver instance name = firefoxdriver: firefox on windows (467c760c-504e-4aed-9866-6c92394e39c3)
+[2022-11-22 21:31:59,193] Pre-Condition - Step 01: Open browser and admin url
+[2022-11-22 21:32:05,857] Pre-Condition - Step 02: Enter to Username textbox with value is vannguyen093
+[2022-11-22 21:32:06,069] Pre-Condition - Step 03: Enter to Password textbox with value is vannguyen093
+[2022-11-22 21:32:06,169] Pre-Condition - Step 04: Click to 'Login' button
+[2022-11-22 21:32:08,447] Create_Post - Step 01: Click to 'Post' menu link
+[2022-11-22 21:32:09,799] Create_Post - Step 02: Get 'Search post' url
+[2022-11-22 21:32:09,803] Create_Post - Step 03: Click to 'Add New' button
+[2022-11-22 21:32:12,410] Create_Post - Step 04: Enter to post title
+[2022-11-22 21:32:13,315] Create_Post - Step 05: Enter to post body
+[2022-11-22 21:32:15,860] Create_Post - Step 06: Click to 'Pulish' primary button
+[2022-11-22 21:32:16,947] Create_Post - Step 06: Click to 'Pulish' secondary button
+[2022-11-22 21:32:17,372] Create_Post - Step 07: Verify 'Post published.' message is displayed
+[2022-11-22 21:32:18,828]  -------------------------- PASSED -------------------------- 
+[2022-11-22 21:32:18,931] Search_Post - Step 01: Open 'Search post' page
+[2022-11-22 21:32:21,166] Search_Post - Step 02: Enter to 'Search' textbox
+[2022-11-22 21:32:21,344] Search_Post - Step 03: Click to 'Search Posts' button
+[2022-11-22 21:32:23,348] Search_Post - Step 04: Verify Search table contains 'Live Coding Title 1890'
+[2022-11-22 21:32:23,476]  -------------------------- PASSED -------------------------- 
+[2022-11-22 21:32:23,477] Search_Post - Step 05: Verify Search table contains 'vannguyen093'
+[2022-11-22 21:32:23,574]  -------------------------- PASSED -------------------------- 
+[2022-11-22 21:32:23,574] Search_Post - Step 06: Open User Site
+[2022-11-22 21:32:24,797] Search_Post - Step 07: Verify post info displayed at Home Page
+[2022-11-22 21:32:24,898]  -------------------------- PASSED -------------------------- 
+[2022-11-22 21:32:24,974]  -------------------------- PASSED -------------------------- 
+[2022-11-22 21:32:55,190] OS name = windows 10
+[2022-11-22 21:32:55,197] Driver instance name = firefoxdriver: firefox on windows (ddd0f2a4-b032-4567-b700-3e0b06fbbe82)
+[2022-11-22 21:37:11,071] Pre-Condition - Step 01: Open browser and admin url
+[2022-11-22 21:37:17,662] Pre-Condition - Step 02: Enter to Username textbox with value is vannguyen093
+[2022-11-22 21:37:17,887] Pre-Condition - Step 03: Enter to Password textbox with value is vannguyen093
+[2022-11-22 21:37:17,971] Pre-Condition - Step 04: Click to 'Login' button
+[2022-11-22 21:37:21,013] Create_Post - Step 01: Click to 'Post' menu link
+[2022-11-22 21:37:22,360] Create_Post - Step 02: Get 'Search post' url
+[2022-11-22 21:37:22,365] Create_Post - Step 03: Click to 'Add New' button
+[2022-11-22 21:37:25,029] Create_Post - Step 04: Enter to post title
+[2022-11-22 21:37:25,919] Create_Post - Step 05: Enter to post body
+[2022-11-22 21:37:28,012] Create_Post - Step 06: Click to 'Pulish' primary button
+[2022-11-22 21:37:29,171] Create_Post - Step 06: Click to 'Pulish' secondary button
+[2022-11-22 21:37:29,557] Create_Post - Step 07: Verify 'Post published.' message is displayed
+[2022-11-22 21:37:31,293]  -------------------------- PASSED -------------------------- 
+[2022-11-22 21:37:31,424] Search_Post - Step 01: Open 'Search post' page
+[2022-11-22 21:37:32,600] Search_Post - Step 02: Enter to 'Search' textbox
+[2022-11-22 21:37:32,783] Search_Post - Step 03: Click to 'Search Posts' button
+[2022-11-22 21:37:34,845] Search_Post - Step 04: Verify Search table contains 'Live Coding Title 57113'
+[2022-11-22 21:37:34,984]  -------------------------- PASSED -------------------------- 
+[2022-11-22 21:37:34,984] Search_Post - Step 05: Verify Search table contains 'vannguyen093'
+[2022-11-22 21:37:35,090]  -------------------------- PASSED -------------------------- 
+[2022-11-22 21:37:35,090] Search_Post - Step 06: Open User Site
+[2022-11-22 21:37:36,296] Search_Post - Step 07: Verify post info displayed at Home Page
+[2022-11-22 21:37:36,396]  -------------------------- PASSED -------------------------- 
+[2022-11-22 21:37:36,457]  -------------------------- PASSED -------------------------- 
+[2022-11-22 21:37:36,525]  -------------------------- PASSED -------------------------- 
+[2022-11-22 21:38:06,928] OS name = windows 10
+[2022-11-22 21:38:06,929] Driver instance name = firefoxdriver: firefox on windows (ee5e23b3-5f99-4f90-af6a-4910b2c59ea3)
+[2022-11-22 21:40:01,908] Pre-Condition - Step 01: Open browser and admin url
+[2022-11-22 21:40:08,082] Pre-Condition - Step 02: Enter to Username textbox with value is vannguyen093
+[2022-11-22 21:40:08,313] Pre-Condition - Step 03: Enter to Password textbox with value is vannguyen093
+[2022-11-22 21:40:08,410] Pre-Condition - Step 04: Click to 'Login' button
+[2022-11-22 21:40:10,707] Create_Post - Step 01: Click to 'Post' menu link
+[2022-11-22 21:40:12,034] Create_Post - Step 02: Get 'Search post' url
+[2022-11-22 21:40:12,039] Create_Post - Step 03: Click to 'Add New' button
+[2022-11-22 21:40:14,568] Create_Post - Step 04: Enter to post title
+[2022-11-22 21:40:15,489] Create_Post - Step 05: Enter to post body
+[2022-11-22 21:40:17,893] Create_Post - Step 06: Click to 'Pulish' primary button
+[2022-11-22 21:40:19,107] Create_Post - Step 06: Click to 'Pulish' secondary button
+[2022-11-22 21:40:19,516] Create_Post - Step 07: Verify 'Post published.' message is displayed
+[2022-11-22 21:40:20,972]  -------------------------- PASSED -------------------------- 
+[2022-11-22 21:40:21,120] Search_Post - Step 01: Open 'Search post' page
+[2022-11-22 21:40:22,313] Search_Post - Step 02: Enter to 'Search' textbox
+[2022-11-22 21:40:22,449] Search_Post - Step 03: Click to 'Search Posts' button
+[2022-11-22 21:40:24,347] Search_Post - Step 04: Verify Search table contains 'Live Coding Title 71275'
+[2022-11-22 21:40:24,482]  -------------------------- PASSED -------------------------- 
+[2022-11-22 21:40:24,483] Search_Post - Step 05: Verify Search table contains 'vannguyen093'
+[2022-11-22 21:40:24,578]  -------------------------- PASSED -------------------------- 
+[2022-11-22 21:40:24,578] Search_Post - Step 06: Open User Site
+[2022-11-22 21:40:25,801] Search_Post - Step 07: Verify post info displayed at Home Page
+[2022-11-22 21:40:25,891]  -------------------------- PASSED -------------------------- 
+[2022-11-22 21:40:25,960]  -------------------------- PASSED -------------------------- 
+[2022-11-22 21:40:26,030]  -------------------------- PASSED -------------------------- 
+[2022-11-22 21:40:26,104]  -------------------------- PASSED -------------------------- 
+[2022-11-22 21:40:26,104] Search_Post - Step 08: Click to post title
+[2022-11-22 21:40:27,208] Search_Post - Step 09: Verify post info displayed at Post Detail Page
+[2022-11-22 21:40:27,310]  -------------------------- PASSED -------------------------- 
+[2022-11-22 21:40:27,371]  -------------------------- PASSED -------------------------- 
+[2022-11-22 21:40:27,438]  -------------------------- PASSED -------------------------- 
+[2022-11-22 21:40:27,552]  -------------------------- PASSED -------------------------- 
+[2022-11-22 21:40:27,570] OS name = windows 10
+[2022-11-22 21:40:27,570] Driver instance name = firefoxdriver: firefox on windows (c82ccbe7-8e0b-4b8a-8b31-7d0d0b8e3b36)

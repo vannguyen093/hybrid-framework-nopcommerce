@@ -11,6 +11,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import pageObjects.liveGuru.user.*;
 import pageObjects.nopCommerce.admin.AdminLoginPageObject;
 import pageObjects.nopCommerce.PageGeneratorManager;
+import pageObjects.wordpress.PageGenerateManager;
+import pageObjects.wordpress.user.UserHomePO;
 import pageUIs.jquery.uploadFile.BasePageJQueryUI;
 import pageUIs.liveGuru.user.BasePageLiveGuruUI;
 import pageUIs.nopCommerce.admin.AdminBasePageUI;
@@ -679,5 +681,10 @@ public class BasePage {
     public String getTextboxValueById(WebDriver driver, String textboxID) {
         waitForElementVisible(driver, BasePageNopCommerceUI.DYNAMIC_TEXTBOX_BY_ID, textboxID);
         return getElementAttribute(driver, BasePageNopCommerceUI.DYNAMIC_TEXTBOX_BY_ID, "value", textboxID);
+    }
+
+    public UserHomePO openUserSite(WebDriver driver, String userUrl) {
+        openPageUrl(driver, userUrl);
+        return PageGenerateManager.getUserHomePage(driver);
     }
 }

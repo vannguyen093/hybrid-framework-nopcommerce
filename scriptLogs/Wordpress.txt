@@ -1,16 +1,34 @@
-[2022-11-22 16:27:15,269] Pre-Condition - Step 01: Open browser and admin url
-[2022-11-22 16:27:21,731] Pre-Condition - Step 02: Enter to Username textbox with value is vannguyen093
-[2022-11-22 16:27:21,961] Pre-Condition - Step 03: Enter to Password textbox with value is vannguyen093
-[2022-11-22 16:27:22,060] Pre-Condition - Step 04: Click to 'Login' button
-[2022-11-22 16:27:24,453] Create_Post - Step 01: Click to 'Post' menu link
-[2022-11-22 16:27:25,983] Create_Post - Step 02: Get 'Search post' url
-[2022-11-22 16:27:25,988] Create_Post - Step 03: Click to 'Add New' button
-[2022-11-22 16:27:28,686] Create_Post - Step 04: Enter to post title
-[2022-11-22 16:27:29,441] Create_Post - Step 05: Enter to post body
-[2022-11-22 16:27:31,890] Create_Post - Step 06: Click to 'Pulish' primary button
-[2022-11-22 16:27:33,499] Create_Post - Step 06: Click to 'Pulish' secondary button
-[2022-11-22 16:27:33,923] Create_Post - Step 07: Verify 'Post published.' message is displayed
-[2022-11-22 16:27:35,444]  -------------------------- PASSED -------------------------- 
-[2022-11-22 16:27:35,556] Search_Post - Step 01: Open 'Search post' page
-[2022-11-22 16:27:36,734] OS name = windows 10
-[2022-11-22 16:27:36,734] Driver instance name = firefoxdriver: firefox on windows (fc5d7f59-9b7e-4f9f-b155-dac3dc48a8b3)
+[2022-11-22 21:40:01,908] Pre-Condition - Step 01: Open browser and admin url
+[2022-11-22 21:40:08,082] Pre-Condition - Step 02: Enter to Username textbox with value is vannguyen093
+[2022-11-22 21:40:08,313] Pre-Condition - Step 03: Enter to Password textbox with value is vannguyen093
+[2022-11-22 21:40:08,410] Pre-Condition - Step 04: Click to 'Login' button
+[2022-11-22 21:40:10,707] Create_Post - Step 01: Click to 'Post' menu link
+[2022-11-22 21:40:12,034] Create_Post - Step 02: Get 'Search post' url
+[2022-11-22 21:40:12,039] Create_Post - Step 03: Click to 'Add New' button
+[2022-11-22 21:40:14,568] Create_Post - Step 04: Enter to post title
+[2022-11-22 21:40:15,489] Create_Post - Step 05: Enter to post body
+[2022-11-22 21:40:17,893] Create_Post - Step 06: Click to 'Pulish' primary button
+[2022-11-22 21:40:19,107] Create_Post - Step 06: Click to 'Pulish' secondary button
+[2022-11-22 21:40:19,516] Create_Post - Step 07: Verify 'Post published.' message is displayed
+[2022-11-22 21:40:20,972]  -------------------------- PASSED -------------------------- 
+[2022-11-22 21:40:21,120] Search_Post - Step 01: Open 'Search post' page
+[2022-11-22 21:40:22,313] Search_Post - Step 02: Enter to 'Search' textbox
+[2022-11-22 21:40:22,449] Search_Post - Step 03: Click to 'Search Posts' button
+[2022-11-22 21:40:24,347] Search_Post - Step 04: Verify Search table contains 'Live Coding Title 71275'
+[2022-11-22 21:40:24,482]  -------------------------- PASSED -------------------------- 
+[2022-11-22 21:40:24,483] Search_Post - Step 05: Verify Search table contains 'vannguyen093'
+[2022-11-22 21:40:24,578]  -------------------------- PASSED -------------------------- 
+[2022-11-22 21:40:24,578] Search_Post - Step 06: Open User Site
+[2022-11-22 21:40:25,801] Search_Post - Step 07: Verify post info displayed at Home Page
+[2022-11-22 21:40:25,891]  -------------------------- PASSED -------------------------- 
+[2022-11-22 21:40:25,960]  -------------------------- PASSED -------------------------- 
+[2022-11-22 21:40:26,030]  -------------------------- PASSED -------------------------- 
+[2022-11-22 21:40:26,104]  -------------------------- PASSED -------------------------- 
+[2022-11-22 21:40:26,104] Search_Post - Step 08: Click to post title
+[2022-11-22 21:40:27,208] Search_Post - Step 09: Verify post info displayed at Post Detail Page
+[2022-11-22 21:40:27,310]  -------------------------- PASSED -------------------------- 
+[2022-11-22 21:40:27,371]  -------------------------- PASSED -------------------------- 
+[2022-11-22 21:40:27,438]  -------------------------- PASSED -------------------------- 
+[2022-11-22 21:40:27,552]  -------------------------- PASSED -------------------------- 
+[2022-11-22 21:40:27,570] OS name = windows 10
+[2022-11-22 21:40:27,570] Driver instance name = firefoxdriver: firefox on windows (c82ccbe7-8e0b-4b8a-8b31-7d0d0b8e3b36)
