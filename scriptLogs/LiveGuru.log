@@ -251,3 +251,23 @@
 [2022-11-19 17:00:18,577]  -------------------------- PASSED -------------------------- 
 [2022-11-19 17:00:18,578] My Account - Step 03: Verify 'Email' value is correctly
 [2022-11-19 17:00:18,642]  -------------------------- PASSED -------------------------- 
+[2022-11-22 16:03:48,124] Pre-Condition - Step 01: Open browser and admin url
+[2022-11-22 16:03:54,777] Pre-Condition - Step 02: Enter to Username textbox with value is vannguyen093
+[2022-11-22 16:03:54,999] Pre-Condition - Step 03: Enter to Password textbox with value is vannguyen093
+[2022-11-22 16:03:55,080] Pre-Condition - Step 04: Click to 'Login' button
+[2022-11-22 16:03:57,524] Create_Post - Step 01: Click to 'Post' menu link
+[2022-11-22 16:03:58,895] Create_Post - Step 02: Get 'Search post' url
+[2022-11-22 16:03:58,899] Create_Post - Step 03: Click to 'Add New' button
+[2022-11-22 16:04:01,593] Create_Post - Step 04: Enter to post title
+[2022-11-22 16:04:02,471] Create_Post - Step 05: Enter to post body
+[2022-11-22 16:11:25,212] Pre-Condition - Step 01: Open browser and admin url
+[2022-11-22 16:11:32,450] Pre-Condition - Step 02: Enter to Username textbox with value is vannguyen093
+[2022-11-22 16:11:32,706] Pre-Condition - Step 03: Enter to Password textbox with value is vannguyen093
+[2022-11-22 16:11:32,819] Pre-Condition - Step 04: Click to 'Login' button
+[2022-11-22 16:11:35,831] Create_Post - Step 01: Click to 'Post' menu link
+[2022-11-22 16:11:37,335] Create_Post - Step 02: Get 'Search post' url
+[2022-11-22 16:11:37,340] Create_Post - Step 03: Click to 'Add New' button
+[2022-11-22 16:11:40,585] Create_Post - Step 04: Enter to post title
+[2022-11-22 16:11:41,393] Create_Post - Step 05: Enter to post body
+[2022-11-22 16:11:43,833] Create_Post - Step 06: Click to 'Pulish' button
+[2022-11-22 16:12:14,105] Search_Post - Step 01: Open 'Search post' page

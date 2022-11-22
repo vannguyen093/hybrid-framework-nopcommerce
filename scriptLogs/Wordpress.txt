@@ -1,0 +1,16 @@
+[2022-11-22 16:27:15,269] Pre-Condition - Step 01: Open browser and admin url
+[2022-11-22 16:27:21,731] Pre-Condition - Step 02: Enter to Username textbox with value is vannguyen093
+[2022-11-22 16:27:21,961] Pre-Condition - Step 03: Enter to Password textbox with value is vannguyen093
+[2022-11-22 16:27:22,060] Pre-Condition - Step 04: Click to 'Login' button
+[2022-11-22 16:27:24,453] Create_Post - Step 01: Click to 'Post' menu link
+[2022-11-22 16:27:25,983] Create_Post - Step 02: Get 'Search post' url
+[2022-11-22 16:27:25,988] Create_Post - Step 03: Click to 'Add New' button
+[2022-11-22 16:27:28,686] Create_Post - Step 04: Enter to post title
+[2022-11-22 16:27:29,441] Create_Post - Step 05: Enter to post body
+[2022-11-22 16:27:31,890] Create_Post - Step 06: Click to 'Pulish' primary button
+[2022-11-22 16:27:33,499] Create_Post - Step 06: Click to 'Pulish' secondary button
+[2022-11-22 16:27:33,923] Create_Post - Step 07: Verify 'Post published.' message is displayed
+[2022-11-22 16:27:35,444]  -------------------------- PASSED -------------------------- 
+[2022-11-22 16:27:35,556] Search_Post - Step 01: Open 'Search post' page
+[2022-11-22 16:27:36,734] OS name = windows 10
+[2022-11-22 16:27:36,734] Driver instance name = firefoxdriver: firefox on windows (fc5d7f59-9b7e-4f9f-b155-dac3dc48a8b3)

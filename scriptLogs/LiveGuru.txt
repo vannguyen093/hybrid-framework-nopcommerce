@@ -1,28 +1,11 @@
-[2022-11-19 17:00:11,759] Register - Step 01: Click to 'Register' link
-[2022-11-19 17:00:12,986] Register - Step 02: Click to 'Radio' button with value 'Male'
-[2022-11-19 17:00:13,274] Register - Step 03: Enter to First Name textbox with value is Automation
-[2022-11-19 17:00:13,385] Register - Step 04: Enter to Last Name textbox with value is FC
-[2022-11-19 17:00:13,470] Register - Step 05: Select date in Day dropdown with value is 30
-[2022-11-19 17:00:13,796] Register - Step 06: Select month in Month dropdown with value is May
-[2022-11-19 17:00:14,092] Register - Step 07: Select year in Year dropdown with value is 1993
-[2022-11-19 17:00:14,392] Register - Step 08: Enter to Email textbox with value is vannguyen21972@gmail.com
-[2022-11-19 17:00:14,488] Register - Step 09: Enter to Password textbox with value is 123456
-[2022-11-19 17:00:14,574] Register - Step 10: Enter to Confirm Password textbox with value is 123456
-[2022-11-19 17:00:14,667] Register - Step 11: Click to 'News letter' checkbox
-[2022-11-19 17:00:14,720] Register - Step 12: Click to 'Register' button
-[2022-11-19 17:00:15,587] Register - Step 13: Verify the 'Success Message' is displayed
-[2022-11-19 17:00:15,635]  -------------------------- PASSED -------------------------- 
-[2022-11-19 17:00:15,635] Register - Step 14: Click to 'Log out' link
-[2022-11-19 17:00:16,423] Login - Step 01: Click to 'Login' link
-[2022-11-19 17:00:16,955] Login - Step 02: Enter to Email textbox with value is vannguyen21972@gmail.com
-[2022-11-19 17:00:17,057] Login - Step 03: Enter to Password textbox with value is 123456
-[2022-11-19 17:00:17,146] Login - Step 04: Click to 'Login' button
-[2022-11-19 17:00:17,813] My Account - Step 01: Click to 'My Account' link
-[2022-11-19 17:00:18,389] My Account - Step 02: Verify 'Customer Info' page is displayed
-[2022-11-19 17:00:18,457]  -------------------------- PASSED -------------------------- 
-[2022-11-19 17:00:18,457] My Account - Step 03: Verify 'First Name' value is correctly
-[2022-11-19 17:00:18,514]  -------------------------- PASSED -------------------------- 
-[2022-11-19 17:00:18,514] My Account - Step 03: Verify 'Last Name' value is correctly
-[2022-11-19 17:00:18,577]  -------------------------- PASSED -------------------------- 
-[2022-11-19 17:00:18,578] My Account - Step 03: Verify 'Email' value is correctly
-[2022-11-19 17:00:18,642]  -------------------------- PASSED -------------------------- 
+[2022-11-22 16:11:25,212] Pre-Condition - Step 01: Open browser and admin url
+[2022-11-22 16:11:32,450] Pre-Condition - Step 02: Enter to Username textbox with value is vannguyen093
+[2022-11-22 16:11:32,706] Pre-Condition - Step 03: Enter to Password textbox with value is vannguyen093
+[2022-11-22 16:11:32,819] Pre-Condition - Step 04: Click to 'Login' button
+[2022-11-22 16:11:35,831] Create_Post - Step 01: Click to 'Post' menu link
+[2022-11-22 16:11:37,335] Create_Post - Step 02: Get 'Search post' url
+[2022-11-22 16:11:37,340] Create_Post - Step 03: Click to 'Add New' button
+[2022-11-22 16:11:40,585] Create_Post - Step 04: Enter to post title
+[2022-11-22 16:11:41,393] Create_Post - Step 05: Enter to post body
+[2022-11-22 16:11:43,833] Create_Post - Step 06: Click to 'Pulish' button
+[2022-11-22 16:12:14,105] Search_Post - Step 01: Open 'Search post' page
