@@ -12,13 +12,13 @@ import pageObjects.liveGuru.user.*;
 import pageObjects.nopCommerce.admin.AdminLoginPageObject;
 import pageObjects.nopCommerce.PageGeneratorManager;
 import pageObjects.wordpress.PageGenerateManager;
+import pageObjects.wordpress.admin.AdminDashboardPO;
 import pageObjects.wordpress.user.UserHomePO;
 import pageUIs.jquery.uploadFile.BasePageJQueryUI;
 import pageUIs.liveGuru.user.BasePageLiveGuruUI;
 import pageUIs.nopCommerce.admin.AdminBasePageUI;
 import pageUIs.nopCommerce.user.BasePageNopCommerceUI;
 
-import java.util.Date;
 import java.util.List;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
@@ -173,6 +173,11 @@ public class BasePage {
         element.sendKeys(textValue);
     }
 
+    public void clearValueByDeleteKey(WebDriver driver, String locatorType) {
+        WebElement element = getWebElement(driver, locatorType);
+        element.sendKeys(Keys.chord(Keys.CONTROL,"a",Keys.DELETE));
+    }
+
     public void sendkeysToElement(WebDriver driver, String locatorType, String textValue, String... dynamicValues) {
         WebElement element = getWebElement(driver, getDynamicXpath(locatorType, dynamicValues));
         element.clear();
@@ -311,9 +316,23 @@ public class BasePage {
         driver.manage().timeouts().implicitlyWait(timeOut, TimeUnit.SECONDS);
     }
 
-    public boolean isElementUndisplayed(WebDriver driver, String locator){
+    public boolean isElementUndisplayed(WebDriver driver, String locatorType){
         overrideGlobalTimeout(driver, shortTimeOut);
-        List<WebElement> elements  = getListWebElements(driver, locator);
+        List<WebElement> elements  = getListWebElements(driver, locatorType);
+        overrideGlobalTimeout(driver, longTimeOut);
+
+        if( elements.size() == 0 ){
+            return true;
+        } else if( elements.size() > 0 && !elements.get(0).isDisplayed() ) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public boolean isElementUndisplayed(WebDriver driver, String locatorType, String... dynamicValues){
+        overrideGlobalTimeout(driver, shortTimeOut);
+        List<WebElement> elements  = getListWebElements(driver, getDynamicXpath(locatorType, dynamicValues));
         overrideGlobalTimeout(driver, longTimeOut);
 
         if( elements.size() == 0 ){
@@ -686,5 +705,10 @@ public class BasePage {
     public UserHomePO openUserSite(WebDriver driver, String userUrl) {
         openPageUrl(driver, userUrl);
         return PageGenerateManager.getUserHomePage(driver);
+    }
+
+    public AdminDashboardPO openAdminSite(WebDriver driver, String adminUrl) {
+        openPageUrl(driver, adminUrl);
+        return PageGenerateManager.getAdminDashboardPage(driver);
     }
 }

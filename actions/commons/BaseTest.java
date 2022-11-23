@@ -69,7 +69,6 @@ public class BaseTest {
                 throw new RuntimeException("Browser not supported: " + browserName);
         }
         driver.manage().timeouts().implicitlyWait(GlobalConstants.LONG_TIMEOUT, TimeUnit.SECONDS);
-        driver.manage().window().maximize();
         driver.get(appUrl);
         return driver;
     }
