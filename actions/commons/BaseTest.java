@@ -41,6 +41,8 @@ public class BaseTest {
             case FIREFOX:
                 //                WebDriverManager.firefoxdriver().setup();
                 System.setProperty("webdriver.gecko.driver", projectPath + "\\browserDrivers\\geckodriver.exe");
+                System.setProperty(FirefoxDriver.SystemProperty.DRIVER_USE_MARIONETTE, "true");
+                System.setProperty(FirefoxDriver.SystemProperty.BROWSER_LOGFILE, GlobalConstants.PROJECT_PATH + "\\browserLogs\\FirefoxLog.log");
                 driver = new FirefoxDriver();
                 break;
             case H_FIREFOX:
@@ -52,6 +54,8 @@ public class BaseTest {
                 break;
             case CHROME:
                 WebDriverManager.chromedriver().setup();
+                System.setProperty("webdriver.chrome.args", "--disable-logging");
+                System.setProperty("webdriver.chrome.silentOutput", "true");
                 driver = new ChromeDriver();
                 break;
             case H_CHROME:

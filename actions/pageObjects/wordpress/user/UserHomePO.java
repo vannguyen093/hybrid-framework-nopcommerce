@@ -44,7 +44,7 @@ public class UserHomePO extends BasePage {
 
     public void enterToSearchTextbox(String editPostTitle) {
         waitForElementVisible(driver, UserHomePageUI.SEARCH_TEXTBOX);
-        clickToElement(driver, UserHomePageUI.SEARCH_TEXTBOX, editPostTitle);
+        sendkeysToElement(driver, UserHomePageUI.SEARCH_TEXTBOX, editPostTitle);
     }
 
     public UserPostSearchPO clickToSearchButton() {

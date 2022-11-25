@@ -762,3 +762,345 @@
 [2022-11-23 10:27:03,264] Delete_Post - Step 10: Enter to 'Search' textbox
 [2022-11-23 10:27:33,377] OS name = windows 11
 [2022-11-23 10:27:33,377] Driver instance name = firefoxdriver: firefox on windows (2cf33b26-fb3d-4251-8c83-4a097940420e)
+[2022-11-23 11:40:33,278] Pre-Condition - Step 01: Open browser and admin url
+[2022-11-23 11:40:42,275] OS name = windows 10
+[2022-11-23 11:40:42,276] Driver instance name = firefoxdriver: firefox on windows (94e30e64-d37b-4e4c-8e21-ddfdbbfd17d8)
+[2022-11-23 11:41:11,465] Pre-Condition - Step 01: Open browser and admin url
+[2022-11-23 11:41:20,758] Pre-Condition - Step 02: Enter to Username textbox with value is vannguyen093
+[2022-11-23 11:41:21,121] Pre-Condition - Step 03: Enter to Password textbox with value is vannguyen093
+[2022-11-23 11:41:21,286] Pre-Condition - Step 04: Click to 'Login' button
+[2022-11-23 11:41:24,915] Create_Post - Step 01: Click to 'Post' menu link
+[2022-11-23 11:41:27,006] Create_Post - Step 02: Get 'Search post' url
+[2022-11-23 11:41:27,014] Create_Post - Step 03: Click to 'Add New' button
+[2022-11-23 11:41:31,507] Create_Post - Step 04: Enter to post title
+[2022-11-23 11:41:32,966] Create_Post - Step 05: Enter to post body
+[2022-11-23 11:41:35,772] Create_Post - Step 06: Click to 'Pulish' primary button
+[2022-11-23 11:41:36,781] Create_Post - Step 06: Click to 'Pulish' secondary button
+[2022-11-23 11:41:37,202] Create_Post - Step 07: Verify 'Post published.' message is displayed
+[2022-11-23 11:41:40,683]  -------------------------- PASSED -------------------------- 
+[2022-11-23 11:41:40,824] Search_Post - Step 01: Open 'Search post' page
+[2022-11-23 11:41:42,299] Search_Post - Step 02: Enter to 'Search' textbox
+[2022-11-23 11:41:42,484] Search_Post - Step 03: Click to 'Search Posts' button
+[2022-11-23 11:41:45,246] Search_Post - Step 04: Verify Search table contains 'Live Coding Title 54422'
+[2022-11-23 11:41:45,372]  -------------------------- PASSED -------------------------- 
+[2022-11-23 11:41:45,373] Search_Post - Step 05: Verify Search table contains 'vannguyen093'
+[2022-11-23 11:41:45,474]  -------------------------- PASSED -------------------------- 
+[2022-11-23 11:41:45,474] Search_Post - Step 06: Open User Site
+[2022-11-23 11:41:46,768] Search_Post - Step 07: Verify post info displayed at Home Page
+[2022-11-23 11:41:46,860]  -------------------------- PASSED -------------------------- 
+[2022-11-23 11:41:46,921]  -------------------------- PASSED -------------------------- 
+[2022-11-23 11:41:46,985]  -------------------------- PASSED -------------------------- 
+[2022-11-23 11:41:47,073]  -------------------------- PASSED -------------------------- 
+[2022-11-23 11:41:47,074] Search_Post - Step 08: Click to post title
+[2022-11-23 11:41:48,228] Search_Post - Step 09: Verify post info displayed at Post Detail Page
+[2022-11-23 11:41:48,318]  -------------------------- PASSED -------------------------- 
+[2022-11-23 11:41:48,382]  -------------------------- PASSED -------------------------- 
+[2022-11-23 11:41:48,450]  -------------------------- PASSED -------------------------- 
+[2022-11-23 11:41:48,542]  -------------------------- PASSED -------------------------- 
+[2022-11-23 11:41:48,548] Edit_Post - Step 01: Open 'Admin' site
+[2022-11-23 11:41:49,918] Edit_Post - Step 02: Click to 'Post' menu link
+[2022-11-23 11:41:51,227] Edit_Post - Step 03: Enter to 'Search' textbox
+[2022-11-23 11:41:51,391] Edit_Post - Step 04: Click to 'Search Posts' button
+[2022-11-23 11:41:53,757] Edit_Post - Step 05: Click to Post title and navigate to edit post page
+[2022-11-23 11:41:56,447] Edit_Post - Step 06: Enter to edit title
+[2022-11-23 11:41:57,144] Edit_Post - Step 07: Enter to edit body
+[2022-11-23 11:41:59,392] Edit_Post - Step 08: Click to 'Update' button
+[2022-11-23 11:42:00,441] Edit_Post - Step 09: Open 'Search post' page
+[2022-11-23 11:42:03,003] Edit_Post - Step 10: Enter to 'Search' textbox
+[2022-11-23 11:42:03,185] Edit_Post - Step 11: Click to 'Search Posts' button
+[2022-11-23 11:42:06,187] Edit_Post - Step 12: Verify Search table contains 'Edit Title 54422'
+[2022-11-23 11:42:06,316]  -------------------------- PASSED -------------------------- 
+[2022-11-23 11:42:06,317] Edit_Post - Step 13: Verify Search table contains 'vannguyen093'
+[2022-11-23 11:42:06,416]  -------------------------- PASSED -------------------------- 
+[2022-11-23 11:42:06,416] Edit_Post - Step 14: Open User Site
+[2022-11-23 11:42:07,430] Edit_Post - Step 15: Verify edit post info displayed at Home Page
+[2022-11-23 11:42:07,538]  -------------------------- PASSED -------------------------- 
+[2022-11-23 11:42:07,607]  -------------------------- PASSED -------------------------- 
+[2022-11-23 11:42:07,687]  -------------------------- PASSED -------------------------- 
+[2022-11-23 11:42:07,752]  -------------------------- PASSED -------------------------- 
+[2022-11-23 11:42:07,753] Edit_Post - Step 16: Click to edit post title
+[2022-11-23 11:42:09,053] Edit_Post - Step 17: Verify edit post info displayed at Post Detail Page
+[2022-11-23 11:42:09,158]  -------------------------- PASSED -------------------------- 
+[2022-11-23 11:42:09,218]  -------------------------- PASSED -------------------------- 
+[2022-11-23 11:42:09,284]  -------------------------- PASSED -------------------------- 
+[2022-11-23 11:42:09,357]  -------------------------- PASSED -------------------------- 
+[2022-11-23 11:42:09,362] Delete_Post - Step 01: Open 'Admin' site
+[2022-11-23 11:42:10,589] Delete_Post - Step 02: Click to 'Post' menu link
+[2022-11-23 11:42:11,750] Delete_Post - Step 03: Enter to 'Search' textbox
+[2022-11-23 11:42:11,896] Delete_Post - Step 04: Click to 'Search Posts' button
+[2022-11-23 11:42:13,986] Delete_Post - Step 05: Select 'Post' checkbox
+[2022-11-23 11:42:14,465] Delete_Post - Step 06: Select 'Move to trash' item in dropdown list
+[2022-11-23 11:42:14,789] Delete_Post - Step 06: Click to 'Apply' button
+[2022-11-23 11:42:16,738] Delete_Post - Step 06: Verify '1 post moved to the Trash.' message is displayed
+[2022-11-23 11:42:16,856]  -------------------------- PASSED -------------------------- 
+[2022-11-23 11:42:16,856] Delete_Post - Step 10: Enter to 'Search' textbox
+[2022-11-23 11:42:16,939] Delete_Post - Step 11: Click to 'Search Posts' button
+[2022-11-23 11:42:18,767] Delete_Post - Step 06: Verify 'No posts found.' message is displayed
+[2022-11-23 11:42:18,881]  -------------------------- PASSED -------------------------- 
+[2022-11-23 11:42:18,882] Delete_Post - Step 14: Open User Site
+[2022-11-23 11:42:19,858] Delete_Post - Step 15: Verify edit post title undisplayed at Home Page
+[2022-11-23 11:42:24,925]  -------------------------- PASSED -------------------------- 
+[2022-11-23 11:42:24,925] Delete_Post - Step 10: Enter to 'Search' textbox
+[2022-11-23 11:42:25,218] Delete_Post - Step 11: Click to 'Search' button
+[2022-11-23 11:42:25,515] Delete_Post - Step 06: Verify 'Nothing found.' message is displayed
+[2022-11-23 11:42:55,702] OS name = windows 10
+[2022-11-23 11:42:55,702] Driver instance name = firefoxdriver: firefox on windows (cf8399c5-cb43-4b14-b872-928a8f7d24a7)
+[2022-11-23 11:45:17,368] Pre-Condition - Step 01: Open browser and admin url
+[2022-11-23 11:45:25,130] Pre-Condition - Step 02: Enter to Username textbox with value is vannguyen093
+[2022-11-23 11:45:25,394] Pre-Condition - Step 03: Enter to Password textbox with value is vannguyen093
+[2022-11-23 11:45:25,506] Pre-Condition - Step 04: Click to 'Login' button
+[2022-11-23 11:45:28,190] Create_Post - Step 01: Click to 'Post' menu link
+[2022-11-23 11:45:29,536] Create_Post - Step 02: Get 'Search post' url
+[2022-11-23 11:45:29,539] Create_Post - Step 03: Click to 'Add New' button
+[2022-11-23 11:45:32,406] Create_Post - Step 04: Enter to post title
+[2022-11-23 11:45:33,455] Create_Post - Step 05: Enter to post body
+[2022-11-23 11:45:35,870] Create_Post - Step 06: Click to 'Pulish' primary button
+[2022-11-23 11:45:37,331] Create_Post - Step 06: Click to 'Pulish' secondary button
+[2022-11-23 11:45:37,736] Create_Post - Step 07: Verify 'Post published.' message is displayed
+[2022-11-23 11:45:40,110]  -------------------------- PASSED -------------------------- 
+[2022-11-23 11:45:40,264] Search_Post - Step 01: Open 'Search post' page
+[2022-11-23 11:45:41,840] Search_Post - Step 02: Enter to 'Search' textbox
+[2022-11-23 11:45:42,016] Search_Post - Step 03: Click to 'Search Posts' button
+[2022-11-23 11:45:44,371] Search_Post - Step 04: Verify Search table contains 'Live Coding Title 10806'
+[2022-11-23 11:45:44,507]  -------------------------- PASSED -------------------------- 
+[2022-11-23 11:45:44,507] Search_Post - Step 05: Verify Search table contains 'vannguyen093'
+[2022-11-23 11:45:44,600]  -------------------------- PASSED -------------------------- 
+[2022-11-23 11:45:44,600] Search_Post - Step 06: Open User Site
+[2022-11-23 11:45:46,092] Search_Post - Step 07: Verify post info displayed at Home Page
+[2022-11-23 11:45:46,189]  -------------------------- PASSED -------------------------- 
+[2022-11-23 11:45:46,282]  -------------------------- PASSED -------------------------- 
+[2022-11-23 11:45:46,382]  -------------------------- PASSED -------------------------- 
+[2022-11-23 11:45:46,488]  -------------------------- PASSED -------------------------- 
+[2022-11-23 11:45:46,488] Search_Post - Step 08: Click to post title
+[2022-11-23 11:45:48,028] Search_Post - Step 09: Verify post info displayed at Post Detail Page
+[2022-11-23 11:45:48,127]  -------------------------- PASSED -------------------------- 
+[2022-11-23 11:45:48,216]  -------------------------- PASSED -------------------------- 
+[2022-11-23 11:45:48,304]  -------------------------- PASSED -------------------------- 
+[2022-11-23 11:45:48,367]  -------------------------- PASSED -------------------------- 
+[2022-11-23 11:45:48,373] Edit_Post - Step 01: Open 'Admin' site
+[2022-11-23 11:45:49,832] Edit_Post - Step 02: Click to 'Post' menu link
+[2022-11-23 11:45:51,002] Edit_Post - Step 03: Enter to 'Search' textbox
+[2022-11-23 11:45:51,152] Edit_Post - Step 04: Click to 'Search Posts' button
+[2022-11-23 11:45:53,061] Edit_Post - Step 05: Click to Post title and navigate to edit post page
+[2022-11-23 11:45:55,573] Edit_Post - Step 06: Enter to edit title
+[2022-11-23 11:45:56,426] Edit_Post - Step 07: Enter to edit body
+[2022-11-23 11:45:58,371] Edit_Post - Step 08: Click to 'Update' button
+[2022-11-23 11:45:58,947] Edit_Post - Step 09: Open 'Search post' page
+[2022-11-23 11:46:01,523] Edit_Post - Step 10: Enter to 'Search' textbox
+[2022-11-23 11:46:01,715] Edit_Post - Step 11: Click to 'Search Posts' button
+[2022-11-23 11:46:04,043] Edit_Post - Step 12: Verify Search table contains 'Edit Title 10806'
+[2022-11-23 11:46:04,169]  -------------------------- PASSED -------------------------- 
+[2022-11-23 11:46:04,170] Edit_Post - Step 13: Verify Search table contains 'vannguyen093'
+[2022-11-23 11:46:04,262]  -------------------------- PASSED -------------------------- 
+[2022-11-23 11:46:04,262] Edit_Post - Step 14: Open User Site
+[2022-11-23 11:46:05,291] Edit_Post - Step 15: Verify edit post info displayed at Home Page
+[2022-11-23 11:46:05,381]  -------------------------- PASSED -------------------------- 
+[2022-11-23 11:46:05,455]  -------------------------- PASSED -------------------------- 
+[2022-11-23 11:46:05,523]  -------------------------- PASSED -------------------------- 
+[2022-11-23 11:46:05,613]  -------------------------- PASSED -------------------------- 
+[2022-11-23 11:46:05,614] Edit_Post - Step 16: Click to edit post title
+[2022-11-23 11:46:06,860] Edit_Post - Step 17: Verify edit post info displayed at Post Detail Page
+[2022-11-23 11:46:06,977]  -------------------------- PASSED -------------------------- 
+[2022-11-23 11:46:07,103]  -------------------------- PASSED -------------------------- 
+[2022-11-23 11:46:07,179]  -------------------------- PASSED -------------------------- 
+[2022-11-23 11:46:07,252]  -------------------------- PASSED -------------------------- 
+[2022-11-23 11:46:07,257] Delete_Post - Step 01: Open 'Admin' site
+[2022-11-23 11:46:08,506] Delete_Post - Step 02: Click to 'Post' menu link
+[2022-11-23 11:46:09,628] Delete_Post - Step 03: Enter to 'Search' textbox
+[2022-11-23 11:46:09,771] Delete_Post - Step 04: Click to 'Search Posts' button
+[2022-11-23 11:46:11,875] Delete_Post - Step 05: Select 'Post' checkbox
+[2022-11-23 11:46:12,198] Delete_Post - Step 06: Select 'Move to trash' item in dropdown list
+[2022-11-23 11:46:12,513] Delete_Post - Step 06: Click to 'Apply' button
+[2022-11-23 11:46:14,394] Delete_Post - Step 06: Verify '1 post moved to the Trash.' message is displayed
+[2022-11-23 11:46:14,501]  -------------------------- PASSED -------------------------- 
+[2022-11-23 11:46:14,501] Delete_Post - Step 10: Enter to 'Search' textbox
+[2022-11-23 11:46:14,605] Delete_Post - Step 11: Click to 'Search Posts' button
+[2022-11-23 11:46:16,469] Delete_Post - Step 06: Verify 'No posts found.' message is displayed
+[2022-11-23 11:46:16,583]  -------------------------- PASSED -------------------------- 
+[2022-11-23 11:46:16,583] Delete_Post - Step 14: Open User Site
+[2022-11-23 11:46:17,527] Delete_Post - Step 15: Verify edit post title undisplayed at Home Page
+[2022-11-23 11:46:22,587]  -------------------------- PASSED -------------------------- 
+[2022-11-23 11:46:22,587] Delete_Post - Step 10: Enter to 'Search' textbox
+[2022-11-23 11:46:22,881] Delete_Post - Step 11: Click to 'Search' button
+[2022-11-23 11:46:23,178] Delete_Post - Step 06: Verify 'Nothing found.' message is displayed
+[2022-11-23 11:46:53,348] OS name = windows 10
+[2022-11-23 11:46:53,349] Driver instance name = firefoxdriver: firefox on windows (0feff19f-32cd-4861-8334-1269aaf77b19)
+[2022-11-23 11:48:47,400] Pre-Condition - Step 01: Open browser and admin url
+[2022-11-23 11:48:54,604] Pre-Condition - Step 02: Enter to Username textbox with value is vannguyen093
+[2022-11-23 11:48:54,852] Pre-Condition - Step 03: Enter to Password textbox with value is vannguyen093
+[2022-11-23 11:48:54,964] Pre-Condition - Step 04: Click to 'Login' button
+[2022-11-23 11:48:57,306] Create_Post - Step 01: Click to 'Post' menu link
+[2022-11-23 11:48:58,729] Create_Post - Step 02: Get 'Search post' url
+[2022-11-23 11:48:58,734] Create_Post - Step 03: Click to 'Add New' button
+[2022-11-23 11:49:01,499] Create_Post - Step 04: Enter to post title
+[2022-11-23 11:49:02,386] Create_Post - Step 05: Enter to post body
+[2022-11-23 11:49:04,899] Create_Post - Step 06: Click to 'Pulish' primary button
+[2022-11-23 11:49:06,037] Create_Post - Step 06: Click to 'Pulish' secondary button
+[2022-11-23 11:49:06,429] Create_Post - Step 07: Verify 'Post published.' message is displayed
+[2022-11-23 11:49:08,066]  -------------------------- PASSED -------------------------- 
+[2022-11-23 11:49:08,170] Search_Post - Step 01: Open 'Search post' page
+[2022-11-23 11:49:10,046] Search_Post - Step 02: Enter to 'Search' textbox
+[2022-11-23 11:49:10,202] Search_Post - Step 03: Click to 'Search Posts' button
+[2022-11-23 11:49:12,186] Search_Post - Step 04: Verify Search table contains 'Live Coding Title 84658'
+[2022-11-23 11:49:12,334]  -------------------------- PASSED -------------------------- 
+[2022-11-23 11:49:12,335] Search_Post - Step 05: Verify Search table contains 'vannguyen093'
+[2022-11-23 11:49:12,427]  -------------------------- PASSED -------------------------- 
+[2022-11-23 11:49:12,427] Search_Post - Step 06: Open User Site
+[2022-11-23 11:49:13,807] Search_Post - Step 07: Verify post info displayed at Home Page
+[2022-11-23 11:49:13,887]  -------------------------- PASSED -------------------------- 
+[2022-11-23 11:49:13,964]  -------------------------- PASSED -------------------------- 
+[2022-11-23 11:49:14,046]  -------------------------- PASSED -------------------------- 
+[2022-11-23 11:49:14,121]  -------------------------- PASSED -------------------------- 
+[2022-11-23 11:49:14,121] Search_Post - Step 08: Click to post title
+[2022-11-23 11:49:15,348] Search_Post - Step 09: Verify post info displayed at Post Detail Page
+[2022-11-23 11:49:15,443]  -------------------------- PASSED -------------------------- 
+[2022-11-23 11:49:15,522]  -------------------------- PASSED -------------------------- 
+[2022-11-23 11:49:15,587]  -------------------------- PASSED -------------------------- 
+[2022-11-23 11:49:15,677]  -------------------------- PASSED -------------------------- 
+[2022-11-23 11:49:15,683] Edit_Post - Step 01: Open 'Admin' site
+[2022-11-23 11:49:16,924] Edit_Post - Step 02: Click to 'Post' menu link
+[2022-11-23 11:49:18,096] Edit_Post - Step 03: Enter to 'Search' textbox
+[2022-11-23 11:49:18,225] Edit_Post - Step 04: Click to 'Search Posts' button
+[2022-11-23 11:49:21,174] Edit_Post - Step 05: Click to Post title and navigate to edit post page
+[2022-11-23 11:49:23,722] Edit_Post - Step 06: Enter to edit title
+[2022-11-23 11:49:24,474] Edit_Post - Step 07: Enter to edit body
+[2022-11-23 11:49:26,441] Edit_Post - Step 08: Click to 'Update' button
+[2022-11-23 11:49:27,087] Edit_Post - Step 09: Open 'Search post' page
+[2022-11-23 11:49:29,720] Edit_Post - Step 10: Enter to 'Search' textbox
+[2022-11-23 11:49:29,860] Edit_Post - Step 11: Click to 'Search Posts' button
+[2022-11-23 11:49:31,997] Edit_Post - Step 12: Verify Search table contains 'Edit Title 84658'
+[2022-11-23 11:49:32,126]  -------------------------- PASSED -------------------------- 
+[2022-11-23 11:49:32,126] Edit_Post - Step 13: Verify Search table contains 'vannguyen093'
+[2022-11-23 11:49:32,224]  -------------------------- PASSED -------------------------- 
+[2022-11-23 11:49:32,224] Edit_Post - Step 14: Open User Site
+[2022-11-23 11:49:33,207] Edit_Post - Step 15: Verify edit post info displayed at Home Page
+[2022-11-23 11:49:33,295]  -------------------------- PASSED -------------------------- 
+[2022-11-23 11:49:33,355]  -------------------------- PASSED -------------------------- 
+[2022-11-23 11:49:33,423]  -------------------------- PASSED -------------------------- 
+[2022-11-23 11:49:33,499]  -------------------------- PASSED -------------------------- 
+[2022-11-23 11:49:33,499] Edit_Post - Step 16: Click to edit post title
+[2022-11-23 11:49:34,740] Edit_Post - Step 17: Verify edit post info displayed at Post Detail Page
+[2022-11-23 11:49:34,862]  -------------------------- PASSED -------------------------- 
+[2022-11-23 11:49:34,923]  -------------------------- PASSED -------------------------- 
+[2022-11-23 11:49:35,005]  -------------------------- PASSED -------------------------- 
+[2022-11-23 11:49:35,081]  -------------------------- PASSED -------------------------- 
+[2022-11-23 11:49:35,086] Delete_Post - Step 01: Open 'Admin' site
+[2022-11-23 11:49:36,320] Delete_Post - Step 02: Click to 'Post' menu link
+[2022-11-23 11:49:37,476] Delete_Post - Step 03: Enter to 'Search' textbox
+[2022-11-23 11:49:37,609] Delete_Post - Step 04: Click to 'Search Posts' button
+[2022-11-23 11:49:39,505] Delete_Post - Step 05: Select 'Post' checkbox
+[2022-11-23 11:49:39,822] Delete_Post - Step 06: Select 'Move to trash' item in dropdown list
+[2022-11-23 11:49:40,151] Delete_Post - Step 06: Click to 'Apply' button
+[2022-11-23 11:49:41,978] Delete_Post - Step 06: Verify '1 post moved to the Trash.' message is displayed
+[2022-11-23 11:49:42,093]  -------------------------- PASSED -------------------------- 
+[2022-11-23 11:49:42,094] Delete_Post - Step 10: Enter to 'Search' textbox
+[2022-11-23 11:49:42,177] Delete_Post - Step 11: Click to 'Search Posts' button
+[2022-11-23 11:49:44,066] Delete_Post - Step 06: Verify 'No posts found.' message is displayed
+[2022-11-23 11:49:44,178]  -------------------------- PASSED -------------------------- 
+[2022-11-23 11:49:44,178] Delete_Post - Step 14: Open User Site
+[2022-11-23 11:49:45,118] Delete_Post - Step 15: Verify edit post title undisplayed at Home Page
+[2022-11-23 11:49:50,173]  -------------------------- PASSED -------------------------- 
+[2022-11-23 11:49:50,173] Delete_Post - Step 10: Enter to 'Search' textbox
+[2022-11-23 11:49:50,453] Delete_Post - Step 11: Click to 'Search' button
+[2022-11-23 11:49:50,783] Delete_Post - Step 06: Verify 'Nothing Found' message is displayed
+[2022-11-23 11:50:20,936] OS name = windows 10
+[2022-11-23 11:50:20,937] Driver instance name = firefoxdriver: firefox on windows (b00c07ca-9803-4d67-ab3c-19fd34a907b2)
+[2022-11-23 11:51:12,453] Pre-Condition - Step 01: Open browser and admin url
+[2022-11-23 11:51:18,793] Pre-Condition - Step 02: Enter to Username textbox with value is vannguyen093
+[2022-11-23 11:51:19,043] Pre-Condition - Step 03: Enter to Password textbox with value is vannguyen093
+[2022-11-23 11:51:19,126] Pre-Condition - Step 04: Click to 'Login' button
+[2022-11-23 11:51:21,493] Create_Post - Step 01: Click to 'Post' menu link
+[2022-11-23 11:51:22,774] Create_Post - Step 02: Get 'Search post' url
+[2022-11-23 11:51:22,778] Create_Post - Step 03: Click to 'Add New' button
+[2022-11-23 11:51:25,526] Create_Post - Step 04: Enter to post title
+[2022-11-23 11:51:26,304] Create_Post - Step 05: Enter to post body
+[2022-11-23 11:51:28,891] Create_Post - Step 06: Click to 'Pulish' primary button
+[2022-11-23 11:51:30,162] Create_Post - Step 06: Click to 'Pulish' secondary button
+[2022-11-23 11:51:30,609] Create_Post - Step 07: Verify 'Post published.' message is displayed
+[2022-11-23 11:51:32,164]  -------------------------- PASSED -------------------------- 
+[2022-11-23 11:51:32,275] Search_Post - Step 01: Open 'Search post' page
+[2022-11-23 11:51:34,409] Search_Post - Step 02: Enter to 'Search' textbox
+[2022-11-23 11:51:34,563] Search_Post - Step 03: Click to 'Search Posts' button
+[2022-11-23 11:51:36,568] Search_Post - Step 04: Verify Search table contains 'Live Coding Title 45426'
+[2022-11-23 11:51:36,711]  -------------------------- PASSED -------------------------- 
+[2022-11-23 11:51:36,712] Search_Post - Step 05: Verify Search table contains 'vannguyen093'
+[2022-11-23 11:51:36,806]  -------------------------- PASSED -------------------------- 
+[2022-11-23 11:51:36,806] Search_Post - Step 06: Open User Site
+[2022-11-23 11:51:38,081] Search_Post - Step 07: Verify post info displayed at Home Page
+[2022-11-23 11:51:38,160]  -------------------------- PASSED -------------------------- 
+[2022-11-23 11:51:38,223]  -------------------------- PASSED -------------------------- 
+[2022-11-23 11:51:38,287]  -------------------------- PASSED -------------------------- 
+[2022-11-23 11:51:38,365]  -------------------------- PASSED -------------------------- 
+[2022-11-23 11:51:38,366] Search_Post - Step 08: Click to post title
+[2022-11-23 11:51:39,482] Search_Post - Step 09: Verify post info displayed at Post Detail Page
+[2022-11-23 11:51:39,572]  -------------------------- PASSED -------------------------- 
+[2022-11-23 11:51:39,640]  -------------------------- PASSED -------------------------- 
+[2022-11-23 11:51:39,716]  -------------------------- PASSED -------------------------- 
+[2022-11-23 11:51:39,776]  -------------------------- PASSED -------------------------- 
+[2022-11-23 11:51:39,781] Edit_Post - Step 01: Open 'Admin' site
+[2022-11-23 11:51:40,999] Edit_Post - Step 02: Click to 'Post' menu link
+[2022-11-23 11:51:42,128] Edit_Post - Step 03: Enter to 'Search' textbox
+[2022-11-23 11:51:42,286] Edit_Post - Step 04: Click to 'Search Posts' button
+[2022-11-23 11:51:44,143] Edit_Post - Step 05: Click to Post title and navigate to edit post page
+[2022-11-23 11:51:46,419] Edit_Post - Step 06: Enter to edit title
+[2022-11-23 11:51:47,087] Edit_Post - Step 07: Enter to edit body
+[2022-11-23 11:51:48,953] Edit_Post - Step 08: Click to 'Update' button
+[2022-11-23 11:51:49,586] Edit_Post - Step 09: Open 'Search post' page
+[2022-11-23 11:51:51,734] Edit_Post - Step 10: Enter to 'Search' textbox
+[2022-11-23 11:51:51,900] Edit_Post - Step 11: Click to 'Search Posts' button
+[2022-11-23 11:51:54,189] Edit_Post - Step 12: Verify Search table contains 'Edit Title 45426'
+[2022-11-23 11:51:54,332]  -------------------------- PASSED -------------------------- 
+[2022-11-23 11:51:54,332] Edit_Post - Step 13: Verify Search table contains 'vannguyen093'
+[2022-11-23 11:51:54,410]  -------------------------- PASSED -------------------------- 
+[2022-11-23 11:51:54,411] Edit_Post - Step 14: Open User Site
+[2022-11-23 11:51:55,631] Edit_Post - Step 15: Verify edit post info displayed at Home Page
+[2022-11-23 11:51:55,719]  -------------------------- PASSED -------------------------- 
+[2022-11-23 11:51:55,785]  -------------------------- PASSED -------------------------- 
+[2022-11-23 11:51:55,855]  -------------------------- PASSED -------------------------- 
+[2022-11-23 11:51:55,925]  -------------------------- PASSED -------------------------- 
+[2022-11-23 11:51:55,925] Edit_Post - Step 16: Click to edit post title
+[2022-11-23 11:51:57,241] Edit_Post - Step 17: Verify edit post info displayed at Post Detail Page
+[2022-11-23 11:51:57,349]  -------------------------- PASSED -------------------------- 
+[2022-11-23 11:51:57,451]  -------------------------- PASSED -------------------------- 
+[2022-11-23 11:51:57,547]  -------------------------- PASSED -------------------------- 
+[2022-11-23 11:51:57,637]  -------------------------- PASSED -------------------------- 
+[2022-11-23 11:51:57,643] Delete_Post - Step 01: Open 'Admin' site
+[2022-11-23 11:51:59,608] Delete_Post - Step 02: Click to 'Post' menu link
+[2022-11-23 11:52:00,784] Delete_Post - Step 03: Enter to 'Search' textbox
+[2022-11-23 11:52:00,919] Delete_Post - Step 04: Click to 'Search Posts' button
+[2022-11-23 11:52:02,849] Delete_Post - Step 05: Select 'Post' checkbox
+[2022-11-23 11:52:03,179] Delete_Post - Step 06: Select 'Move to trash' item in dropdown list
+[2022-11-23 11:52:03,520] Delete_Post - Step 06: Click to 'Apply' button
+[2022-11-23 11:52:05,574] Delete_Post - Step 06: Verify '1 post moved to the Trash.' message is displayed
+[2022-11-23 11:52:05,694]  -------------------------- PASSED -------------------------- 
+[2022-11-23 11:52:05,694] Delete_Post - Step 10: Enter to 'Search' textbox
+[2022-11-23 11:52:05,784] Delete_Post - Step 11: Click to 'Search Posts' button
+[2022-11-23 11:52:07,742] Delete_Post - Step 06: Verify 'No posts found.' message is displayed
+[2022-11-23 11:52:07,865]  -------------------------- PASSED -------------------------- 
+[2022-11-23 11:52:07,865] Delete_Post - Step 14: Open User Site
+[2022-11-23 11:52:08,822] Delete_Post - Step 15: Verify edit post title undisplayed at Home Page
+[2022-11-23 11:52:13,880]  -------------------------- PASSED -------------------------- 
+[2022-11-23 11:52:13,880] Delete_Post - Step 10: Enter to 'Search' textbox
+[2022-11-23 11:52:14,037] Delete_Post - Step 11: Click to 'Search' button
+[2022-11-23 11:52:14,948] Delete_Post - Step 06: Verify 'Nothing Found' message is displayed
+[2022-11-23 11:52:15,027]  -------------------------- PASSED -------------------------- 
+[2022-11-23 11:52:15,031] OS name = windows 10
+[2022-11-23 11:52:15,031] Driver instance name = firefoxdriver: firefox on windows (7f1443ef-1d6c-4025-b885-4ac129d60eb9)
+[2022-11-23 14:53:03,823] Pre-Condition - Step 01: Open browser and admin url
+[2022-11-23 14:53:04,113] OS name = windows 10
+[2022-11-23 14:53:04,113] 
+[2022-11-23 14:56:41,761] Pre-Condition - Step 01: Open browser and admin url
+[2022-11-23 14:56:42,111] OS name = windows 10
+[2022-11-23 14:56:42,112] 
+[2022-11-23 14:57:32,525] Pre-Condition - Step 01: Open browser and admin url
+[2022-11-23 14:57:32,793] OS name = windows 10
+[2022-11-23 14:57:32,794] 
+[2022-11-23 15:35:22,463] Pre-Condition - Step 01: Open browser and admin url
+[2022-11-23 15:35:34,680] Pre-Condition - Step 02: Enter to Username textbox with value is vannguyen093
+[2022-11-23 15:35:34,963] Pre-Condition - Step 03: Enter to Password textbox with value is vannguyen093
+[2022-11-23 15:35:35,081] Pre-Condition - Step 04: Click to 'Login' button
+[2022-11-23 15:35:40,062] Create_Post - Step 01: Click to 'Post' menu link
+[2022-11-23 15:35:42,021] Create_Post - Step 02: Get 'Search post' url
+[2022-11-23 15:35:42,026] Create_Post - Step 03: Click to 'Add New' button
+[2022-11-23 15:35:46,728] Create_Post - Step 04: Enter to post title
+[2022-11-23 15:35:47,685] Create_Post - Step 05: Enter to post body

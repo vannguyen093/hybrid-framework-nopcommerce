@@ -1,0 +1,10 @@
+1669280342280	geckodriver	INFO	Listening on 127.0.0.1:9138
+1669280343092	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\Hong Trang\\AppData\\Local\\Temp\\rust_mozprofileSyce54"
+1669280343642	Marionette	INFO	Marionette enabled
+1669280343648	Marionette	INFO	Listening on port 52620
+Read port: 52620
+1669280344029	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Hong Trang\\AppData\\Local\\Temp\\rust_mozprofileSyce54\\search.json.mozlz4", (void 0)))
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.saucedemo.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.saucedemo.com."
+1669280349835	Marionette	INFO	Stopped listening on port 52620
