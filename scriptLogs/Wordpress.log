@@ -1104,3 +1104,59 @@
 [2022-11-23 15:35:42,026] Create_Post - Step 03: Click to 'Add New' button
 [2022-11-23 15:35:46,728] Create_Post - Step 04: Enter to post title
 [2022-11-23 15:35:47,685] Create_Post - Step 05: Enter to post body
+[2022-11-25 10:20:24,684] Register - Step 01: Click to 'Register' link
+[2022-11-25 10:20:25,781] Register - Step 02: Click to 'Radio' button with value 'Male'
+[2022-11-25 10:20:26,075] Register - Step 03: Enter to First Name textbox with value is Đỗ
+[2022-11-25 10:20:26,170] Register - Step 04: Enter to Last Name textbox with value is Kha
+[2022-11-25 10:20:26,260] Register - Step 05: Select date in Day dropdown with value is 30
+[2022-11-25 10:20:26,581] Register - Step 06: Select month in Month dropdown with value is May
+[2022-11-25 10:20:26,898] Register - Step 07: Select year in Year dropdown with value is 1993
+[2022-11-25 10:20:27,213] Register - Step 08: Enter to Email textbox with value is đinh.mai@gmail.com
+[2022-11-25 10:20:27,311] Register - Step 09: Enter to Password textbox with value is qg073axx3w
+[2022-11-25 10:20:27,405] Register - Step 10: Enter to Confirm Password textbox with value is qg073axx3w
+[2022-11-25 10:20:27,491] Register - Step 11: Click to 'News letter' checkbox
+[2022-11-25 10:20:27,532] Register - Step 12: Click to 'Register' button
+[2022-11-25 10:20:27,841] Register - Step 13: Verify the 'Success Message' is displayed
+[2022-11-25 10:20:57,944] Login - Step 01: Click to 'Login' link
+[2022-11-25 10:20:59,039] Login - Step 02: Enter to Email textbox with value is đinh.mai@gmail.com
+[2022-11-25 10:20:59,159] Login - Step 03: Enter to Password textbox with value is qg073axx3w
+[2022-11-25 10:20:59,251] Login - Step 04: Click to 'Login' button
+[2022-11-25 10:21:00,049] My Account - Step 01: Click to 'My Account' link
+[2022-11-25 10:21:26,112] OS name = windows 11
+[2022-11-25 10:21:26,112] Driver instance name = firefoxdriver: firefox on windows (664ca6f0-2134-49b4-97e0-7d375fd62900)
+[2022-11-25 10:21:26,140] Failed to decode response from marionette
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:53'
+System info: host: 'DESKTOP-9JOSJVK', ip: '192.168.164.1', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.14'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 107.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20221110173214, moz:geckodriverVersion: 0.31.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 1096, moz:profile: C:\Users\Van Nguyen\AppData..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 664ca6f0-2134-49b4-97e0-7d375fd62900
+[2022-11-25 10:22:25,592] Register - Step 01: Click to 'Register' link
+[2022-11-25 10:22:26,335] Register - Step 02: Click to 'Radio' button with value 'Male'
+[2022-11-25 10:22:26,620] Register - Step 03: Enter to First Name textbox with value is Lenita
+[2022-11-25 10:22:26,715] Register - Step 04: Enter to Last Name textbox with value is Dietrich
+[2022-11-25 10:22:26,823] Register - Step 05: Select date in Day dropdown with value is 30
+[2022-11-25 10:22:27,127] Register - Step 06: Select month in Month dropdown with value is May
+[2022-11-25 10:22:27,418] Register - Step 07: Select year in Year dropdown with value is 1993
+[2022-11-25 10:22:27,717] Register - Step 08: Enter to Email textbox with value is lashandra.corkery@yahoo.com
+[2022-11-25 10:22:27,811] Register - Step 09: Enter to Password textbox with value is 9zsx5j4w
+[2022-11-25 10:22:27,900] Register - Step 10: Enter to Confirm Password textbox with value is 9zsx5j4w
+[2022-11-25 10:22:27,991] Register - Step 11: Click to 'News letter' checkbox
+[2022-11-25 10:22:28,057] Register - Step 12: Click to 'Register' button
+[2022-11-25 10:22:28,938] Register - Step 13: Verify the 'Success Message' is displayed
+[2022-11-25 10:22:28,985]  -------------------------- PASSED -------------------------- 
+[2022-11-25 10:22:28,985] Register - Step 14: Click to 'Log out' link
+[2022-11-25 10:22:29,699] Login - Step 01: Click to 'Login' link
+[2022-11-25 10:22:30,297] Login - Step 02: Enter to Email textbox with value is lashandra.corkery@yahoo.com
+[2022-11-25 10:22:30,401] Login - Step 03: Enter to Password textbox with value is 9zsx5j4w
+[2022-11-25 10:22:30,494] Login - Step 04: Click to 'Login' button
+[2022-11-25 10:22:31,147] My Account - Step 01: Click to 'My Account' link
+[2022-11-25 10:22:31,747] My Account - Step 02: Verify 'Customer Info' page is displayed
+[2022-11-25 10:22:31,815]  -------------------------- PASSED -------------------------- 
+[2022-11-25 10:22:31,815] My Account - Step 03: Verify 'First Name' value is correctly
+[2022-11-25 10:22:31,872]  -------------------------- PASSED -------------------------- 
+[2022-11-25 10:22:31,872] My Account - Step 03: Verify 'Last Name' value is correctly
+[2022-11-25 10:22:31,934]  -------------------------- PASSED -------------------------- 
+[2022-11-25 10:22:31,934] My Account - Step 03: Verify 'Email' value is correctly
+[2022-11-25 10:22:31,997]  -------------------------- PASSED -------------------------- 
+[2022-11-25 10:22:31,999] OS name = windows 11
+[2022-11-25 10:22:32,000] Driver instance name = firefoxdriver: firefox on windows (d9d26383-7f52-434b-bd24-06f7db8f9ebe)
