@@ -24,7 +24,7 @@ public class Level_06_Page_Generator_Manager_II extends BaseTest {
   @BeforeClass
   public void beforeClass(String browserName, String appUrl) {
 
-    driver = getBrowserDriver(browserName,appUrl);
+    driver = getBrowserDriverA(browserName,appUrl);
 
     homePage = PageGeneratorManager.getUserHomePage(driver);
 

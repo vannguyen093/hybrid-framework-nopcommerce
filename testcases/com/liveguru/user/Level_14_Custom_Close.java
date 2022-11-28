@@ -22,7 +22,7 @@ public class Level_14_Custom_Close extends BaseTest {
     @BeforeClass
     public void beforeClass(String browserName, String appUrl) {
 
-        driver = getBrowserDriver(browserName,appUrl);
+        driver = getBrowserDriverA(browserName,appUrl);
 
         homePage = PageGeneratorManager.getHomePage(driver);
 

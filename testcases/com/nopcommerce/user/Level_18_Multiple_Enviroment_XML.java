@@ -7,29 +7,35 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import pageObjects.nopCommerce.PageGeneratorManager;
-import pageObjects.nopCommerce.user.*;
+import pageObjects.nopCommerce.user.UserCustomerInfoPageObject;
+import pageObjects.nopCommerce.user.UserHomePageObject;
+import pageObjects.nopCommerce.user.UserLoginPageObject;
+import pageObjects.nopCommerce.user.UserRegisterPageObject;
+import utilities.DataHelper;
 
-public class Level_15_Pattern_Object extends BaseTest {
+public class Level_18_Multiple_Enviroment_XML extends BaseTest {
     private WebDriver driver;
     private String firstName, lastName, email, password, date, month, year;
+    DataHelper dataHelper;
     private UserHomePageObject homePage;
     private UserRegisterPageObject registerPage;
     private UserLoginPageObject loginPage;
     private UserCustomerInfoPageObject customerInfoPage;
 
 
-    @Parameters({"browser", "url"})
+    @Parameters({"browser", "enviroment"})
     @BeforeClass
-    public void beforeClass(String browserName, String appUrl) {
+    public void beforeClass(String browserName, String enviromentName) {
 
-        driver = getBrowserDriverA(browserName, appUrl);
+        driver = getBrowserDriverE(browserName, enviromentName);
 
         homePage = PageGeneratorManager.getUserHomePage(driver);
+        dataHelper = DataHelper.getDataHelper();
 
-        firstName = "Automation";
-        lastName = "FC";
-        password = "123456";
-        email = "vannguyen" + generateFakeNumber() + "@gmail.com";
+        firstName = dataHelper.getFirstName();
+        lastName = dataHelper.getLastName();
+        password = dataHelper.getPassword();
+        email = dataHelper.getEmail();
         date = "30";
         month = "May";
         year = "1993";
@@ -115,8 +121,8 @@ public class Level_15_Pattern_Object extends BaseTest {
         verifyEquals(customerInfoPage.getTextboxValueById(driver,"Email"), email);
     }
 
-    @AfterClass
+    @AfterClass(alwaysRun = true)
     public void afterClass() {
-        driver.quit();
+        closeBrowserAndDriver();
     }
 }

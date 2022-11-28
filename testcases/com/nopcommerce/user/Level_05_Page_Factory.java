@@ -25,7 +25,7 @@ public class Level_05_Page_Factory extends BaseTest {
     @BeforeClass
     public void beforeClass(String browserName, String appUrl) {
 
-        driver = getBrowserDriver(browserName,appUrl);
+        driver = getBrowserDriverA(browserName,appUrl);
 
         homePage = new HomePageObject(driver);
 

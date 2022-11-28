@@ -35,7 +35,7 @@ public class BaseTest {
         log = LogFactory.getLog(getClass());
     }
 
-    protected WebDriver getBrowserDriver(String browserName, String appUrl) {
+    protected WebDriver getBrowserDriverA(String browserName, String appUrl) {
         BrowserList browserList = BrowserList.valueOf(browserName.toUpperCase());
         switch (browserList) {
             case FIREFOX:
@@ -77,13 +77,55 @@ public class BaseTest {
         return driver;
     }
 
+    protected WebDriver getBrowserDriverE(String browserName, String enviromentName) {
+        BrowserList browserList = BrowserList.valueOf(browserName.toUpperCase());
+        switch (browserList) {
+            case FIREFOX:
+                //                WebDriverManager.firefoxdriver().setup();
+                System.setProperty("webdriver.gecko.driver", projectPath + "\\browserDrivers\\geckodriver.exe");
+                System.setProperty(FirefoxDriver.SystemProperty.DRIVER_USE_MARIONETTE, "true");
+                System.setProperty(FirefoxDriver.SystemProperty.BROWSER_LOGFILE, GlobalConstants.PROJECT_PATH + "\\browserLogs\\FirefoxLog.log");
+                driver = new FirefoxDriver();
+                break;
+            case H_FIREFOX:
+                WebDriverManager.firefoxdriver().setup();
+                FirefoxOptions options = new FirefoxOptions();
+                options.addArguments("--headless");
+                options.addArguments("window-size=1920x1080");
+                driver = new FirefoxDriver(options);
+                break;
+            case CHROME:
+                WebDriverManager.chromedriver().setup();
+                System.setProperty("webdriver.chrome.args", "--disable-logging");
+                System.setProperty("webdriver.chrome.silentOutput", "true");
+                driver = new ChromeDriver();
+                break;
+            case H_CHROME:
+                WebDriverManager.chromedriver().setup();
+                ChromeOptions optionChrome = new ChromeOptions();
+                optionChrome.addArguments("--headless");
+                optionChrome.addArguments("window-size=1920x1080");
+                driver = new ChromeDriver(optionChrome);
+                break;
+            case EDGE:
+                WebDriverManager.edgedriver().setup();
+                driver = new EdgeDriver();
+                break;
+            default:
+                throw new RuntimeException("Browser not supported: " + browserName);
+        }
+        driver.manage().timeouts().implicitlyWait(GlobalConstants.LONG_TIMEOUT, TimeUnit.SECONDS);
+        driver.get(getEnvironmentUrl(enviromentName));
+        return driver;
+    }
+
     public WebDriver getDriverInstance() {
         return this.driver;
     }
 
-    private String getEnvironmentUrl(String serverName) {
+    private String getEnvironmentUrl(String enviromentName) {
         String envUrl = null;
-        EnviromentList enviroment = EnviromentList.valueOf(serverName.toUpperCase());
+        EnviromentList enviroment = EnviromentList.valueOf(enviromentName.toUpperCase());
         switch (enviroment) {
             case DEV:
                 envUrl = "https://demo.nopcommerce.com/";
@@ -94,8 +136,11 @@ public class BaseTest {
             case STAGING:
                 envUrl = "https://staging.nopcommerce.com/";
                 break;
-            case PRODUCTION:
+            case PROD:
                 envUrl = "https://production.nopcommerce.com/";
+                break;
+            default:
+                envUrl = null;
                 break;
         }
         return envUrl;

@@ -25,7 +25,7 @@ public class Level_07_Switch_Page extends BaseTest {
     @BeforeClass
     public void beforeClass(String browserName, String appUrl) {
 
-        driver = getBrowserDriver(browserName,appUrl);
+        driver = getBrowserDriverA(browserName,appUrl);
 
         homePage = PageGeneratorManager.getUserHomePage(driver);
 

@@ -23,7 +23,7 @@ public class Common_01_Register_Cookie extends BaseTest {
     @Parameters({"browser", "url"})
     @BeforeTest(description = "Create new common User for all Classes Test")
     public void Register(String browserName, String appUrl) {
-        driver = getBrowserDriver(browserName,appUrl);
+        driver = getBrowserDriverA(browserName,appUrl);
         homePage = PageGeneratorManager.getHomePage(driver);
 
         firstName = "Van";

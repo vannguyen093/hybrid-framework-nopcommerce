@@ -28,7 +28,7 @@ public class Level_10_Datatable extends BaseTest {
     @BeforeClass
     public void beforeClass(String browserName, String appUrl) {
 
-        driver = getBrowserDriver(browserName, appUrl);
+        driver = getBrowserDriverA(browserName, appUrl);
 
         homePage = PageGeneratorManager.getHomePage(driver);
 
